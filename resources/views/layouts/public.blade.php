@@ -20,12 +20,13 @@
     @stack('head')
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
     <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
     <div class="topline"><div class="container"><span>Ibnu Aqil Education Centre</span><a href="{{ route('portal.index') }}">Ruang berbagi sekolah mitra <span aria-hidden="true">↗</span></a></div></div>
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="{{ route('public.home') }}" aria-label="Ibnu Aqil Education Centre, beranda">
-                <img class="official-logo" src="{{ asset('assets/logo-yhasb.png') }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="48" height="49">
+                <img class="official-logo" src="{{ asset(\App\Services\PublicPhotos::logo()) }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="48" height="49">
                 <span class="brand-name">Ibnu Aqil<small>EDUCATION CENTRE</small></span>
             </a>
             <button type="button" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="sr-only">Buka menu navigasi</span></button>
@@ -50,7 +51,7 @@
     <footer class="site-footer">
         <div class="container footer-main">
             <div class="footer-brand-column">
-                <a class="brand brand-light" href="{{ route('public.home') }}"><img class="official-logo" src="{{ asset('assets/logo-yhasb.png') }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="48" height="49"><span class="brand-name">Ibnu Aqil<small>EDUCATION CENTRE</small></span></a>
+                <a class="brand brand-light" href="{{ route('public.home') }}"><img class="official-logo" src="{{ asset(\App\Services\PublicPhotos::logo()) }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="48" height="49"><span class="brand-name">Ibnu Aqil<small>EDUCATION CENTRE</small></span></a>
                 <p>Ruang informasi Ibnu Aqil.<br>Terhubung melalui ilmu dan berbagi.</p>
                 <a class="footer-portal" href="{{ route('portal.index') }}">Masuk Portal Pengimbasan <span aria-hidden="true">↗</span></a>
             </div>
@@ -70,5 +71,7 @@
     @if(strlen($whatsappNumber) >= 9 && strlen($whatsappNumber) <= 15)
     <a class="whatsapp-link" href="https://wa.me/{{ $whatsappNumber }}" target="_blank" rel="noopener noreferrer" aria-label="Hubungi Ibnu Aqil melalui WhatsApp (tab baru)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.8a8 8 0 0 1-11.9 7L4 20l1.2-4A8 8 0 1 1 20 11.8Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 8.3c-.7 1.9 1.8 5.8 4.8 6.9 1.2.5 2.1-.8 2.1-1.1l-2.1-1-.7.7c-1.3-.7-2.3-1.6-2.8-2.8l.6-.7-1-2Z" fill="currentColor"/></svg><span>WhatsApp</span></a>
     @endif
+    <a class="back-to-top" href="#main-content" aria-label="Kembali ke atas"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <dialog class="lightbox" aria-label="Pratinjau gambar"><form method="dialog"><button type="submit" class="lightbox-close" aria-label="Tutup pratinjau">×</button></form><figure class="lightbox-figure"></figure><p class="lightbox-caption"></p></dialog>
 </body>
 </html>

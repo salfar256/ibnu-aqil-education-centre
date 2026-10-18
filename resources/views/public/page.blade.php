@@ -2,8 +2,8 @@
 @section('title', $page->title.' — Ibnu Aqil Education Centre')
 @section('description', $page->summary ?: $page->title.' di Ibnu Aqil Education Centre.')
 @section('content')
-<section class="page-hero"><div class="container"><nav class="breadcrumb" aria-label="Jejak halaman"><a href="{{ route('public.home') }}">Beranda</a><span aria-hidden="true">/</span><span aria-current="page">{{ $page->title }}</span></nav><div class="page-hero-grid"><div><p class="eyebrow">Ibnu Aqil Education Centre</p><h1>{{ $page->title }}</h1>@if($page->summary)<p class="page-lead">{{ $page->summary }}</p>@endif</div><span class="page-ornament" aria-hidden="true">✳</span></div></div></section>
-<section class="section page-section"><div class="container content-layout"><article class="prose">
+<section class="page-hero"><div class="container"><nav class="breadcrumb" aria-label="Jejak halaman"><a href="{{ route('public.home') }}">Beranda</a><span aria-hidden="true">/</span><span aria-current="page">{{ $page->title }}</span></nav><div class="page-hero-grid"><div data-reveal><p class="eyebrow">Ibnu Aqil Education Centre</p><h1>{{ $page->title }}</h1>@if($page->summary)<p class="page-lead">{{ $page->summary }}</p>@endif</div><span class="page-ornament" aria-hidden="true">✳</span></div></div></section>
+<section class="section page-section"><div class="container content-layout"><article class="prose" data-reveal>
     @if($page->body)<div class="content-body">{!! nl2br(e($page->body)) !!}</div>@else<p class="content-status">Informasi pada halaman ini belum diterbitkan.</p>@endif
     @if($page->slug === 'kontak')
     <div class="contact-details">

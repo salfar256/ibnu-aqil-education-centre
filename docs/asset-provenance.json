@@ -39,6 +39,108 @@
       "bytes": 927876,
       "jpeg_quality": 70,
       "limitation": "Poster resmi merupakan komposisi desain/foto dari brosur. Jangan dilabel sebagai foto dokumentasi satu kegiatan."
+    },
+    {
+      "file": "public/assets/foto/masjid-ibnu-aqil.jpg",
+      "source": "Canva",
+      "canva_asset_id": "MAGTNoP2kgo",
+      "canva_asset_name": "WhatsApp Image 2023-10-22 at 13.17.51.jpg",
+      "canva_original_dimensions": [
+        1158,
+        868
+      ],
+      "canva_design_id": "DAGTNpTzPKE",
+      "canva_design_title": "Profil MDI Ibnu Aqil",
+      "retrieved": "2026-10-18",
+      "retrieval": "Canva export: aset ditempatkan penuh pada halaman seukuran dimensi aslinya di salinan kerja DAHYXlWMiNU, lalu diekspor (kualitas pro) dan dikompres lokal.",
+      "export_sha256": "a46d6cdfc756ed0a64fa5a2cc3af9a91056fc0b219b8bc04f6f3d00095df075a",
+      "operation": "Ekspor JPG ukuran asli (1158 px, tidak diperbesar ke 1600 px); JPEG optimize/progressive, metadata EXIF dibuang.",
+      "dimensions": [
+        1158,
+        868
+      ],
+      "bytes": 151087,
+      "sha256": "41a9487d6e7cb9107b61b7e1357b51585a514d729af0718d5952ef53aff31d94",
+      "jpeg_quality": 85,
+      "authorization": "Pengguna (pemilik akun Canva) meminta aset ini diunduh untuk website Ibnu Aqil.",
+      "limitation": "Foto dokumentasi bangunan masjid; resolusi asli hanya 1158 px."
+    },
+    {
+      "file": "public/assets/foto/manasik-kabah.jpg",
+      "source": "Canva",
+      "canva_asset_id": "MAGmu3xZVQc",
+      "canva_asset_name": "WhatsApp Image 2025-05-07 at 10.23.10 (1).jpg",
+      "canva_original_dimensions": [
+        2250,
+        4000
+      ],
+      "canva_design_id": "DAGmiOaXFeE",
+      "canva_design_title": "Sosialisasi Ponpes MI > MDI",
+      "canva_design_page": 2,
+      "retrieved": "2026-10-18",
+      "retrieval": "Canva export: aset ditempatkan penuh pada halaman seukuran dimensi aslinya di salinan kerja DAHYXlWMiNU, lalu diekspor (kualitas pro) dan dikompres lokal.",
+      "export_sha256": "fc5d2b0a731e08f4f1673a2782a2e42b833841057fc6a160a1d075f9bc58545d",
+      "operation": "Foto potret: sisi panjang dibatasi 1600 px (900 x 1600) karena lebar 1600 px tidak muat <=400 KB tanpa kualitas JPEG ~43; EXIF dibuang.",
+      "dimensions": [
+        900,
+        1600
+      ],
+      "bytes": 344320,
+      "sha256": "9c6b4901eb9bd2dae25049645d94ec3fe51eaee13d7364d73654e793bf9ca504",
+      "jpeg_quality": 85,
+      "authorization": "Pengguna (pemilik akun Canva) meminta aset ini diunduh untuk website Ibnu Aqil.",
+      "limitation": "Warna langit tampak sudah diedit/ditingkatkan pada file sumber; jangan diklaim sebagai foto tanpa olahan."
+    },
+    {
+      "file": "public/assets/foto/ilustrasi-gerbang.jpg",
+      "source": "Canva",
+      "canva_asset_id": "MAHPcnsd3X4",
+      "canva_asset_name": "Ke-Ibnu-Aqil-an_Rapi.pptx_33.png",
+      "canva_original_dimensions": [
+        1672,
+        941
+      ],
+      "canva_design_id": "DAHPcnhgtBc",
+      "canva_design_title": "Ibadah & ilmu. Orang tua & Guru",
+      "canva_design_page": 1,
+      "retrieved": "2026-10-18",
+      "retrieval": "Canva export: aset ditempatkan penuh pada halaman seukuran dimensi aslinya di salinan kerja DAHYXlWMiNU, lalu diekspor (kualitas pro) dan dikompres lokal.",
+      "export_sha256": "60120f53ef2bd02092dca55c512d561ec019752709499feaba412909d93b5e64",
+      "operation": "Ekspor PNG ukuran asli, di-resize proporsional ke lebar 1600 px dan dikonversi ke JPEG.",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 163248,
+      "sha256": "ca71ff330661d4583c43624b5b26f90226cd36ed60bdb8487caaef8bbdea2077",
+      "jpeg_quality": 85,
+      "authorization": "Pengguna (pemilik akun Canva) meminta aset ini diunduh untuk website Ibnu Aqil.",
+      "limitation": "Ilustrasi (bukan foto dokumentasi); selalu diberi label Ilustrasi."
+    },
+    {
+      "file": "public/assets/foto/logo-yhasb-hd.png",
+      "source": "Canva",
+      "canva_asset_id": "MAHPcpVz2Mg",
+      "canva_asset_name": "Ke-Ibnu-Aqil-an_Rapi.pptx_23.png",
+      "canva_original_dimensions": [
+        723,
+        640
+      ],
+      "canva_design_id": "DAHPcnhgtBc",
+      "canva_design_title": "Ibadah & ilmu. Orang tua & Guru",
+      "canva_design_page": 1,
+      "retrieved": "2026-10-18",
+      "retrieval": "Canva export: aset ditempatkan penuh pada halaman seukuran dimensi aslinya di salinan kerja DAHYXlWMiNU, lalu diekspor (kualitas pro) dan dikompres lokal.",
+      "export_sha256": "2725eb817cf3c63707750f513b6489d71eedc4bef628c2c2c995278c8d5b6bd3",
+      "operation": "Ekspor PNG ukuran asli dengan latar transparan; hanya optimasi PNG lossless, tanpa penggambaran ulang logo.",
+      "dimensions": [
+        723,
+        640
+      ],
+      "bytes": 192966,
+      "sha256": "b323b7c5a5eb0617c3bd3a1939f7206d7354c944c05daacd40b96f186cc3d4d9",
+      "authorization": "Pengguna (pemilik akun Canva) meminta aset ini diunduh untuk website Ibnu Aqil.",
+      "limitation": "Raster 723 x 640 px, bukan vektor; ganti dengan file vektor resmi bila tersedia."
     }
   ]
 }
