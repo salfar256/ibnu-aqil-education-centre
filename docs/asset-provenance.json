@@ -1,0 +1,44 @@
+{
+  "source_url": "https://s.id/brosur_PPDB_IBNU_AQIL_BOGOR_2024_2025",
+  "source_drive_file_id": "11pTd33oOoGaPXz0hUDMqaBlHReDKwjFC",
+  "source_title": "Brosur Gabungan PPDB Lembaga Pendidikan YHASB TP. 2026/2027",
+  "source_actual_format": "JPEG",
+  "source_dimensions": [
+    7972,
+    1536
+  ],
+  "source_sha256": "d7c70508dc49ef8d8240ceee66feeb888ee54a338bce52c02d63ef81a4945c83",
+  "authorization": "Pengguna memberikan sumber terbaru dan mengizinkan penggunaan aset resminya untuk website Ibnu Aqil.",
+  "assets": [
+    {
+      "file": "public/assets/logo-yhasb.png",
+      "source": "same official brochure",
+      "operation": "Rectangular source crop only; no logo recreation and no background removal.",
+      "source_crop_xyxy": [
+        798,
+        92,
+        905,
+        201
+      ],
+      "dimensions": [
+        107,
+        109
+      ],
+      "bytes": 16285,
+      "transparent": false,
+      "limitation": "Potongan logo dari brosur flat; resolusi 107 x 109 piksel. Gunakan kecil; ganti dengan file asli/vector jika tersedia."
+    },
+    {
+      "file": "public/assets/brosur-2026-2027.jpg",
+      "source": "same official brochure",
+      "operation": "Full composition preserved; proportional web resize and JPEG optimization.",
+      "dimensions": [
+        6000,
+        1156
+      ],
+      "bytes": 927876,
+      "jpeg_quality": 70,
+      "limitation": "Poster resmi merupakan komposisi desain/foto dari brosur. Jangan dilabel sebagai foto dokumentasi satu kegiatan."
+    }
+  ]
+}

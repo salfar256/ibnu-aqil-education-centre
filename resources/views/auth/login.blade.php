@@ -1,0 +1,3 @@
+@extends('layouts.auth')
+@section('title','Masuk portal')
+@section('content')<p class="eyebrow">SELAMAT DATANG KEMBALI</p><h2>Masuk ke portal</h2><p>Gunakan akun individu dari sekolah Anda.</p><form method="post" action="{{ url('/login') }}" class="auth-form">@csrf<label for="email">Email</label><input id="email" name="email" type="email" value="{{ old('email') }}" required autocomplete="username" autofocus maxlength="255"><label for="password">Kata sandi</label><input id="password" name="password" type="password" required autocomplete="current-password" maxlength="255"><a href="{{ route('password.request') }}" class="forgot-link">Lupa kata sandi?</a><button class="button button-primary" type="submit">Masuk ke portal →</button></form>@endsection

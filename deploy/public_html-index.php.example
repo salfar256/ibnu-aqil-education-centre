@@ -1,0 +1,18 @@
+<?php
+
+// Only when cPanel cannot point the domain to the application's public/ directory.
+// Copy to /home/CPANEL_USER/public_html/index.php and replace CPANEL_USER below.
+// Copy ONLY public/ assets and public/.htaccess. Keep .env and application outside.
+use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
+
+define('LARAVEL_START', microtime(true));
+$applicationRoot = '/home/CPANEL_USER/ibnu-aqil';
+if (file_exists($maintenance = $applicationRoot.'/storage/framework/maintenance.php')) {
+    require $maintenance;
+}
+require $applicationRoot.'/vendor/autoload.php';
+/** @var Application $app */
+$app = require_once $applicationRoot.'/bootstrap/app.php';
+$app->usePublicPath(__DIR__);
+$app->handleRequest(Request::capture());

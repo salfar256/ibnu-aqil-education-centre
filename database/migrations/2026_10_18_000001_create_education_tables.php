@@ -1,0 +1,19 @@
+<?php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+return new class extends Migration {
+ public function up():void {
+ Schema::create('schools',function(Blueprint $t){$t->id();$t->string('name');$t->string('code',50)->unique();$t->boolean('is_active')->default(true);$t->timestamps();});
+ Schema::table('users',function(Blueprint $t){$t->foreignId('school_id')->nullable()->constrained()->restrictOnDelete();$t->string('role',20)->default('partner');$t->boolean('is_active')->default(true);$t->boolean('must_change_password')->default(true);});
+ Schema::create('activities',function(Blueprint $t){$t->id();$t->string('title');$t->string('slug')->unique();$t->string('theme');$t->unsignedSmallInteger('year');$t->text('description')->nullable();$t->string('status',20)->default('draft')->index();$t->timestamps();});
+ Schema::create('materials',function(Blueprint $t){$t->id();$t->foreignId('activity_id')->constrained()->restrictOnDelete();$t->string('title');$t->string('slug')->unique();$t->text('description');$t->string('type',20);$t->string('author_name');$t->string('status',20)->default('draft')->index();$t->timestamp('published_at')->nullable();$t->string('video_provider',20)->nullable();$t->string('video_id',100)->nullable();$t->string('video_protection',20)->default('link');$t->timestamps();});
+ Schema::create('assets',function(Blueprint $t){$t->id();$t->foreignId('material_id')->nullable()->constrained()->cascadeOnDelete();$t->string('original_name');$t->string('path')->unique();$t->string('mime_type',80);$t->unsignedBigInteger('size');$t->boolean('allow_download')->default(true);$t->string('visibility',20)->default('private');$t->timestamps();});
+ Schema::create('access_grants',function(Blueprint $t){$t->id();$t->foreignId('school_id')->constrained()->restrictOnDelete();$t->foreignId('activity_id')->constrained()->restrictOnDelete();$t->timestamp('expires_at')->nullable();$t->boolean('allow_download')->default(false);$t->boolean('is_active')->default(true);$t->unique(['school_id','activity_id']);$t->timestamps();});
+ Schema::create('content_pages',function(Blueprint $t){$t->id();$t->string('slug')->unique();$t->string('title');$t->text('summary')->nullable();$t->longText('body')->nullable();$t->string('type',20)->default('page');$t->string('status',20)->default('draft');$t->timestamp('verified_at')->nullable();$t->text('source_note')->nullable();$t->timestamps();});
+ Schema::create('articles',function(Blueprint $t){$t->id();$t->string('kind',20)->default('news');$t->string('slug')->unique();$t->string('title');$t->text('summary');$t->longText('body');$t->string('status',20)->default('draft');$t->timestamp('verified_at')->nullable();$t->timestamp('published_at')->nullable();$t->foreignId('cover_asset_id')->nullable()->constrained('assets')->nullOnDelete();$t->timestamps();$t->index(['status','kind','published_at']);});
+ Schema::create('settings',function(Blueprint $t){$t->id();$t->string('key')->unique();$t->text('value')->nullable();$t->timestamps();});
+ Schema::create('audit_logs',function(Blueprint $t){$t->id();$t->foreignId('user_id')->nullable()->constrained()->nullOnDelete();$t->foreignId('school_id')->nullable()->constrained()->nullOnDelete();$t->string('action',80)->index();$t->string('subject_type')->nullable();$t->unsignedBigInteger('subject_id')->nullable();$t->string('ip_hash',64)->nullable();$t->timestamp('created_at')->useCurrent()->index();});
+ }
+ public function down():void {foreach(['audit_logs','settings','articles','content_pages','access_grants','assets','materials','activities'] as $table)Schema::dropIfExists($table);Schema::table('users',function(Blueprint $t){$t->dropConstrainedForeignId('school_id');$t->dropColumn(['role','is_active','must_change_password']);});Schema::dropIfExists('schools');}
+};

@@ -1,0 +1,5 @@
+<?php
+namespace App\Http\Middleware;
+use Closure;
+use Illuminate\Http\Request;
+class SecurityHeaders {public function handle(Request $r,Closure $next){$s=$next($r);foreach(['X-Content-Type-Options'=>'nosniff','X-Frame-Options'=>'SAMEORIGIN','Referrer-Policy'=>'strict-origin-when-cross-origin','Permissions-Policy'=>'camera=(), microphone=(), geolocation=()','Content-Security-Policy'=>"default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'self' https://www.youtube-nocookie.com https://player.vimeo.com; object-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"] as $key=>$val)$s->headers->set($key,$val);if($r->isSecure())$s->headers->set('Strict-Transport-Security','max-age=31536000');if($r->is('portal*','admin*','login*','password*','akun*','berkas*')){$s->headers->set('X-Robots-Tag','noindex, nofollow, noarchive');$s->headers->set('Cache-Control','private, no-store, max-age=0');}return $s;}}
