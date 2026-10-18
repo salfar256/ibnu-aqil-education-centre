@@ -44,6 +44,8 @@ Konten baru selalu dimulai sebagai draf. Sebelum menerbitkan halaman, berita, pr
 
 Di **Kontak & pendaftaran**, simpan hanya email, telepon, alamat, WhatsApp, lokasi, dan tautan pendaftaran resmi yang sudah dikonfirmasi. Kosongkan yang belum diketahui. Semua tautan harus HTTPS; WhatsApp memakai `https://wa.me/NOMOR` atau `https://api.whatsapp.com/send?...`. Pengaturan ini langsung dapat digunakan website publik. Tautan pendaftaran mengarah ke sistem yang sudah ada.
 
+**Foto tampilan website** (hero beranda, galeri "Suasana Ibnu Aqil", dan foto pada profil unit) dibaca dari `public/assets/foto/`, bukan dari unggahan admin. Nama berkas yang dikenali: `masjid-ibnu-aqil.jpg`, `manasik-kabah.jpg`, `ilustrasi-gerbang.jpg`, dan logo `logo-yhasb-hd.png`. Slot hanya tampil jika berkasnya ada; tanpa berkas, website memakai ilustrasi bawaan. Gunakan foto resmi yang sudah diizinkan (lebar minimal 1600 px, JPEG ≤ 400 KB), utamakan foto gedung/lingkungan, dan hindari wajah peserta didik tanpa persetujuan wali. Catat sumber setiap berkas di `docs/asset-provenance.json`.
+
 ## Pemantauan dan pemeliharaan
 
 Ringkasan admin menunjukkan jumlah lampiran dan total ukuran yang tercatat pada database. Ini bukan seluruh penggunaan cPanel: jatah hosting 15 GB juga mencakup kode aplikasi, database, email, log, dan backup. Periksa pemakaian aktual di cPanel, hapus backup lama sesuai kebijakan, dan optimalkan foto/PDF sebelum unggah.
