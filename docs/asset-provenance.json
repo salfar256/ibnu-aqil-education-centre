@@ -141,6 +141,138 @@
       "sha256": "b323b7c5a5eb0617c3bd3a1939f7206d7354c944c05daacd40b96f186cc3d4d9",
       "authorization": "Pengguna (pemilik akun Canva) meminta aset ini diunduh untuk website Ibnu Aqil.",
       "limitation": "Raster 723 x 640 px, bukan vektor; ganti dengan file vektor resmi bila tersedia."
+    },
+    {
+      "file": "public/assets/logo/pesantren.png",
+      "source": "Canva",
+      "canva_design_id": "DAHMzdNnZRk",
+      "canva_design_title": "Logo di YHASB",
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "canva_design_page": 2,
+      "description": "Logo Ma'had Ad Dirasah Al Islamiyyah Ibnu Aqil",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG 600 x 600 kualitas pro dengan latar transparan langsung dari desain.",
+      "export_sha256": "cdcaf2da668080b52a03ae66697c7e8a2daf6978f03f4b6d9f3e3d424ae329a9",
+      "operation": "Area transparan dipangkas, logo diletakkan di kanvas persegi transparan, lalu diperkecil ke 320 x 320 px; tanpa penggambaran ulang.",
+      "dimensions": [
+        320,
+        320
+      ],
+      "bytes": 61839,
+      "sha256": "c36d08bd8a62aa72170d9522962e2ebe1171aaf5594f7a0b42412ebcca7c05a8",
+      "transparent": true,
+      "authorization": "Pengguna menyediakan proyek logo ini di folder Canva Brosur untuk website Ibnu Aqil.",
+      "limitation": "Raster, bukan vektor. Halaman 8–9 proyek (tanda tangan dan stempel) sengaja tidak digunakan."
+    },
+    {
+      "file": "public/assets/logo/smp.png",
+      "source": "Canva",
+      "canva_design_id": "DAHMzdNnZRk",
+      "canva_design_title": "Logo di YHASB",
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "canva_design_page": 3,
+      "description": "Logo SMP Ibnu Aqil Bogor",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG 600 x 600 kualitas pro dengan latar transparan langsung dari desain.",
+      "export_sha256": "af11f2be501124e9f05277e613bb98951521aa306a2fb4ed8a466b9b2c2b3cb3",
+      "operation": "Area transparan dipangkas, logo diletakkan di kanvas persegi transparan, lalu diperkecil ke 320 x 320 px; tanpa penggambaran ulang.",
+      "dimensions": [
+        320,
+        320
+      ],
+      "bytes": 76204,
+      "sha256": "11e987b18db78fd0562ee5c8b4f1fb4defbf8fdfff1ae90ba098f6794d142b90",
+      "transparent": true,
+      "authorization": "Pengguna menyediakan proyek logo ini di folder Canva Brosur untuk website Ibnu Aqil.",
+      "limitation": "Raster, bukan vektor. Halaman 8–9 proyek (tanda tangan dan stempel) sengaja tidak digunakan."
+    },
+    {
+      "file": "public/assets/logo/sma.png",
+      "source": "Canva",
+      "canva_design_id": "DAHMzdNnZRk",
+      "canva_design_title": "Logo di YHASB",
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "canva_design_page": 4,
+      "description": "Logo SMA Ibnu Aqil",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG 600 x 600 kualitas pro dengan latar transparan langsung dari desain.",
+      "export_sha256": "9429fb7e1f4312c1cfad3048e870be755c02ae4fdbd412543b7f4cf20297d583",
+      "operation": "Area transparan dipangkas, logo diletakkan di kanvas persegi transparan, lalu diperkecil ke 320 x 320 px; tanpa penggambaran ulang.",
+      "dimensions": [
+        320,
+        320
+      ],
+      "bytes": 57094,
+      "sha256": "21631b22fc9bc1ffe6fc5220015b5e2ac67cba8eaafaa6b68cda690ff48d94e4",
+      "transparent": true,
+      "authorization": "Pengguna menyediakan proyek logo ini di folder Canva Brosur untuk website Ibnu Aqil.",
+      "limitation": "Raster, bukan vektor. Halaman 8–9 proyek (tanda tangan dan stempel) sengaja tidak digunakan."
+    },
+    {
+      "file": "public/assets/logo/smk.png",
+      "source": "Canva",
+      "canva_design_id": "DAHMzdNnZRk",
+      "canva_design_title": "Logo di YHASB",
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "canva_design_page": 5,
+      "description": "Logo SMK Ibnu Aqil",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG 600 x 600 kualitas pro dengan latar transparan langsung dari desain.",
+      "export_sha256": "e5fc6a516fcb0f0e56e5012c3486d085750f1111ba1c0781c49db7b32275ba21",
+      "operation": "Area transparan dipangkas, logo diletakkan di kanvas persegi transparan, lalu diperkecil ke 320 x 320 px; tanpa penggambaran ulang.",
+      "dimensions": [
+        320,
+        320
+      ],
+      "bytes": 56123,
+      "sha256": "9f8580f7a71d4ffa0d5163c9b165627f397147e6367c5d35e3f52bcc79ecb97f",
+      "transparent": true,
+      "authorization": "Pengguna menyediakan proyek logo ini di folder Canva Brosur untuk website Ibnu Aqil.",
+      "limitation": "Raster, bukan vektor. Halaman 8–9 proyek (tanda tangan dan stempel) sengaja tidak digunakan."
+    },
+    {
+      "file": "public/assets/logo/mi.png",
+      "source": "Canva",
+      "canva_design_id": "DAHMzdNnZRk",
+      "canva_design_title": "Logo di YHASB",
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "canva_design_page": 6,
+      "description": "Logo Madrasah Ibtidaiyah Ibnu Aqil",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG 600 x 600 kualitas pro dengan latar transparan langsung dari desain.",
+      "export_sha256": "ef3942c10bfd280ab7b8502b5d3abd240893fa315cf9df8519d7669f2f5b2ae5",
+      "operation": "Area transparan dipangkas, logo diletakkan di kanvas persegi transparan, lalu diperkecil ke 320 x 320 px; tanpa penggambaran ulang.",
+      "dimensions": [
+        320,
+        320
+      ],
+      "bytes": 95507,
+      "sha256": "fac968c258dcc49a06ea3f255786004c0295b88783b40ea266a925a09c3a53d1",
+      "transparent": true,
+      "authorization": "Pengguna menyediakan proyek logo ini di folder Canva Brosur untuk website Ibnu Aqil.",
+      "limitation": "Raster, bukan vektor. Halaman 8–9 proyek (tanda tangan dan stempel) sengaja tidak digunakan."
+    },
+    {
+      "file": "public/assets/logo/kbihu.png",
+      "source": "Canva",
+      "canva_design_id": "DAHMzdNnZRk",
+      "canva_design_title": "Logo di YHASB",
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "canva_design_page": 7,
+      "description": "Logo Bimbingan Ibadah Haji & Umroh Ibnu Aqil",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG 600 x 600 kualitas pro dengan latar transparan langsung dari desain.",
+      "export_sha256": "2c55ee2181d7f6c838ea5677bfcf30ddc4702a095bc55583d734106b7f697e8e",
+      "operation": "Area transparan dipangkas, logo diletakkan di kanvas persegi transparan, lalu diperkecil ke 320 x 320 px; tanpa penggambaran ulang.",
+      "dimensions": [
+        320,
+        320
+      ],
+      "bytes": 121473,
+      "sha256": "d9656645cebbe764b9ce25aae83e6bd56d9df2bf58a204ecf5837a5c9b8c5370",
+      "transparent": true,
+      "authorization": "Pengguna menyediakan proyek logo ini di folder Canva Brosur untuk website Ibnu Aqil.",
+      "limitation": "Raster, bukan vektor. Halaman 8–9 proyek (tanda tangan dan stempel) sengaja tidak digunakan."
     }
   ]
 }

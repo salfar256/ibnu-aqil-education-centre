@@ -212,3 +212,9 @@ body{text-rendering:optimizeLegibility}
 .marquee-group[aria-hidden]{display:none}
 .marquee-group{flex-wrap:wrap;justify-content:center;gap:12px 24px}
 }
+.unit-card-logo{width:64px;height:64px;object-fit:contain;background:#fff;border:1px solid #dfe5d8;border-radius:16px;padding:6px}
+.unit-hero-logo{display:block;width:96px;height:96px;object-fit:contain;background:#fff;border-radius:22px;padding:8px;margin-bottom:22px;box-shadow:0 8px 24px #0000002e}
+.social-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.social-link{display:inline-flex;align-items:center;gap:7px;border:1px solid currentColor;border-radius:20px;padding:7px 12px;font-size:11px;font-weight:600;line-height:1}
+.social-link svg{width:16px;height:16px;flex:none}
+.contact-details .social-links a{border-bottom:1px solid currentColor}

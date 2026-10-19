@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Models\{Article, Asset, ContentPage, School, User};
+use App\Models\{Article, Asset, ContentPage, School, Setting, User};
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
@@ -107,5 +107,26 @@ class PublicSiteTest extends TestCase
         $this->post('/admin/manage/pages', $payload)->assertRedirect()->assertSessionHasNoErrors();
         $this->assertNotNull(ContentPage::where('slug', 'tentang')->firstOrFail()->verified_at);
         $this->get(route('public.page', 'tentang'))->assertOk()->assertSee('Informasi terverifikasi.');
+    }
+
+    public function test_official_social_and_map_links_render_and_foreign_urls_are_rejected(): void
+    {
+        $this->page('kontak', ['title' => 'Mari terhubung']);
+        $school = School::create(['name' => 'Lembaga Pengujian', 'code' => 'SOCIAL', 'is_active' => true]);
+        $admin = User::create(['school_id' => $school->id, 'name' => 'Admin Uji', 'email' => 'social@example.test', 'password' => 'Correct!Password2026', 'role' => 'admin', 'is_active' => true, 'must_change_password' => false]);
+        $valid = ['whatsapp_url' => 'https://wa.me/6285810183161', 'maps_url' => 'https://www.google.com/maps/search/?api=1&query=Ibnu+Aqil+Education+Centre', 'instagram_url' => 'https://www.instagram.com/ibnuaqilmedia', 'youtube_url' => 'https://www.youtube.com/@ibnuaqilmedia', 'tiktok_url' => 'https://www.tiktok.com/@ibnuaqilmedia', 'verified' => 1];
+
+        $this->actingAs($admin)->post('/admin/manage/settings', ['instagram_url' => 'https://evil.example/ibnuaqilmedia'] + $valid)->assertSessionHasErrors('instagram_url');
+        $this->post('/admin/manage/settings', ['tiktok_url' => 'https://www.tiktok.com/@ibnuaqilmedia?_r=1'] + $valid)->assertSessionHasErrors('tiktok_url');
+        $this->post('/admin/manage/settings', ['maps_url' => 'https://maps.example.com/ibnu-aqil'] + $valid)->assertSessionHasErrors('maps_url');
+        $this->post('/admin/manage/settings', $valid)->assertRedirect()->assertSessionHasNoErrors();
+
+        $this->get(route('public.page', 'kontak'))->assertOk()
+            ->assertSee('WhatsApp PPDB')->assertSee('https://wa.me/6285810183161', false)
+            ->assertSee('https://www.instagram.com/ibnuaqilmedia', false)->assertSee('https://www.youtube.com/@ibnuaqilmedia', false)
+            ->assertSee('https://www.tiktok.com/@ibnuaqilmedia', false)->assertSee('Buka di Google Maps');
+
+        Setting::where('key', 'youtube_url')->update(['value' => 'https://evil.example/@ibnuaqilmedia']);
+        $this->get(route('public.page', 'kontak'))->assertOk()->assertDontSee('evil.example');
     }
 }

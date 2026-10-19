@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-10-18",
+  "verified_at": "2026-10-19",
   "language": "id",
   "verification": {
     "basis": "Brosur tahun ajaran 2026–2027 yang diberikan dan dikonfirmasi pengguna sebagai sumber terbaru; gambar asli diperiksa per bagian.",
@@ -14,7 +14,29 @@
     "local_source": "work/sources/brosur-terbaru.jpg",
     "public_content": true,
     "fees_verified_for_current_publication": false,
-    "exact_admissions_period_verified": false
+    "exact_admissions_period_verified": false,
+    "supplementary_sources": {
+      "basis": "Brosur unit di folder Canva \"Brosur\" (FAHYcWnWf8c) yang diberikan pengguna pada 19 Oktober 2026. Hanya informasi profil yang tidak bergantung tahun ajaran yang diambil.",
+      "designs": {
+        "DAGTx3cfnGc": "Brosur Ponpes v1",
+        "DAGSbZmNvo8": "Brosur SMP v1",
+        "DAGTxkIAnoc": "SMP v2",
+        "DAGTxx1mZMM": "Brosur SMA v1",
+        "DAGTx2YmPeg": "Brosur SMK v1",
+        "DAGTWQrie88": "SMK dari TP. 2025/2026",
+        "DAGSbV_sBS8": "Gabungan TP. 2025/2026",
+        "DAHMzdNnZRk": "Logo di YHASB"
+      },
+      "not_published": [
+        "Biaya pendaftaran dan administrasi (brosur TP 2024/2025 dan 2025/2026)",
+        "Periode dan jam layanan pendaftaran",
+        "Klaim terakreditasi A dan Sekolah Adiwiyata",
+        "Daftar prestasi SMK 2015–2022",
+        "Program berkarir dan studium Jerman, Jepang, Korea",
+        "Nomor kontak unit selain WhatsApp PPDB yang diberikan pengguna",
+        "Tanda tangan dan stempel pada proyek logo"
+      ]
+    }
   },
   "identity": {
     "name": "Ibnu Aqil Education Centre",
@@ -25,12 +47,17 @@
     "telephone": "02518638879",
     "telephone_display": "(0251) 8638879",
     "addresses": [
-      "Jl. Lingkar Laladon No. 256, Ciomas, Bogor",
+      "Jl. Lingkar Laladon No. 256A, Laladon, Ciomas, Kabupaten Bogor 16610",
       "Jl. Cihideung Keramat, Purwasari, Dramaga, Bogor"
     ],
-    "instagram_url": "https://instagram.com/ibnuaqilmedia",
+    "instagram_url": "https://www.instagram.com/ibnuaqilmedia",
     "source_url": "https://s.id/brosur_PPDB_IBNU_AQIL_BOGOR_2024_2025",
-    "founding_year_from_microsite": 1992
+    "founding_year_from_microsite": 1992,
+    "whatsapp_purpose": "PPDB",
+    "youtube_url": "https://www.youtube.com/@ibnuaqilmedia",
+    "tiktok_url": "https://www.tiktok.com/@ibnuaqilmedia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Ibnu+Aqil+Education+Centre+Ciomas+Bogor",
+    "social_source": "Diberikan langsung oleh pengguna pada 19 Oktober 2026; parameter pelacakan berbagi (si, _r, _t) dihapus."
   },
   "about": {
     "title": "Pendidikan dan pembinaan dalam satu lingkungan Ibnu Aqil",
@@ -62,11 +89,14 @@
       "category": "Sekolah Menengah Pertama",
       "title": "Mengembangkan minat, ilmu, dan pembiasaan ibadah",
       "excerpt": "BTQ Plus, tahfidz, dan program kepesantrenan mendampingi kegiatan belajar serta pilihan ekstrakurikuler siswa.",
-      "body": "SMP Ibnu Aqil menyediakan pembelajaran dengan BTQ Plus, ekstrakurikuler tahfidz, dan muatan lokal keagamaan dalam program pesantren. Brosur resmi juga memperkenalkan pilihan ekstrakurikuler untuk mendukung minat dan bakat siswa serta sistem absensi elektronik.",
+      "body": "SMP Ibnu Aqil menyediakan pembelajaran dengan BTQ Plus, ekstrakurikuler tahfidz, dan muatan lokal keagamaan dalam program pesantren. Brosur resmi juga memperkenalkan pilihan ekstrakurikuler untuk mendukung minat dan bakat siswa serta sistem absensi elektronik.\n\nEkstrakurikuler yang diperkenalkan dalam brosur SMP meliputi Pramuka, Futsal, Handball, Badminton, Panahan, Marawis, Karate, Pencak Silat (SMI), Angklung, Komputer, Paduan Suara, Math Club, English Club, Sains Club, Kaligrafi, dan Seni Baca Al-Qur'an (Tilawah).\n\nFasilitas yang tercantum: ruang kelas, asrama pondok pesantren, ruang bimbingan dan konseling, laboratorium komputer, perpustakaan, gedung aula, gedung semi indoor, lapangan olahraga, dan Masjid Salapan Bentang.",
       "programs": [
+        "Kegiatan Dhuha bersama",
+        "Tadarus Al-Qur'an",
         "BTQ Plus",
-        "Ekstrakurikuler tahfidz",
+        "Program Tilawati",
         "Muatan lokal keagamaan dan program pesantren",
+        "Ekstrakurikuler tahfidz",
         "Pilihan ekstrakurikuler sesuai minat dan bakat",
         "Absensi elektronik"
       ],
@@ -75,18 +105,23 @@
     },
     {
       "slug": "sma",
-      "name": "SMA Ibnu Aqil",
+      "name": "SMA Ibnu Aqil Boarding School",
       "category": "Sekolah Menengah Atas",
       "title": "Menumbuhkan bekal belajar, kemandirian, dan kepemimpinan",
       "excerpt": "Boarding school, bimbingan belajar intensif, English Conversation, serta pengembangan keterampilan kepemimpinan.",
-      "body": "SMA Ibnu Aqil memperkenalkan program boarding school dan bimbingan belajar intensif. Program English Conversation, Santripreneur, praktik mengajar, dan pengembangan keterampilan kepemimpinan menjadi bagian dari kegiatan yang tercantum dalam brosur resmi tahun ajaran 2026–2027.",
+      "body": "SMA Ibnu Aqil memperkenalkan program boarding school dan bimbingan belajar intensif. Program English Conversation, Santripreneur, praktik mengajar, dan pengembangan keterampilan kepemimpinan menjadi bagian dari kegiatan yang tercantum dalam brosur resmi tahun ajaran 2026–2027.\n\nKitab kuning yang dipelajari meliputi Nahwu (Metode Amsilati, Jurumiyah, Mukhtashar), Sharaf (Tashrif Amsilati, Nadzhom Maqshud, Kailani), Fiqih (Al-Ghayah wat Taqrib, Fathul Mu'in), Akhlak (Ta'limul Muta'allim, Nashaihul 'Ibad, 'Uqudul Lujain, Adabul 'Alim), Tauhid (Tijan Ad-Darari, Fathul Majid), Tarikh (Khulashoh Nurul Yaqin, Dardir Mi'raj), serta Hadis (Arba'in Nawawi, Mukhtarul Hadits, 'Ushfuriyah).\n\nEkstrakurikuler: paduan suara, bulu tangkis, pencak silat GASMI Pagar Nusa, pramuka, handball, dan futsal. Fasilitas sekolah meliputi masjid, aula serbaguna, laboratorium komputer, lapangan semi indoor, lapangan outdoor, ruang kelas, asrama putra dan putri, perpustakaan, serta ruang auditorium.",
       "programs": [
         "Boarding school",
+        "Kurikulum Merdeka",
         "Bimbingan belajar intensif",
-        "English Conversation",
+        "Pengajian kitab kuning dengan Metode Amsilati",
+        "Hafalan Al-Qur'an dan hadis",
+        "Bacaan Al-Qur'an metode Tilawati",
+        "Bahasa Arab dan Inggris, termasuk English Conversation",
+        "Pelatihan profesi mengajar untuk kelas akhir",
         "Santripreneur",
-        "Program praktik mengajar",
-        "Pengembangan keterampilan kepemimpinan"
+        "Pengembangan keterampilan kepemimpinan",
+        "Pencak Silat GASMI"
       ],
       "source_section": "SEKOLAH MENENGAH ATAS",
       "status": "published"
@@ -96,15 +131,20 @@
       "name": "SMK Ibnu Aqil",
       "category": "Sekolah Menengah Kejuruan",
       "title": "Keterampilan untuk berkarya dan melanjutkan langkah",
-      "excerpt": "Program keahlian Farmasi, Akuntansi, dan Pemasaran, dengan praktik kerja lapangan serta kunjungan industri.",
-      "body": "SMK Ibnu Aqil memperkenalkan program keahlian Farmasi, Akuntansi, dan Pemasaran. Pembelajaran didukung praktik kerja lapangan, kunjungan industri, serta pengembangan potensi untuk melanjutkan ke perguruan tinggi.",
+      "excerpt": "Program keahlian Bisnis dan Pemasaran, Farmasi, serta Akuntansi dan Keuangan Lembaga, didukung praktik kerja lapangan dan kunjungan industri.",
+      "body": "SMK Ibnu Aqil memperkenalkan tiga program keahlian, yaitu Bisnis dan Pemasaran, Farmasi, serta Akuntansi dan Keuangan Lembaga. Pembelajaran didukung praktik kerja lapangan, kunjungan industri, serta pengembangan potensi untuk melanjutkan ke perguruan tinggi.\n\nVisi: \"Menghasilkan lulusan yang kompeten di bidang keahliannya dengan karakter utama jujur, mampu bekerja produktif, dan cerdas.\"\n\nMisi:\n• Melaksanakan proses pembelajaran efektif dalam bidang kompetensi dan kompetensi pendukung lainnya di kelas.\n• Melaksanakan pembiasaan kerja jujur, produktif, dan cerdas secara simulatif.\n• Melaksanakan bimbingan praktik ibadah secara konsisten sebagai daya dukung tercapainya visi dan misi program keahlian.\n\nKurikulum Merdeka diterapkan dengan pembelajaran berbasis masalah (problem-based learning) dan soft skills: pembelajaran berbasis proyek dan industri, teaching factory, serta pengajar dari dunia usaha dan dunia industri (DU/DI).\n\nBisnis dan Pemasaran membuka jalan menuju karier di bidang manajemen, pemasaran digital, periklanan, dan keuangan. Farmasi mengasah bakat dan minat peserta didik di bidang kesehatan dan ilmu farmasi melalui program yang aplikatif. Akuntansi dan Keuangan Lembaga memberikan landasan keterampilan praktis dan teoretis untuk dunia keuangan dan akuntansi.",
       "programs": [
+        "Bisnis dan Pemasaran",
         "Farmasi",
-        "Akuntansi",
-        "Pemasaran",
-        "Praktik kerja lapangan",
+        "Akuntansi dan Keuangan Lembaga",
+        "Praktik kerja lapangan (PKL)",
         "Kunjungan industri",
-        "Pengembangan potensi ke perguruan tinggi negeri"
+        "Projek Penguatan Profil Pelajar Pancasila dan Budaya Kerja (P5)",
+        "Program guru magang bersama DU/DI",
+        "Pembiasaan Dhuha dan tadarus bersama",
+        "Bimbingan baca tulis Al-Qur'an metode Tilawati",
+        "Pengembangan potensi ke perguruan tinggi negeri",
+        "Ekstrakurikuler futsal, silat, handball, badminton, basket, dan seni"
       ],
       "draft_details": [
         "Persyaratan, mitra, jadwal, dan biaya program karier Jerman/Korea belum tersedia untuk dipublikasikan rinci."
@@ -118,17 +158,19 @@
       "category": "Pondok Pesantren",
       "title": "Mendalami ilmu, membiasakan ibadah, membangun karakter",
       "excerpt": "Kajian kitab kuning, bahasa Arab dan Inggris, tahsin dan tahfidz Al-Qur'an, serta pembinaan kepemimpinan.",
-      "body": "Pondok Pesantren Ibnu Aqil memperkenalkan kajian kitab kuning, bahasa Arab dan Inggris, serta tahsin dan tahfidz Al-Qur'an. Pembinaan karakter, public speaking, kepemimpinan, dan pembiasaan ibadah melengkapi program pesantren.\n\nMetode pengajian yang tercantum dalam brosur resmi meliputi bandongan, sorogan, dan klasikal. Program juga mencakup bahtsul masail serta pembinaan ibadah, zikir, dan riyadhah.",
+      "body": "Pondok Pesantren Ibnu Aqil (Ma'had Ad-Dirasah Al-Islamiyyah Ibnu Aqil, MDIIA) adalah lembaga pendidikan Islam putra dan putri berbasis faham Ahlussunnah wal Jama'ah an-Nahdliyyah. Pesantren didirikan oleh KH. Agus Salim, S.Sos., M.M. pada tahun 1994 dengan tujuan mencetak generasi yang mampu menghadapi kemajuan zaman dan tantangan global dengan akhlak dan ilmu yang mumpuni.\n\nMotto pesantren:\nالمحافظة على القديم الصالح والأخذ بالجديد الأصلح\n\"Menjaga tradisi lama yang baik, serta mengambil tradisi baru yang lebih baik.\"\n\nMetode pengajian:\n• Bandongan: kiai membacakan kitab, menerjemahkan, dan menjelaskan.\n• Sorogan: santri menghadap guru secara perorangan dengan membawa kitab yang dipelajari.\n• Klasikal: pengajaran per kelas agar santri lebih mudah memahami pelajaran sesuai tingkat kemampuannya.",
       "programs": [
-        "Kajian kitab kuning",
+        "Character building",
+        "Tahsin wa Tahfidzil Qur'an",
+        "Tahfidz wa Fahmul 1000 Hadits",
+        "31 kitab kuning dari berbagai bidang ilmu",
         "Bahasa Arab dan Inggris",
-        "Tahsin dan tahfidz Al-Qur'an",
-        "Pembinaan karakter dan kepemimpinan",
+        "Pembinaan dan pembiasaan ibadah, zikir, dan riyadhah",
+        "Kepemimpinan agama dan sosial kemasyarakatan",
         "Public speaking",
-        "Bahtsul masail",
-        "Bandongan, sorogan, dan klasikal"
+        "Bahtsul masail"
       ],
-      "source_section": "PONDOK PESANTREN",
+      "source_section": "Brosur Ponpes v1 (Canva DAGTx3cfnGc); PONDOK PESANTREN pada brosur 2026–2027.",
       "status": "published"
     },
     {
@@ -152,7 +194,13 @@
     "BTQ Plus",
     "Shalat berjamaah",
     "Program pesantren",
-    "Majlis Bina Ruhiah"
+    "Majlis Bina Ruhiah",
+    "Penguasaan TIK",
+    "Bimbel intensif",
+    "Bimbingan praktik ibadah",
+    "Pengembangan life skill",
+    "Bimbingan dakwah islamiyah",
+    "Bimbingan BTQ metode Tilawati"
   ],
   "facilities": [
     "Masjid",
@@ -165,7 +213,10 @@
     "Laboratorium IPA",
     "Laboratorium farmasi",
     "Auditorium",
-    "Lapangan parkir"
+    "Lapangan parkir",
+    "Asrama pesantren putra dan putri",
+    "Laboratorium sains",
+    "Peralatan kesenian dan olahraga"
   ],
   "extracurriculars": [
     "Tahfidz Al-Qur'an",
@@ -187,15 +238,22 @@
     "Degung",
     "Angklung",
     "Pramuka",
-    "Paduan suara"
+    "Paduan suara",
+    "Paskibra",
+    "Marching band",
+    "Marawis",
+    "Nasyid dan hadroh",
+    "Bulu tangkis",
+    "Basket"
   ],
   "admissions": {
     "title": "Informasi PPDB 2026/2027",
-    "body": "Brosur resmi tahun ajaran 2026/2027 dapat dilihat melalui tautan informasi pendaftaran. Hubungi admin untuk memastikan ketersediaan tempat, persyaratan, periode pendaftaran, dan biaya yang berlaku.",
+    "body": "Brosur resmi tahun ajaran 2026/2027 dapat dilihat pada halaman ini. Untuk pertanyaan PPDB, hubungi admin melalui WhatsApp PPDB 0858-1018-3161 guna memastikan ketersediaan tempat, persyaratan, periode pendaftaran, dan biaya yang berlaku.\n\nDokumen yang biasanya disiapkan untuk SMP, SMA (boarding school), dan SMK:\n• Formulir pendaftaran\n• Fotokopi ijazah yang dilegalisir\n• Pas foto 3x4\n• Fotokopi KTP orang tua atau wali\n• Fotokopi kartu keluarga\n• Fotokopi akta kelahiran\n• Fotokopi kartu NISN (jika ada)\n• Surat keterangan berkelakuan baik dari sekolah asal\n\nUntuk MI Ibnu Aqil:\n• Formulir pendaftaran\n• Pas foto berwarna 3x4\n• Fotokopi KTP orang tua atau wali\n• Fotokopi kartu keluarga\n\nDaftar dokumen diambil dari brosur tahun ajaran sebelumnya. Jumlah lembar, biaya, dan jadwal dapat berubah, jadi konfirmasikan kepada admin PPDB sebelum mendaftar.",
     "url": "https://s.id/brosur_PPDB_IBNU_AQIL_BOGOR_2024_2025",
     "cta": "Lihat informasi pendaftaran",
     "status": "published",
-    "do_not_claim_open": true
+    "do_not_claim_open": true,
+    "whatsapp_url": "https://wa.me/6285810183161"
   },
   "excluded_from_public_seed": [
     "Biaya dari Canva 2025/2026",
@@ -220,6 +278,18 @@
       "gold": "#D8BC62",
       "light": "#F6F4E9"
     },
-    "official_hex_claim": false
+    "official_hex_claim": false,
+    "unit_logos": {
+      "source": "Canva DAHMzdNnZRk \"Logo di YHASB\", halaman 1–7",
+      "files": {
+        "yhasb": "public/assets/logo/yhasb.png",
+        "pesantren": "public/assets/logo/pesantren.png",
+        "smp": "public/assets/logo/smp.png",
+        "sma": "public/assets/logo/sma.png",
+        "smk": "public/assets/logo/smk.png",
+        "mi": "public/assets/logo/mi.png",
+        "kbihu": "public/assets/logo/kbihu.png"
+      }
+    }
   }
 }
