@@ -6,7 +6,7 @@ class SocialLinks {
   'instagram_url'=>'~^https://(?:www\.)?instagram\.com/[A-Za-z0-9._]{1,30}/?$~',
   'youtube_url'=>'~^https://(?:www\.|m\.)?youtube\.com/(?:@[A-Za-z0-9._-]{3,30}|channel/[A-Za-z0-9_-]{24})/?$~',
   'tiktok_url'=>'~^https://(?:www\.)?tiktok\.com/@[A-Za-z0-9._]{2,24}/?$~',
-  'maps_url'=>'~^https://(?:www\.google\.com/maps/|maps\.google\.com/|maps\.app\.goo\.gl/|goo\.gl/maps/)[^\s<>"\']*$~',
+  'maps_url'=>'~^https://(?:www\.google\.com/maps/|maps\.google\.com/|maps\.app\.goo\.gl/|goo\.gl/maps/|share\.google/)[^\s<>"\']*$~',
  ];
  private const LABELS=['instagram_url'=>'Instagram','youtube_url'=>'YouTube','tiktok_url'=>'TikTok'];
  public static function valid(string $key,?string $url):bool{return isset(self::PATTERNS[$key])&&is_string($url)&&strlen($url)<=500&&preg_match(self::PATTERNS[$key],$url)===1;}
