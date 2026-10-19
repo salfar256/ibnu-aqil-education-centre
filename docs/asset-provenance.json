@@ -273,6 +273,431 @@
       "transparent": true,
       "authorization": "Pengguna menyediakan proyek logo ini di folder Canva Brosur untuk website Ibnu Aqil.",
       "limitation": "Raster, bukan vektor. Halaman 8–9 proyek (tanda tangan dan stempel) sengaja tidak digunakan."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/silat-gasmi.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGSbV_sBS8",
+      "canva_design_title": "Gabungan TP. 2025/2026",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        1830,
+        233,
+        2700,
+        893
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        870,
+        660
+      ],
+      "bytes": 101286,
+      "sha256": "f69c84660b40aac11c5aa88c3255cf9f28650e3f068052cc474e4258ce6572f5",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/pramuka-membaca.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGSbV_sBS8",
+      "canva_design_title": "Gabungan TP. 2025/2026",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        2979,
+        229,
+        4200,
+        1009
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        1200,
+        767
+      ],
+      "bytes": 108614,
+      "sha256": "689e825cc7ec7418f03e892d21e619690d6a93f98dda8b14692a971f29adb7a7",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/shalat-dhuha.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGSbV_sBS8",
+      "canva_design_title": "Gabungan TP. 2025/2026",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        150,
+        2010,
+        1400,
+        2470
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        1200,
+        442
+      ],
+      "bytes": 72431,
+      "sha256": "1db8e489faf510d7e36987ee006979d4223a88b42713888c462d31e370488454",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/pelepasan-siswa.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTWQrie88",
+      "canva_design_title": "SMK dari TP. 2025/2026",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        0,
+        0,
+        1180,
+        845
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        1180,
+        845
+      ],
+      "bytes": 90998,
+      "sha256": "32be208c2bb873f88fbfbc9ab5ad2e4a7d3ba4ce547254c99cf584954f94c9ed",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/tadarus-bersama.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTWQrie88",
+      "canva_design_title": "SMK dari TP. 2025/2026",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        1510,
+        345,
+        2620,
+        1095
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        1110,
+        750
+      ],
+      "bytes": 100333,
+      "sha256": "caaabee00deb78750e6a8e9a396ff8dc8c8953c50847a48ab6b76b6e40cdc46f",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/praktik-farmasi.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTWQrie88",
+      "canva_design_title": "SMK dari TP. 2025/2026",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        1988,
+        2764,
+        2475,
+        3476
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        487,
+        712
+      ],
+      "bytes": 37541,
+      "sha256": "ee6a547b000e16c294fab08672b59a984487a727f1ea07e6901732fc5112a368",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/lab-farmasi.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTWQrie88",
+      "canva_design_title": "SMK dari TP. 2025/2026",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        1508,
+        2764,
+        1988,
+        3476
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        480,
+        712
+      ],
+      "bytes": 34640,
+      "sha256": "68d040c9bddd50e7295a91121ed675d362308548d070369d63212d5c2eba6eb5",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/paskibra.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTWQrie88",
+      "canva_design_title": "SMK dari TP. 2025/2026",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        2475,
+        2764,
+        3000,
+        3476
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        525,
+        712
+      ],
+      "bytes": 38337,
+      "sha256": "08dbd2657cd148eedcd859378fc4801d7baab70314d8612b34a9ca3a118eebdd",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/santri-putra.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTxx1mZMM",
+      "canva_design_title": "Brosur SMA v1",
+      "canva_design_page": 1,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 3200 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        2225,
+        1265,
+        3015,
+        1730
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        790,
+        465
+      ],
+      "bytes": 84086,
+      "sha256": "bbae2ae255cdc1de27ddc17b7779417537083044c83e7d16351923ccfa1b97e2",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/juara-akuntansi.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTxx1mZMM",
+      "canva_design_title": "Brosur SMA v1",
+      "canva_design_page": 1,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 3200 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        0,
+        560,
+        1530,
+        1540
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        1200,
+        769
+      ],
+      "bytes": 123949,
+      "sha256": "b67ee75e62604b13265e8db699524a053c696cc0b7d66dbd24a81bccb5a65180",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/santriwati-kitab.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGSbV_sBS8",
+      "canva_design_title": "Gabungan TP. 2025/2026",
+      "canva_design_page": 1,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        3440,
+        560,
+        4400,
+        1400
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        960,
+        840
+      ],
+      "bytes": 89522,
+      "sha256": "68b68a406b170b708acae099e8a818217c7fed6ffec7bcd2211b8c4810486669",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/gedung-sekolah.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTxx1mZMM",
+      "canva_design_title": "Brosur SMA v1",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 3200 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        1540,
+        1810,
+        1990,
+        2085
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        450,
+        275
+      ],
+      "bytes": 16907,
+      "sha256": "6a87e29946cccf03f95fd4008f8c3f70dd5bce7a3e8c77958e1bd0850cb66472",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/lab-komputer.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTxx1mZMM",
+      "canva_design_title": "Brosur SMA v1",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 3200 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        1540,
+        1450,
+        1990,
+        1730
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        450,
+        280
+      ],
+      "bytes": 19767,
+      "sha256": "7b13cada926ff1a19c56331473061f187e6bb94b71007746473ab59e63657f27",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/lapangan-semi-indoor.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTxx1mZMM",
+      "canva_design_title": "Brosur SMA v1",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 3200 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        1540,
+        1070,
+        1990,
+        1345
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        450,
+        275
+      ],
+      "bytes": 17922,
+      "sha256": "0b4c9b8328719c6c531e7e061a15a2fa9e6de1986672b1947b216d66bc78bab5",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/gerbang-sekolah.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTxx1mZMM",
+      "canva_design_title": "Brosur SMA v1",
+      "canva_design_page": 2,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 3200 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        1540,
+        320,
+        1990,
+        610
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        450,
+        290
+      ],
+      "bytes": 21204,
+      "sha256": "5dbc1199ccef3a8ebc8952626cefc4953eb336e097943ccc690e64a16c3db521",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/lapangan-upacara.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGSbZmNvo8",
+      "canva_design_title": "Brosur SMP v1",
+      "canva_design_page": 1,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        1010,
+        1130,
+        1290,
+        1470
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        280,
+        340
+      ],
+      "bytes": 21254,
+      "sha256": "c87dce7a97ca57b75caff2e0de039bd5d984ac3d0384ee628c40a8920edb6aca",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/kegiatan/pendiri-kh-agus-salim.jpg",
+      "source": "Canva",
+      "canva_design_id": "DAGTx3cfnGc",
+      "canva_design_title": "Brosur Ponpes v1",
+      "canva_design_page": 1,
+      "canva_folder": "Brosur (FAHYcWnWf8c)",
+      "retrieved": "2026-10-19",
+      "retrieval": "Ekspor PNG kualitas pro lebar 4500 px; brosur berupa gambar datar sehingga foto diambil dengan pemotongan persegi.",
+      "crop_xyxy": [
+        1706,
+        1744,
+        3037,
+        3150
+      ],
+      "operation": "Potongan persegi tanpa retus; diperkecil ke lebar maksimum 1200 px bila perlu dan dioptimasi JPEG.",
+      "dimensions": [
+        1200,
+        1268
+      ],
+      "bytes": 141586,
+      "sha256": "7a1d4f912d3226a2a27fe0e3ccc1f288d45fa4de91b179f633c7b2df160c96be",
+      "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
+      "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
     }
   ]
 }

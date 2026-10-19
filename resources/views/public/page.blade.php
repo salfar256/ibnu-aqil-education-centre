@@ -16,7 +16,13 @@
     </div>
     @endif
     @if($page->slug === 'pendaftaran')<figure class="brochure-figure"><a href="{{ asset('assets/brosur-2026-2027.jpg') }}" target="_blank" rel="noopener"><img src="{{ asset('assets/brosur-2026-2027.jpg') }}" alt="Brosur resmi Ibnu Aqil tahun ajaran 2026/2027, enam unit pendidikan dan layanan" width="6000" height="1156" loading="lazy"></a><figcaption>Brosur resmi TP 2026/2027. Klik untuk memperbesar. Ketersediaan, jadwal, dan ketentuan pendaftaran dikonfirmasi melalui admin.</figcaption></figure>@endif
-    @if($page->slug === 'pendaftaran' && preg_match('~^https://wa\.me/[0-9]{9,15}$~', (string) ($settings['whatsapp_url'] ?? '')))<div class="registration-action"><a href="{{ $settings['whatsapp_url'] }}" class="button" target="_blank" rel="noopener noreferrer">Chat WhatsApp PPDB <span aria-hidden="true">↗</span></a><p>Admin PPDB membantu informasi persyaratan, jadwal, dan biaya yang berlaku.</p></div>@endif
     @if($page->slug === 'pendaftaran' && !empty($settings['registration_url']) && preg_match('/^https:\/\//i', $settings['registration_url']))<div class="registration-action"><a href="{{ $settings['registration_url'] }}" class="button" target="_blank" rel="noopener noreferrer">Buka layanan pendaftaran <span aria-hidden="true">↗</span></a><p>Tautan pendaftaran dibuka di tab baru.</p></div>@endif
+    @if($page->slug === 'tentang')@include('public.partials.highlights')@endif
+    @if($page->slug === 'fasilitas')<h2 class="page-subheading">Fasilitas dalam foto</h2>@include('public.partials.facility-grid')@endif
+    @if($page->slug === 'pendaftaran')<h2 class="page-subheading">Alur pendaftaran</h2>@include('public.partials.admission-steps')@endif
 </article><aside class="page-aside"><p class="eyebrow">Jelajahi Ibnu Aqil</p><nav aria-label="Halaman informasi">@foreach(['tentang' => 'Tentang lembaga', 'fasilitas' => 'Fasilitas & program', 'prestasi' => 'Prestasi', 'pendaftaran' => 'Informasi pendaftaran', 'kontak' => 'Hubungi kami'] as $slug => $label)<a href="{{ route('public.page', $slug) }}" @if($page->slug === $slug) aria-current="page" @endif>{{ $label }} <span aria-hidden="true">↗</span></a>@endforeach</nav><div class="aside-note"><span aria-hidden="true">↗</span><h2>Ruang berbagi<br>sekolah mitra.</h2><a class="text-link" href="{{ route('portal.index') }}">Portal Pengimbasan <span aria-hidden="true">→</span></a></div></aside></div></section>
+@if($page->slug === 'tentang')
+@include('public.partials.stats-band')
+@include('public.partials.founder')
+@endif
 @endsection

@@ -129,4 +129,18 @@ class PublicSiteTest extends TestCase
         Setting::where('key', 'youtube_url')->update(['value' => 'https://evil.example/@ibnuaqilmedia']);
         $this->get(route('public.page', 'kontak'))->assertOk()->assertDontSee('evil.example');
     }
+
+    public function test_brochure_showcase_renders_photos_achievements_and_admission_flow(): void
+    {
+        Setting::create(['key' => 'whatsapp_url', 'value' => 'https://wa.me/6285810183161']);
+        Setting::create(['key' => 'maps_url', 'value' => 'https://share.google/1qFq51ITYcl8wqM9V']);
+        $this->page('kontak');
+
+        $this->get(route('public.home'))->assertOk()
+            ->assertSee('assets/foto/kegiatan/pramuka-membaca.jpg', false)
+            ->assertSee('Empat langkah')->assertSee('Chat WhatsApp PPDB')->assertSee('KH. Agus Salim');
+        $this->get(route('public.achievements'))->assertOk()->assertSee('Juara 1 Pencak Silat tingkat Nasional')->assertDontSee('Belum ada prestasi');
+        $this->get(route('public.gallery'))->assertOk()->assertSee('assets/foto/kegiatan/silat-gasmi.jpg', false)->assertSee('Laboratorium komputer');
+        $this->get(route('public.page', 'kontak'))->assertOk()->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false);
+    }
 }

@@ -28,14 +28,12 @@
         "DAHMzdNnZRk": "Logo di YHASB"
       },
       "not_published": [
-        "Biaya pendaftaran dan administrasi (brosur TP 2024/2025 dan 2025/2026)",
-        "Periode dan jam layanan pendaftaran",
-        "Klaim terakreditasi A dan Sekolah Adiwiyata",
-        "Daftar prestasi SMK 2015–2022",
-        "Program berkarir dan studium Jerman, Jepang, Korea",
+        "Nominal biaya pendaftaran dan administrasi TP 2024/2025 dan 2025/2026 (tidak berlaku untuk TP 2026/2027; biaya terbaru melalui admin PPDB)",
+        "Tanggal periode pendaftaran lama (November 2023/2024)",
         "Nomor kontak unit selain WhatsApp PPDB yang diberikan pengguna",
         "Tanda tangan dan stempel pada proyek logo"
-      ]
+      ],
+      "user_authorization_2026_10_19": "Pengguna memberi akses penuh untuk menerbitkan data brosur lama, termasuk foto kegiatan (sudah disetujui siswa dan wali), akreditasi, Adiwiyata, prestasi, dan program karier SMK."
     }
   },
   "identity": {
@@ -56,13 +54,14 @@
     "whatsapp_purpose": "PPDB",
     "youtube_url": "https://www.youtube.com/@ibnuaqilmedia",
     "tiktok_url": "https://www.tiktok.com/@ibnuaqilmedia",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Ibnu+Aqil+Education+Centre+Ciomas+Bogor",
-    "social_source": "Diberikan langsung oleh pengguna pada 19 Oktober 2026; parameter pelacakan berbagi (si, _r, _t) dihapus."
+    "maps_url": "https://share.google/1qFq51ITYcl8wqM9V",
+    "social_source": "Diberikan langsung oleh pengguna pada 19 Oktober 2026; parameter pelacakan berbagi (si, _r, _t) dihapus.",
+    "maps_source": "Tautan bagikan Google Maps dari pengguna, 19 Oktober 2026."
   },
   "about": {
     "title": "Pendidikan dan pembinaan dalam satu lingkungan Ibnu Aqil",
-    "excerpt": "Kenali pendidikan MI, SMP, SMA, SMK, pondok pesantren, serta bimbingan ibadah haji dan umrah di lingkungan Yayasan Haji Agus Salim Bogor.",
-    "body": "Ibnu Aqil Education Centre memperkenalkan satuan pendidikan dan layanan pembinaan di lingkungan Yayasan Haji Agus Salim Bogor (YHASB). Unit yang diperkenalkan meliputi Madrasah Ibtidaiyah, SMP, SMA, SMK, Pondok Pesantren, serta KBIHU Ibnu Aqil.\n\nPembiasaan keagamaan dan pengembangan minat menjadi bagian dari program yang dicantumkan dalam brosur resmi. Website ini membantu keluarga mengenali karakter setiap unit, menemukan informasi pendaftaran, dan mengakses jalur komunikasi resmi.",
+    "excerpt": "Kawasan pendidikan Islam Yayasan Haji Agus Salim Bogor sejak 1994: MI, SMP, SMA Boarding School, SMK, pondok pesantren, dan KBIHU.",
+    "body": "Ibnu Aqil Education Centre adalah kawasan pendidikan di bawah Yayasan Haji Agus Salim Bogor (YHASB) di Laladon, Ciomas, Kabupaten Bogor. Berawal dari Pondok Pesantren Ibnu Aqil yang didirikan KH. Agus Salim, S.Sos., M.M. pada tahun 1994, kini Ibnu Aqil menaungi Madrasah Ibtidaiyah, SMP, SMA Boarding School, SMK, Pondok Pesantren Ma'had Ad-Dirasah Al-Islamiyyah Ibnu Aqil, serta KBIHU Ibnu Aqil.\n\nSetiap unit berbagi lingkungan yang sama. Hari dimulai dengan shalat Dhuha berjamaah dan tadarus, pelajaran umum berjalan beriringan dengan bimbingan baca tulis Al-Qur'an metode Tilawati, dan santri yang tinggal di asrama mendalami kitab kuning melalui metode bandongan, sorogan, dan klasikal. SMP, SMA, dan SMK Ibnu Aqil terakreditasi A.\n\nDengan motto \"menjaga tradisi lama yang baik, serta mengambil tradisi baru yang lebih baik\", Ibnu Aqil membekali putra-putri dengan ilmu, akhlak, dan keterampilan untuk melanjutkan studi maupun berkarya di tengah masyarakat.",
     "source_section": "Identitas YHASB; daftar unit; program unggulan yayasan pada brosur 2026–2027.",
     "status": "published"
   },
@@ -73,7 +72,7 @@
       "category": "Madrasah Ibtidaiyah",
       "title": "Belajar, membangun karakter, dan mengenal Al-Qur'an",
       "excerpt": "Pendidikan dasar dengan program kepesantrenan, pembinaan karakter, dan bimbingan baca tulis Al-Qur'an.",
-      "body": "MI Ibnu Aqil memperkenalkan pendidikan dasar dengan program kepesantrenan dan pembinaan karakter. Pembelajaran juga dilengkapi outing class serta bimbingan baca tulis Al-Qur'an, sebagaimana tercantum dalam brosur resmi tahun ajaran 2026–2027.",
+      "body": "MI Ibnu Aqil memperkenalkan pendidikan dasar dengan program kepesantrenan dan pembinaan karakter. Pembelajaran juga dilengkapi outing class serta bimbingan baca tulis Al-Qur'an, sebagaimana tercantum dalam brosur resmi tahun ajaran 2026–2027.\n\nKegiatan belajar MI berlangsung Senin sampai Jumat, pukul 07.25–14.00 WIB, dalam lingkungan yang sama dengan masjid dan pesantren Ibnu Aqil.",
       "programs": [
         "Program kepesantrenan",
         "Pembinaan karakter",
@@ -89,7 +88,7 @@
       "category": "Sekolah Menengah Pertama",
       "title": "Mengembangkan minat, ilmu, dan pembiasaan ibadah",
       "excerpt": "BTQ Plus, tahfidz, dan program kepesantrenan mendampingi kegiatan belajar serta pilihan ekstrakurikuler siswa.",
-      "body": "SMP Ibnu Aqil menyediakan pembelajaran dengan BTQ Plus, ekstrakurikuler tahfidz, dan muatan lokal keagamaan dalam program pesantren. Brosur resmi juga memperkenalkan pilihan ekstrakurikuler untuk mendukung minat dan bakat siswa serta sistem absensi elektronik.\n\nEkstrakurikuler yang diperkenalkan dalam brosur SMP meliputi Pramuka, Futsal, Handball, Badminton, Panahan, Marawis, Karate, Pencak Silat (SMI), Angklung, Komputer, Paduan Suara, Math Club, English Club, Sains Club, Kaligrafi, dan Seni Baca Al-Qur'an (Tilawah).\n\nFasilitas yang tercantum: ruang kelas, asrama pondok pesantren, ruang bimbingan dan konseling, laboratorium komputer, perpustakaan, gedung aula, gedung semi indoor, lapangan olahraga, dan Masjid Salapan Bentang.",
+      "body": "SMP Ibnu Aqil menyediakan pembelajaran dengan BTQ Plus, ekstrakurikuler tahfidz, dan muatan lokal keagamaan dalam program pesantren. Brosur resmi juga memperkenalkan pilihan ekstrakurikuler untuk mendukung minat dan bakat siswa serta sistem absensi elektronik. SMP Ibnu Aqil terakreditasi A.\n\nEkstrakurikuler yang diperkenalkan dalam brosur SMP meliputi Pramuka, Futsal, Handball, Badminton, Panahan, Marawis, Karate, Pencak Silat (SMI), Angklung, Komputer, Paduan Suara, Math Club, English Club, Sains Club, Kaligrafi, dan Seni Baca Al-Qur'an (Tilawah).\n\nFasilitas yang tercantum: ruang kelas, asrama pondok pesantren, ruang bimbingan dan konseling, laboratorium komputer, perpustakaan, gedung aula, gedung semi indoor, lapangan olahraga, dan Masjid Salapan Bentang.",
       "programs": [
         "Kegiatan Dhuha bersama",
         "Tadarus Al-Qur'an",
@@ -109,10 +108,11 @@
       "category": "Sekolah Menengah Atas",
       "title": "Menumbuhkan bekal belajar, kemandirian, dan kepemimpinan",
       "excerpt": "Boarding school, bimbingan belajar intensif, English Conversation, serta pengembangan keterampilan kepemimpinan.",
-      "body": "SMA Ibnu Aqil memperkenalkan program boarding school dan bimbingan belajar intensif. Program English Conversation, Santripreneur, praktik mengajar, dan pengembangan keterampilan kepemimpinan menjadi bagian dari kegiatan yang tercantum dalam brosur resmi tahun ajaran 2026–2027.\n\nKitab kuning yang dipelajari meliputi Nahwu (Metode Amsilati, Jurumiyah, Mukhtashar), Sharaf (Tashrif Amsilati, Nadzhom Maqshud, Kailani), Fiqih (Al-Ghayah wat Taqrib, Fathul Mu'in), Akhlak (Ta'limul Muta'allim, Nashaihul 'Ibad, 'Uqudul Lujain, Adabul 'Alim), Tauhid (Tijan Ad-Darari, Fathul Majid), Tarikh (Khulashoh Nurul Yaqin, Dardir Mi'raj), serta Hadis (Arba'in Nawawi, Mukhtarul Hadits, 'Ushfuriyah).\n\nEkstrakurikuler: paduan suara, bulu tangkis, pencak silat GASMI Pagar Nusa, pramuka, handball, dan futsal. Fasilitas sekolah meliputi masjid, aula serbaguna, laboratorium komputer, lapangan semi indoor, lapangan outdoor, ruang kelas, asrama putra dan putri, perpustakaan, serta ruang auditorium.",
+      "body": "SMA Ibnu Aqil memperkenalkan program boarding school dan bimbingan belajar intensif. Program English Conversation, Santripreneur, praktik mengajar, dan pengembangan keterampilan kepemimpinan menjadi bagian dari kegiatan yang tercantum dalam brosur resmi tahun ajaran 2026–2027. SMA Ibnu Aqil terakreditasi A.\n\nKitab kuning yang dipelajari meliputi Nahwu (Metode Amsilati, Jurumiyah, Mukhtashar), Sharaf (Tashrif Amsilati, Nadzhom Maqshud, Kailani), Fiqih (Al-Ghayah wat Taqrib, Fathul Mu'in), Akhlak (Ta'limul Muta'allim, Nashaihul 'Ibad, 'Uqudul Lujain, Adabul 'Alim), Tauhid (Tijan Ad-Darari, Fathul Majid), Tarikh (Khulashoh Nurul Yaqin, Dardir Mi'raj), serta Hadis (Arba'in Nawawi, Mukhtarul Hadits, 'Ushfuriyah).\n\nEkstrakurikuler: paduan suara, bulu tangkis, pencak silat GASMI Pagar Nusa, pramuka, handball, dan futsal. Fasilitas sekolah meliputi masjid, aula serbaguna, laboratorium komputer, lapangan semi indoor, lapangan outdoor, ruang kelas, asrama putra dan putri, perpustakaan, serta ruang auditorium.",
       "programs": [
         "Boarding school",
         "Kurikulum Merdeka",
+        "Sekolah Adiwiyata tingkat Kabupaten",
         "Bimbingan belajar intensif",
         "Pengajian kitab kuning dengan Metode Amsilati",
         "Hafalan Al-Qur'an dan hadis",
@@ -132,7 +132,7 @@
       "category": "Sekolah Menengah Kejuruan",
       "title": "Keterampilan untuk berkarya dan melanjutkan langkah",
       "excerpt": "Program keahlian Bisnis dan Pemasaran, Farmasi, serta Akuntansi dan Keuangan Lembaga, didukung praktik kerja lapangan dan kunjungan industri.",
-      "body": "SMK Ibnu Aqil memperkenalkan tiga program keahlian, yaitu Bisnis dan Pemasaran, Farmasi, serta Akuntansi dan Keuangan Lembaga. Pembelajaran didukung praktik kerja lapangan, kunjungan industri, serta pengembangan potensi untuk melanjutkan ke perguruan tinggi.\n\nVisi: \"Menghasilkan lulusan yang kompeten di bidang keahliannya dengan karakter utama jujur, mampu bekerja produktif, dan cerdas.\"\n\nMisi:\n• Melaksanakan proses pembelajaran efektif dalam bidang kompetensi dan kompetensi pendukung lainnya di kelas.\n• Melaksanakan pembiasaan kerja jujur, produktif, dan cerdas secara simulatif.\n• Melaksanakan bimbingan praktik ibadah secara konsisten sebagai daya dukung tercapainya visi dan misi program keahlian.\n\nKurikulum Merdeka diterapkan dengan pembelajaran berbasis masalah (problem-based learning) dan soft skills: pembelajaran berbasis proyek dan industri, teaching factory, serta pengajar dari dunia usaha dan dunia industri (DU/DI).\n\nBisnis dan Pemasaran membuka jalan menuju karier di bidang manajemen, pemasaran digital, periklanan, dan keuangan. Farmasi mengasah bakat dan minat peserta didik di bidang kesehatan dan ilmu farmasi melalui program yang aplikatif. Akuntansi dan Keuangan Lembaga memberikan landasan keterampilan praktis dan teoretis untuk dunia keuangan dan akuntansi.",
+      "body": "SMK Ibnu Aqil memperkenalkan tiga program keahlian, yaitu Bisnis dan Pemasaran, Farmasi, serta Akuntansi dan Keuangan Lembaga. Pembelajaran didukung praktik kerja lapangan, kunjungan industri, serta pengembangan potensi untuk melanjutkan ke perguruan tinggi. SMK Ibnu Aqil terakreditasi A.\n\nVisi: \"Menghasilkan lulusan yang kompeten di bidang keahliannya dengan karakter utama jujur, mampu bekerja produktif, dan cerdas.\"\n\nMisi:\n• Melaksanakan proses pembelajaran efektif dalam bidang kompetensi dan kompetensi pendukung lainnya di kelas.\n• Melaksanakan pembiasaan kerja jujur, produktif, dan cerdas secara simulatif.\n• Melaksanakan bimbingan praktik ibadah secara konsisten sebagai daya dukung tercapainya visi dan misi program keahlian.\n\nKurikulum Merdeka diterapkan dengan pembelajaran berbasis masalah (problem-based learning) dan soft skills: pembelajaran berbasis proyek dan industri, teaching factory, serta pengajar dari dunia usaha dan dunia industri (DU/DI).\n\nBisnis dan Pemasaran membuka jalan menuju karier di bidang manajemen, pemasaran digital, periklanan, dan keuangan. Farmasi mengasah bakat dan minat peserta didik di bidang kesehatan dan ilmu farmasi melalui program yang aplikatif. Akuntansi dan Keuangan Lembaga memberikan landasan keterampilan praktis dan teoretis untuk dunia keuangan dan akuntansi.",
       "programs": [
         "Bisnis dan Pemasaran",
         "Farmasi",
@@ -143,11 +143,9 @@
         "Program guru magang bersama DU/DI",
         "Pembiasaan Dhuha dan tadarus bersama",
         "Bimbingan baca tulis Al-Qur'an metode Tilawati",
+        "Program karier dan studi lanjut ke Jerman (bersama Global Catalis), Jepang, dan Korea",
         "Pengembangan potensi ke perguruan tinggi negeri",
         "Ekstrakurikuler futsal, silat, handball, badminton, basket, dan seni"
-      ],
-      "draft_details": [
-        "Persyaratan, mitra, jadwal, dan biaya program karier Jerman/Korea belum tersedia untuk dipublikasikan rinci."
       ],
       "source_section": "SEKOLAH MENENGAH KEJURUAN",
       "status": "published"
@@ -248,7 +246,7 @@
   ],
   "admissions": {
     "title": "Informasi PPDB 2026/2027",
-    "body": "Brosur resmi tahun ajaran 2026/2027 dapat dilihat pada halaman ini. Untuk pertanyaan PPDB, hubungi admin melalui WhatsApp PPDB 0858-1018-3161 guna memastikan ketersediaan tempat, persyaratan, periode pendaftaran, dan biaya yang berlaku.\n\nDokumen yang biasanya disiapkan untuk SMP, SMA (boarding school), dan SMK:\n• Formulir pendaftaran\n• Fotokopi ijazah yang dilegalisir\n• Pas foto 3x4\n• Fotokopi KTP orang tua atau wali\n• Fotokopi kartu keluarga\n• Fotokopi akta kelahiran\n• Fotokopi kartu NISN (jika ada)\n• Surat keterangan berkelakuan baik dari sekolah asal\n\nUntuk MI Ibnu Aqil:\n• Formulir pendaftaran\n• Pas foto berwarna 3x4\n• Fotokopi KTP orang tua atau wali\n• Fotokopi kartu keluarga\n\nDaftar dokumen diambil dari brosur tahun ajaran sebelumnya. Jumlah lembar, biaya, dan jadwal dapat berubah, jadi konfirmasikan kepada admin PPDB sebelum mendaftar.",
+    "body": "Brosur resmi tahun ajaran 2026/2027 dapat dilihat pada halaman ini. Untuk pertanyaan PPDB, hubungi admin melalui WhatsApp PPDB 0858-1018-3161 guna memastikan ketersediaan tempat, persyaratan, periode pendaftaran, dan biaya yang berlaku.\n\nDokumen yang biasanya disiapkan untuk SMP, SMA (boarding school), dan SMK:\n• Formulir pendaftaran\n• Fotokopi ijazah yang dilegalisir\n• Pas foto 3x4\n• Fotokopi KTP orang tua atau wali\n• Fotokopi kartu keluarga\n• Fotokopi akta kelahiran\n• Fotokopi kartu NISN (jika ada)\n• Surat keterangan berkelakuan baik dari sekolah asal\n\nUntuk MI Ibnu Aqil:\n• Formulir pendaftaran\n• Pas foto berwarna 3x4\n• Fotokopi KTP orang tua atau wali\n• Fotokopi kartu keluarga\n\nCalon peserta didik dapat datang langsung ke kantor pendaftaran di kampus Ibnu Aqil setiap hari kerja pukul 08.00–15.00 WIB, atau menghubungi admin PPDB melalui WhatsApp. Kuota setiap unit terbatas, dan rincian biaya terbaru disampaikan langsung oleh admin PPDB.",
     "url": "https://s.id/brosur_PPDB_IBNU_AQIL_BOGOR_2024_2025",
     "cta": "Lihat informasi pendaftaran",
     "status": "published",
@@ -256,14 +254,11 @@
     "whatsapp_url": "https://wa.me/6285810183161"
   },
   "excluded_from_public_seed": [
-    "Biaya dari Canva 2025/2026",
-    "Periode November–Juni 2024 pada Canva lama",
-    "Klaim akreditasi aktif",
-    "Prestasi 2022/2023 tanpa pembaruan editorial",
     "Testimoni atau statistik yang tidak bersumber",
     "Nama pengurus sebagai jabatan aktif di luar yang dibutuhkan profil",
     "Detail internal anggaran pengimbasan",
-    "Paket perjalanan dan legalitas KBIHU tanpa dokumen"
+    "Paket perjalanan dan legalitas KBIHU tanpa dokumen",
+    "Nominal biaya dari brosur lama"
   ],
   "visual_identity": {
     "observed_palette": [
