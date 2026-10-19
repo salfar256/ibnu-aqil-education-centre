@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\{AccessGrant, Activity, Article, Asset, AuditLog, ContentPage, Material, School, Setting, User};
-use App\Services\{AssetStorage, Audit};
+use App\Services\{AssetStorage, Audit, SocialLinks};
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\{RedirectResponse, Request};
 use Illuminate\Support\Facades\{Hash, Password, Storage};
@@ -299,10 +299,13 @@ class AdminController extends Controller
         return [
             'contact_email' => ['Email resmi', 'email'],
             'contact_phone' => ['Nomor telepon resmi', 'text'],
-            'whatsapp_url' => ['Tautan WhatsApp resmi', 'url'],
+            'whatsapp_url' => ['Tautan WhatsApp PPDB', 'url'],
             'registration_url' => ['Tautan sistem pendaftaran', 'url'],
             'address' => ['Alamat resmi', 'textarea'],
-            'maps_url' => ['Tautan peta lokasi', 'url'],
+            'maps_url' => ['Tautan Google Maps', 'url'],
+            'instagram_url' => ['Tautan Instagram', 'url'],
+            'youtube_url' => ['Tautan YouTube', 'url'],
+            'tiktok_url' => ['Tautan TikTok', 'url'],
         ];
     }
 
@@ -314,7 +317,10 @@ class AdminController extends Controller
             'address' => ['nullable', 'string', 'max:1000'],
             'whatsapp_url' => ['nullable', 'url:https', 'max:500', 'regex:~^https://(?:wa\.me/[0-9]+|api\.whatsapp\.com/send\?[^\s]+)$~i'],
             'registration_url' => ['nullable', 'url:https', 'max:500'],
-            'maps_url' => ['nullable', 'url:https', 'max:500'],
+            'maps_url' => ['nullable', 'url:https', 'max:500', 'regex:'.SocialLinks::PATTERNS['maps_url']],
+            'instagram_url' => ['nullable', 'url:https', 'max:500', 'regex:'.SocialLinks::PATTERNS['instagram_url']],
+            'youtube_url' => ['nullable', 'url:https', 'max:500', 'regex:'.SocialLinks::PATTERNS['youtube_url']],
+            'tiktok_url' => ['nullable', 'url:https', 'max:500', 'regex:'.SocialLinks::PATTERNS['tiktok_url']],
             'verified' => ['accepted'],
         ]);
         foreach (array_keys($this->settingFields()) as $key) {

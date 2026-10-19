@@ -9,5 +9,7 @@ class PublicPhotos {
  ];
  public static function all():array{$photos=[];foreach(self::SLOTS as $key=>$slot)if($photo=self::get($key))$photos[$key]=$photo;return $photos;}
  public static function get(string $key):?array{$slot=self::SLOTS[$key]??null;if(!$slot)return null;$path=public_path('assets/foto/'.$slot['file']);if(!is_file($path)||is_link($path)||!($size=@getimagesize($path)))return null;return $slot+['src'=>asset('assets/foto/'.$slot['file']),'width'=>$size[0],'height'=>$size[1]];}
+ // Official unit logos from the Canva project "Logo di YHASB"; null when the file is missing so views can fall back to text.
+ public static function unitLogo(string $slug):?string{if(!preg_match('/^[a-z]+$/',$slug))return null;$path=public_path('assets/logo/'.$slug.'.png');return is_file($path)&&!is_link($path)?'assets/logo/'.$slug.'.png':null;}
  public static function logo():string{return is_file(public_path('assets/foto/logo-yhasb-hd.png'))?'assets/foto/logo-yhasb-hd.png':'assets/logo-yhasb.png';}
 }

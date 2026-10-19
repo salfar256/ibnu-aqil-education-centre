@@ -59,7 +59,9 @@
             <div><h2>Unit Ibnu Aqil</h2>@foreach(['mi' => 'MI', 'smp' => 'SMP', 'sma' => 'SMA', 'smk' => 'SMK', 'pesantren' => 'Pondok Pesantren', 'kbihu' => 'KBIHU'] as $slug => $label)<a href="{{ route('public.unit', $slug) }}">{{ $label }} Ibnu Aqil</a>@endforeach</div>
             <div class="footer-contact"><h2>Mari terhubung</h2><a href="{{ route('public.page', 'pendaftaran') }}">Informasi pendaftaran <span aria-hidden="true">↗</span></a><a href="{{ route('public.page', 'kontak') }}">Hubungi kami <span aria-hidden="true">↗</span></a>
                 @if(!empty($settings['contact_address']))<p class="footer-address">{{ $settings['contact_address'] }}</p>@endif
+                @if($footerMapsUrl = \App\Services\SocialLinks::maps($settings ?? []))<a href="{{ $footerMapsUrl }}" target="_blank" rel="noopener noreferrer">Lihat lokasi di Google Maps <span aria-hidden="true">↗</span></a>@endif
                 @if(!empty($settings['contact_email']) && filter_var($settings['contact_email'], FILTER_VALIDATE_EMAIL))<a class="contact-value" href="mailto:{{ $settings['contact_email'] }}">{{ $settings['contact_email'] }}</a>@endif
+                @include('public.partials.social-links')
             </div>
         </div>
         <div class="container footer-bottom"><span>© {{ date('Y') }} Ibnu Aqil Education Centre</span><a href="{{ route('login') }}">Akses pengelola <span aria-hidden="true">↗</span></a></div>
@@ -69,7 +71,7 @@
         $whatsappNumber = preg_match('/^https:\/\/wa\.me\/(\d{9,15})(?:\?.*)?$/', $whatsappSetting, $whatsappMatch) ? $whatsappMatch[1] : preg_replace('/\D/', '', $whatsappSetting);
     @endphp
     @if(strlen($whatsappNumber) >= 9 && strlen($whatsappNumber) <= 15)
-    <a class="whatsapp-link" href="https://wa.me/{{ $whatsappNumber }}" target="_blank" rel="noopener noreferrer" aria-label="Hubungi Ibnu Aqil melalui WhatsApp (tab baru)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.8a8 8 0 0 1-11.9 7L4 20l1.2-4A8 8 0 1 1 20 11.8Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 8.3c-.7 1.9 1.8 5.8 4.8 6.9 1.2.5 2.1-.8 2.1-1.1l-2.1-1-.7.7c-1.3-.7-2.3-1.6-2.8-2.8l.6-.7-1-2Z" fill="currentColor"/></svg><span>WhatsApp</span></a>
+    <a class="whatsapp-link" href="https://wa.me/{{ $whatsappNumber }}" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp PPDB Ibnu Aqil (tab baru)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.8a8 8 0 0 1-11.9 7L4 20l1.2-4A8 8 0 1 1 20 11.8Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 8.3c-.7 1.9 1.8 5.8 4.8 6.9 1.2.5 2.1-.8 2.1-1.1l-2.1-1-.7.7c-1.3-.7-2.3-1.6-2.8-2.8l.6-.7-1-2Z" fill="currentColor"/></svg><span>WhatsApp PPDB</span></a>
     @endif
     <a class="back-to-top" href="#main-content" aria-label="Kembali ke atas"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <dialog class="lightbox" aria-label="Pratinjau gambar"><form method="dialog"><button type="submit" class="lightbox-close" aria-label="Tutup pratinjau">×</button></form><figure class="lightbox-figure"></figure><p class="lightbox-caption"></p></dialog>

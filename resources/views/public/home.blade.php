@@ -34,7 +34,7 @@
     <div class="container"><div class="section-heading" data-reveal><div><p class="eyebrow">Mengenal lebih dekat</p><h2>Temukan ruang<br><em>belajar Anda.</em></h2></div><p>Dari pendidikan sekolah hingga pesantren dan KBIHU, jelajahi setiap bagian dari Ibnu Aqil.</p></div>
         <div class="unit-grid">
             @foreach($units as $unit)
-            <a class="unit-card unit-card-{{ $unit->slug }}" href="{{ route('public.unit', $unit->slug) }}" data-reveal data-spotlight><div class="unit-card-top"><span class="unit-symbol" aria-hidden="true">{{ $unitLabels[$unit->slug] ?? 'IA' }}</span><span class="unit-arrow" aria-hidden="true">↗</span></div><div><h3>{{ $unit->title }}</h3>@if($unit->summary)<p>{{ $unit->summary }}</p>@endif</div><span class="unit-card-link">Lihat profil <span aria-hidden="true">→</span></span></a>
+            <a class="unit-card unit-card-{{ $unit->slug }}" href="{{ route('public.unit', $unit->slug) }}" data-reveal data-spotlight><div class="unit-card-top">@if($unitLogo = \App\Services\PublicPhotos::unitLogo($unit->slug))<img class="unit-card-logo" src="{{ asset($unitLogo) }}" alt="" width="64" height="64" loading="lazy" decoding="async">@else<span class="unit-symbol" aria-hidden="true">{{ $unitLabels[$unit->slug] ?? 'IA' }}</span>@endif<span class="unit-arrow" aria-hidden="true">↗</span></div><div><h3>{{ $unit->title }}</h3>@if($unit->summary)<p>{{ $unit->summary }}</p>@endif</div><span class="unit-card-link">Lihat profil <span aria-hidden="true">→</span></span></a>
             @endforeach
         </div>
     </div>
