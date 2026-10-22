@@ -1,11 +1,10 @@
 @extends('layouts.public')
 @section('title', 'Ibnu Aqil Education Centre — MI, SMP, SMA, SMK, Pesantren Bogor')
-@section('description', 'Ibnu Aqil, Yayasan Haji Agus Salim Bogor: MI, SMP, SMA Boarding School, SMK, Pondok Pesantren, dan KBIHU di Laladon, Ciomas. Informasi PPDB 2026/2027 melalui WhatsApp PPDB.')
+@section('description', 'Ibnu Aqil, Yayasan Haji Agus Salim Bogor: MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren di Laladon, Ciomas. Informasi PPDB 2026/2027 melalui WhatsApp PPDB.')
 @php
-    $heroPhoto = \App\Services\PublicPhotos::get('masjid') ?? \App\Services\SchoolProfile::photo('santriwati-kitab');
-    $heroInset = \App\Services\SchoolProfile::photo('tadarus-bersama');
-    $unitLabels = ['mi' => 'MI', 'smp' => 'SMP', 'sma' => 'SMA', 'smk' => 'SMK', 'pesantren' => 'PP', 'kbihu' => 'KBIHU'];
-    $ribbon = ['MI', 'SMP', 'SMA BOARDING SCHOOL', 'SMK', 'PONDOK PESANTREN', 'KBIHU'];
+    $heroPhoto = \App\Services\PublicPhotos::get('masjid-wide') ?? \App\Services\PublicPhotos::get('masjid');
+    $unitLabels = ['mi' => 'MI', 'smp' => 'SMP', 'sma' => 'SMA', 'smk' => 'SMK', 'pesantren' => 'PP'];
+    $ribbon = ['MI', 'SMP', 'SMA BOARDING SCHOOL', 'SMK', 'PONDOK PESANTREN'];
     $ppdbUrl = \App\Services\WhatsApp::link($settings, 'Saya ingin berkonsultasi tentang pendaftaran putra/putri saya di Ibnu Aqil tahun ajaran 2026/2027.');
     $campusPhotos = \App\Services\PublicPhotos::all();
 @endphp
@@ -13,25 +12,30 @@
 @push('head')<link rel="preload" as="image" href="{{ $heroPhoto['src'] }}">@endpush
 @endif
 @section('content')
-<section class="home-hero @if($heroPhoto) home-hero-photo @endif">
-    <span class="hero-glow hero-glow-one" aria-hidden="true"></span><span class="hero-glow hero-glow-two" aria-hidden="true"></span>
-    <div class="container hero-grid">
-        <div class="hero-copy" data-reveal><p class="eyebrow"><span></span> PPDB 2026/2027 · Yayasan Haji Agus Salim Bogor</p><h1>Tumbuh berilmu,<br><em>berakhlak,</em><br>dan siap melangkah.</h1><p class="hero-description">MI, SMP, SMA Boarding School, SMK, Pondok Pesantren, dan KBIHU dalam satu lingkungan yang membiasakan ibadah, menghidupkan tradisi kitab kuning, dan mengasah bakat putra-putri Anda.</p><div class="hero-actions">@if($ppdbUrl)<a class="button button-glow" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">Chat WhatsApp PPDB <span aria-hidden="true">↗</span></a>@else<a class="button button-glow" href="{{ route('public.page', 'pendaftaran') }}">Info pendaftaran <span aria-hidden="true">↗</span></a>@endif<a class="text-link" href="#unit-ibnu-aqil">Jelajahi unit <span aria-hidden="true">→</span></a></div><div class="hero-footnote"><span class="small-star" aria-hidden="true">✳</span><p>Kampus Laladon, Ciomas, Bogor.<br>Asrama putra dan putri tersedia.</p></div></div>
-        @if($heroPhoto)
-        <figure class="hero-photo" data-reveal data-tilt>
-            <div class="hero-photo-frame"><img src="{{ $heroPhoto['src'] }}" alt="{{ $heroPhoto['alt'] }}" width="{{ $heroPhoto['width'] }}" height="{{ $heroPhoto['height'] }}" fetchpriority="high" decoding="async"></div>
-            @if($heroInset)<div class="hero-inset"><img src="{{ $heroInset['src'] }}" alt="{{ $heroInset['alt'] }}" width="{{ $heroInset['width'] }}" height="{{ $heroInset['height'] }}" decoding="async"></div>@endif
-            <figcaption class="hero-chip hero-chip-top"><span class="chip-dot" aria-hidden="true"></span>{{ $heroPhoto['caption'] }}</figcaption>
-            <div class="hero-chip hero-chip-bottom"><strong>A</strong><span>akreditasi SMP,<br>SMA, dan SMK</span></div>
-            <span class="hero-photo-star" aria-hidden="true">✳</span>
-        </figure>
-        @endif
+<section class="home-hero home-hero-full">
+    @if($heroPhoto)<figure class="hero-backdrop"><img src="{{ $heroPhoto['src'] }}" alt="{{ $heroPhoto['alt'] }}" width="{{ $heroPhoto['width'] }}" height="{{ $heroPhoto['height'] }}" fetchpriority="high" decoding="async"></figure>@endif
+    <span class="hero-veil" aria-hidden="true"></span><span class="hero-pattern" aria-hidden="true"></span>
+    <div class="container hero-full-grid">
+        <div class="hero-copy">
+            <svg class="calligraphy-draw hero-bismillah" viewBox="0 0 690 150" role="img" aria-label="Bismillahirrahmanirrahim"><text x="345" y="112" text-anchor="middle" lang="ar" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</text></svg>
+            <p class="eyebrow"><span></span> PPDB 2026/2027 · Yayasan Haji Agus Salim Bogor</p>
+            <h1>Tumbuh berilmu,<br><em>berakhlak,</em><br>dan siap melangkah.</h1>
+            <p class="hero-description">MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren dalam satu lingkungan yang membiasakan ibadah, menghidupkan tradisi kitab kuning, dan mengasah bakat putra-putri Anda.</p>
+            <div class="hero-actions">@if($ppdbUrl)<a class="button button-whatsapp button-inline" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">Chat WhatsApp PPDB <span aria-hidden="true">↗</span></a>@else<a class="button button-glow" href="{{ route('public.page', 'pendaftaran') }}">Info pendaftaran <span aria-hidden="true">↗</span></a>@endif<a class="text-link" href="#unit-ibnu-aqil">Jelajahi unit <span aria-hidden="true">→</span></a></div>
+        </div>
+        <div class="hero-badges" aria-label="Sekilas Ibnu Aqil">
+            <div class="hero-badge"><strong>1992</strong><span>berdiri sejak</span></div>
+            <div class="hero-badge"><strong>A</strong><span>akreditasi SMP,<br>SMA, dan SMK</span></div>
+            <div class="hero-badge"><strong>30+</strong><span>kitab kuning<br>di pesantren</span></div>
+        </div>
     </div>
+    @if($heroPhoto)<p class="hero-caption"><span class="chip-dot" aria-hidden="true"></span>{{ $heroPhoto['caption'] }}, Kampus Laladon, Ciomas, Bogor</p>@endif
+    <span class="hero-scroll" aria-hidden="true"></span>
 </section>
 <div class="unit-ribbon" role="region" aria-label="Unit Ibnu Aqil"><div class="marquee"><div class="marquee-track">@foreach([false, true] as $duplicate)<div class="marquee-group" @if($duplicate) aria-hidden="true" @endif>@foreach($ribbon as $label)<span>{{ $label }}</span><i aria-hidden="true">✦</i>@endforeach</div>@endforeach</div></div></div>
 @include('public.partials.stats-band')
 <section class="section section-units" id="unit-ibnu-aqil">
-    <div class="container"><div class="section-heading" data-reveal><div><p class="eyebrow">Pilihan jenjang</p><h2>Putra-putri Anda akan<br><em>masuk jenjang apa?</em></h2></div><p>Pilih unit untuk melihat profil dan programnya. Dari madrasah ibtidaiyah hingga SMK dan pesantren, setiap unit berada dalam satu kawasan dengan pembinaan ibadah yang sama.</p></div>
+    <div class="container"><div class="section-heading" data-reveal><div><p class="eyebrow">Pilihan jenjang</p><h2>Putra-putri Anda akan<br><em>masuk jenjang apa?</em></h2></div><p>Pilih unit untuk melihat profil dan programnya. Dari madrasah ibtidaiyah hingga SMA, SMK, dan pesantren, setiap unit berada dalam satu kawasan dengan pembinaan ibadah yang sama.</p></div>
         <div class="unit-grid">
             @foreach($units as $unit)
             <a class="unit-card unit-card-{{ $unit->slug }}" href="{{ route('public.unit', $unit->slug) }}" data-reveal data-spotlight><div class="unit-card-top">@if($unitLogo = \App\Services\PublicPhotos::unitLogo($unit->slug))<img class="unit-card-logo" src="{{ asset($unitLogo) }}" alt="" width="64" height="64" loading="lazy" decoding="async">@else<span class="unit-symbol" aria-hidden="true">{{ $unitLabels[$unit->slug] ?? 'IA' }}</span>@endif<span class="unit-arrow" aria-hidden="true">↗</span></div><div><h3>{{ $unit->title }}</h3>@if($unit->summary)<p>{{ $unit->summary }}</p>@endif</div><span class="unit-card-link">Lihat profil <span aria-hidden="true">→</span></span></a>
@@ -46,10 +50,10 @@
 </section>
 @include('public.partials.education-path')
 @include('public.partials.level-finder')
-<section class="section section-activities" aria-labelledby="activities-heading">
-    <div class="container"><div class="section-heading" data-reveal><div><p class="eyebrow">Kehidupan di Ibnu Aqil</p><h2 id="activities-heading">Hari-hari yang<br><em>hidup dan bermakna.</em></h2></div><a class="text-link" href="{{ route('public.gallery') }}">Lihat galeri <span aria-hidden="true">↗</span></a></div>
-        @include('public.partials.activity-mosaic', ['photos' => \App\Services\SchoolProfile::activities(9)])
-    </div>
+<section class="section section-activities section-life" aria-labelledby="activities-heading">
+    <p class="calligraphy-watermark" lang="ar" dir="rtl" aria-hidden="true">طَلَبُ الْعِلْمِ فَرِيْضَةٌ</p>
+    <div class="container"><div class="section-heading" data-reveal><div><p class="eyebrow">Kehidupan di Ibnu Aqil</p><h2 id="activities-heading">Hari-hari yang<br><em>hidup dan bermakna.</em></h2></div><a class="text-link" href="{{ route('public.gallery') }}">Lihat galeri <span aria-hidden="true">↗</span></a></div></div>
+    @include('public.partials.photo-marquee')
 </section>
 @include('public.partials.founder')
 <section class="section section-achievements" aria-labelledby="achievements-heading">

@@ -12,7 +12,6 @@ class WhatsApp {
         'sma' => ['SMA', 'SMA Ibnu Aqil Boarding School'],
         'smk' => ['SMK', 'SMK Ibnu Aqil'],
         'pesantren' => ['Pesantren', 'Pondok Pesantren Ibnu Aqil'],
-        'kbihu' => ['KBIHU', 'KBIHU Ibnu Aqil'],
     ];
 
     public static function number(array $settings): ?string
@@ -39,10 +38,6 @@ class WhatsApp {
 
     public static function unitMessage(string $slug): string
     {
-        if ($slug === 'kbihu') {
-            return 'Saya ingin bertanya tentang layanan bimbingan ibadah haji dan umrah di KBIHU Ibnu Aqil.';
-        }
-
         return 'Saya ingin bertanya tentang pendaftaran di '.self::unitName($slug).'.';
     }
 
@@ -62,7 +57,6 @@ class WhatsApp {
         }
         $items[] = ['label' => 'Rincian biaya', 'href' => self::link($settings, self::costMessage())];
         $items[] = ['label' => 'Kunjungan ke kampus', 'href' => self::link($settings, 'Saya ingin berkunjung ke kampus Ibnu Aqil untuk melihat sekolah dan asrama. Kapan waktu yang tepat?')];
-        $items[] = ['label' => 'Haji & umrah (KBIHU)', 'href' => self::link($settings, self::unitMessage('kbihu'))];
 
         return array_values(array_filter($items, fn ($item) => $item['href'] !== null));
     }
