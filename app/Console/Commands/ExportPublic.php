@@ -267,13 +267,13 @@ class ExportPublic extends Command
     private function portalPage(string $portalUrl): string
     {
         $settings = Setting::pluck('value', 'key');
-        $actions = $portalUrl ? '<a class="button" href="'.e($portalUrl).'" rel="noopener noreferrer">Buka portal sekolah mitra <span aria-hidden="true">↗</span></a>' : '<p class="content-status">Portal sekolah mitra belum terhubung ke website publik ini. Hubungi pengelola untuk informasi akses.</p>';
+        $actions = $portalUrl ? '<a class="button" href="'.e($portalUrl).'" rel="noopener noreferrer">Buka halaman masuk pengelola <span aria-hidden="true">↗</span></a>' : '<p class="content-status">Halaman masuk pengelola tidak tersedia pada versi statis website ini.</p>';
         $whatsapp = (string) ($settings['whatsapp_url'] ?? '');
         if (preg_match('~^https://wa\.me/[0-9]{9,15}$~', $whatsapp)) {
-            $actions .= '<p style="margin-top:24px"><a class="text-link" href="'.e($whatsapp).'" target="_blank" rel="noopener noreferrer">Hubungi melalui WhatsApp <span aria-hidden="true">↗</span></a></p>';
+            $actions .= '<p style="margin-top:24px"><a class="text-link" href="'.e($whatsapp).'" target="_blank" rel="noopener noreferrer">Tanya admin PPDB melalui WhatsApp <span aria-hidden="true">↗</span></a></p>';
         }
 
-        return $this->statusPage('Portal Pengimbasan', 'Akses akun dan materi sekolah mitra tersedia melalui portal terpisah yang dikelola Ibnu Aqil. Gunakan akun yang diberikan oleh pengelola.', $actions);
+        return $this->statusPage('Akses pengelola', 'Halaman ini khusus untuk pengelola website Ibnu Aqil. Orang tua dan calon santri dapat langsung bertanya kepada admin PPDB.', $actions);
     }
 
     private function statusPage(string $title, string $description, string $actions = ''): string

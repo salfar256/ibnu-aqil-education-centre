@@ -1,4 +1,4 @@
-@php($ppdbUrl = preg_match('~^https://wa\.me/[0-9]{9,15}$~', (string) ($settings['whatsapp_url'] ?? '')) ? $settings['whatsapp_url'] : null)
+@php($ppdbUrl = \App\Services\WhatsApp::link($settings ?? [], 'Saya ingin berkonsultasi memilih unit yang tepat untuk putra/putri saya.'))
 <div class="admission-steps">
     <ol class="step-list">
         @foreach(\App\Services\SchoolProfile::ADMISSION_STEPS as [$title, $text])
