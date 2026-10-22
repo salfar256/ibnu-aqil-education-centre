@@ -27,7 +27,7 @@ class PublicSiteTest extends TestCase
             $this->page($slug, ['title' => strtoupper($slug).' Ibnu Aqil', 'type' => 'unit']);
         }
         $response = $this->get(route('public.home'))->assertOk();
-        $response->assertSee('Ibnu Aqil Education Centre')->assertSee('Portal Pengimbasan')->assertSee('id="primary-nav"', false)->assertSee('aria-controls="primary-nav"', false)->assertSee('Lewati ke konten utama');
+        $response->assertSee('Ibnu Aqil Education Centre')->assertDontSee('Portal Pengimbasan')->assertSee('id="primary-nav"', false)->assertSee('aria-controls="primary-nav"', false)->assertSee('Lewati ke konten utama');
         foreach (['mi', 'smp', 'sma', 'smk', 'pesantren', 'kbihu'] as $slug) {
             $response->assertSee(route('public.unit', $slug), false);
             $this->get(route('public.unit', $slug))->assertOk()->assertSee(strtoupper($slug).' Ibnu Aqil');
@@ -142,5 +142,20 @@ class PublicSiteTest extends TestCase
         $this->get(route('public.achievements'))->assertOk()->assertSee('Juara 1 Pencak Silat tingkat Nasional')->assertDontSee('Belum ada prestasi');
         $this->get(route('public.gallery'))->assertOk()->assertSee('assets/foto/kegiatan/silat-gasmi.jpg', false)->assertSee('Laboratorium komputer');
         $this->get(route('public.page', 'kontak'))->assertOk()->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false);
+    }
+
+    public function test_whatsapp_inquiries_are_prefilled_per_unit_and_portal_is_not_promoted(): void
+    {
+        $this->seed(\Database\Seeders\DatabaseSeeder::class);
+        $home = $this->get('/')->assertOk();
+        $home->assertSee('https://wa.me/6285810183161?text=', false)
+            ->assertSee('data-finder', false)
+            ->assertSee('Yang sering')
+            ->assertSee('Tanya rincian biaya')
+            ->assertDontSee('Portal Pengimbasan')
+            ->assertDontSee(route('portal.index'), false);
+        $unit = $this->get('/unit/smk')->assertOk();
+        $unit->assertSee(rawurlencode('pendaftaran di SMK Ibnu Aqil'), false)->assertDontSee('Portal Pengimbasan');
+        $this->get('/unit/kbihu')->assertOk()->assertSee(rawurlencode('KBIHU Ibnu Aqil'), false)->assertDontSee('Tanya rincian biaya');
     }
 }

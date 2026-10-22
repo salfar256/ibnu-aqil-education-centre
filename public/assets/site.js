@@ -57,6 +57,95 @@
         if (desktop.addEventListener) desktop.addEventListener('change', () => closeMenu());
     }
 
+    // Floating WhatsApp topic menu: close on outside click or Escape.
+    const waFloat = document.querySelector('.wa-float');
+    if (waFloat) {
+        document.addEventListener('click', event => {
+            if (waFloat.open && !waFloat.contains(event.target)) waFloat.open = false;
+        });
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && waFloat.open) {
+                waFloat.open = false;
+                waFloat.querySelector('summary').focus();
+            }
+        });
+    }
+
+    // Level finder: two or three questions lead to a unit recommendation and a prefilled WhatsApp message.
+    document.querySelectorAll('[data-finder]').forEach(finder => {
+        const section = finder.closest('[data-finder-section]');
+        if (section) section.hidden = false;
+        const steps = {};
+        finder.querySelectorAll('[data-step]').forEach(step => { steps[step.dataset.step] = step; });
+        const results = [...finder.querySelectorAll('[data-result]')];
+        const restart = finder.querySelector('[data-finder-restart]');
+        const stageText = {
+            mi: 'putra/putri saya akan masuk sekolah dasar',
+            smp: 'putra/putri saya kelas 6 SD/MI atau baru lulus',
+            next: 'putra/putri saya kelas 9 SMP/MTs atau baru lulus'
+        };
+        const boardText = {
+            ya: 'Kami juga ingin ia mondok di pesantren.',
+            pertimbangkan: 'Kami masih mempertimbangkan apakah ia akan mondok.',
+            tidak: 'Rencananya ia pulang ke rumah (tidak mondok).'
+        };
+        const state = {};
+
+        function show(name) {
+            Object.values(steps).forEach(step => { step.hidden = step.dataset.step !== name; });
+            results.forEach(result => { result.hidden = true; });
+            const first = steps[name]?.querySelector('button');
+            if (first && state.started) first.focus();
+        }
+
+        function finish() {
+            Object.values(steps).forEach(step => { step.hidden = true; });
+            const result = results.find(item => item.dataset.result === state.unit);
+            if (!result) return;
+            const message = finder.dataset.greeting + 'Saya mengisi panduan jenjang di website: ' + stageText[state.stage] + '. ' + (boardText[state.board] ? boardText[state.board] + ' ' : '') + 'Rekomendasinya ' + result.dataset.name + '. Mohon informasi pendaftarannya.';
+            result.querySelector('[data-finder-wa]').href = finder.dataset.wa + '?text=' + encodeURIComponent(message);
+            result.querySelector('.finder-board-note').hidden = !state.board || state.board === 'tidak';
+            result.hidden = false;
+            restart.hidden = false;
+            result.setAttribute('tabindex', '-1');
+            result.focus();
+        }
+
+        finder.addEventListener('click', event => {
+            const button = event.target.closest('[data-answer]');
+            if (!button) return;
+            state.started = true;
+            const step = button.closest('[data-step]').dataset.step;
+            const answer = button.dataset.answer;
+            if (step === 'stage') {
+                state.stage = answer;
+                if (answer === 'next') {
+                    show('goal');
+                } else if (answer === 'mi') {
+                    state.unit = 'mi';
+                    state.board = null;
+                    finish();
+                } else {
+                    state.unit = answer;
+                    steps.board.querySelector('[data-board-number]').textContent = '2';
+                    show('board');
+                }
+            } else if (step === 'goal') {
+                state.unit = answer;
+                steps.board.querySelector('[data-board-number]').textContent = '3';
+                show('board');
+            } else {
+                state.board = answer;
+                finish();
+            }
+        });
+
+        restart?.addEventListener('click', () => {
+            restart.hidden = true;
+            show('stage');
+        });
+    });
+
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     const header = document.querySelector('.site-header');

@@ -6,7 +6,7 @@
     $heroInset = \App\Services\SchoolProfile::photo('tadarus-bersama');
     $unitLabels = ['mi' => 'MI', 'smp' => 'SMP', 'sma' => 'SMA', 'smk' => 'SMK', 'pesantren' => 'PP', 'kbihu' => 'KBIHU'];
     $ribbon = ['MI', 'SMP', 'SMA BOARDING SCHOOL', 'SMK', 'PONDOK PESANTREN', 'KBIHU'];
-    $ppdbUrl = preg_match('~^https://wa\.me/[0-9]{9,15}$~', (string) ($settings['whatsapp_url'] ?? '')) ? $settings['whatsapp_url'] : null;
+    $ppdbUrl = \App\Services\WhatsApp::link($settings, 'Saya ingin berkonsultasi tentang pendaftaran putra/putri saya di Ibnu Aqil tahun ajaran 2026/2027.');
     $campusPhotos = \App\Services\PublicPhotos::all();
 @endphp
 @if($heroPhoto)
@@ -31,7 +31,7 @@
 <div class="unit-ribbon" role="region" aria-label="Unit Ibnu Aqil"><div class="marquee"><div class="marquee-track">@foreach([false, true] as $duplicate)<div class="marquee-group" @if($duplicate) aria-hidden="true" @endif>@foreach($ribbon as $label)<span>{{ $label }}</span><i aria-hidden="true">✦</i>@endforeach</div>@endforeach</div></div></div>
 @include('public.partials.stats-band')
 <section class="section section-units" id="unit-ibnu-aqil">
-    <div class="container"><div class="section-heading" data-reveal><div><p class="eyebrow">Pilihan jenjang</p><h2>Satu lingkungan,<br><em>banyak jalan bertumbuh.</em></h2></div><p>Dari madrasah ibtidaiyah hingga SMK dan pesantren, setiap unit berada dalam satu kawasan dengan pembinaan ibadah yang sama.</p></div>
+    <div class="container"><div class="section-heading" data-reveal><div><p class="eyebrow">Pilihan jenjang</p><h2>Putra-putri Anda akan<br><em>masuk jenjang apa?</em></h2></div><p>Pilih unit untuk melihat profil dan programnya. Dari madrasah ibtidaiyah hingga SMK dan pesantren, setiap unit berada dalam satu kawasan dengan pembinaan ibadah yang sama.</p></div>
         <div class="unit-grid">
             @foreach($units as $unit)
             <a class="unit-card unit-card-{{ $unit->slug }}" href="{{ route('public.unit', $unit->slug) }}" data-reveal data-spotlight><div class="unit-card-top">@if($unitLogo = \App\Services\PublicPhotos::unitLogo($unit->slug))<img class="unit-card-logo" src="{{ asset($unitLogo) }}" alt="" width="64" height="64" loading="lazy" decoding="async">@else<span class="unit-symbol" aria-hidden="true">{{ $unitLabels[$unit->slug] ?? 'IA' }}</span>@endif<span class="unit-arrow" aria-hidden="true">↗</span></div><div><h3>{{ $unit->title }}</h3>@if($unit->summary)<p>{{ $unit->summary }}</p>@endif</div><span class="unit-card-link">Lihat profil <span aria-hidden="true">→</span></span></a>
@@ -44,6 +44,8 @@
         @include('public.partials.highlights')
     </div>
 </section>
+@include('public.partials.education-path')
+@include('public.partials.level-finder')
 <section class="section section-activities" aria-labelledby="activities-heading">
     <div class="container"><div class="section-heading" data-reveal><div><p class="eyebrow">Kehidupan di Ibnu Aqil</p><h2 id="activities-heading">Hari-hari yang<br><em>hidup dan bermakna.</em></h2></div><a class="text-link" href="{{ route('public.gallery') }}">Lihat galeri <span aria-hidden="true">↗</span></a></div>
         @include('public.partials.activity-mosaic', ['photos' => \App\Services\SchoolProfile::activities(9)])
@@ -71,7 +73,8 @@
         @include('public.partials.admission-steps')
     </div>
 </section>
-<section class="portal-feature"><div class="container portal-feature-grid"><div class="portal-visual" aria-hidden="true" data-reveal data-tilt><div class="portal-tile tile-back"><span>ILMU</span><i>↗</i></div><div class="portal-tile tile-front"><span class="tile-mark">↗</span><span>Berbagi<br><em>praktik baik.</em></span><small>PORTAL PENGIMBASAN</small></div><div class="portal-visual-star">✳</div></div><div class="portal-feature-copy" data-reveal><p class="eyebrow">Untuk sekolah mitra</p><h2>Pengetahuan tumbuh<br><em>saat dibagikan.</em></h2><p>Akses video, foto, ebook, dan modul pengimbasan yang dibagikan untuk sekolah Anda, dalam satu ruang yang terkelola.</p><div class="portal-types"><span>Video</span><span>Foto</span><span>Ebook</span><span>Modul</span></div><a class="button button-cream" href="{{ route('portal.index') }}">Masuk Portal Pengimbasan <span aria-hidden="true">↗</span></a><p class="portal-note">Akses menggunakan akun yang diberikan oleh pengelola.</p></div></div></section>
+@include('public.partials.cost-band')
+@include('public.partials.wa-faq')
 <section class="section section-news"><div class="container"><div class="section-heading" data-reveal><div><p class="eyebrow">Cerita dari Ibnu Aqil</p><h2>Berita & <em>kegiatan.</em></h2></div><a class="text-link" href="{{ route('public.news') }}">Semua berita <span aria-hidden="true">↗</span></a></div>
     @if($news->isNotEmpty())<div class="news-grid">@foreach($news as $article)@include('public.partials.article-card', ['article' => $article])@endforeach</div>
     @else<div class="empty-state empty-inline" data-reveal><span class="empty-mark" aria-hidden="true">↗</span><div><h3>Ruang cerita Ibnu Aqil</h3><p>Berita dan kegiatan dapat dibaca di sini setelah diterbitkan oleh pengelola.</p></div><a class="text-link" href="{{ route('public.page', 'tentang') }}">Kenali lembaga <span aria-hidden="true">→</span></a></div>@endif
