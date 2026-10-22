@@ -72,6 +72,7 @@ class ExportPublic extends Command
             foreach ($documents as $relative => $contents) {
                 $this->write($output, $relative, $contents);
             }
+            $this->collectStylesheetDependencies();
             foreach ($this->assetFiles as $relative => $source) {
                 $this->copy($output, $relative, $source);
             }
@@ -93,6 +94,39 @@ class ExportPublic extends Command
             app('url')->setRequest($originalRequest);
             URL::forceRootUrl($originalUrl);
             URL::forceScheme(parse_url((string) $originalUrl, PHP_URL_SCHEME) ?: null);
+        }
+    }
+
+    // Stylesheets may reference fonts and decorative images with relative url(); copy those files too.
+    private function collectStylesheetDependencies(): void
+    {
+        foreach (array_keys($this->assetFiles) as $relative) {
+            if (!str_ends_with(strtolower($relative), '.css')) {
+                continue;
+            }
+            preg_match_all('~url\(\s*([\'"]?)([^\'")]+)\1\s*\)~i', (string) file_get_contents($this->assetFiles[$relative]), $matches);
+            foreach ($matches[2] as $reference) {
+                if (preg_match('~^(?:data:|https?:|/|#)~i', $reference)) {
+                    continue;
+                }
+                $path = strtok($reference, '?#');
+                $segments = [];
+                foreach (explode('/', dirname($relative).'/'.$path) as $segment) {
+                    if ($segment === '' || $segment === '.') {
+                        continue;
+                    }
+                    if ($segment === '..') {
+                        array_pop($segments);
+                        continue;
+                    }
+                    $segments[] = $segment;
+                }
+                $target = implode('/', $segments);
+                if (!preg_match('~^assets/(?:[a-zA-Z0-9_-]+/)*[a-zA-Z0-9_.-]+\.(?:svg|png|jpg|jpeg|webp|gif|woff2?)$~i', $target) || !is_file(public_path($target)) || is_link(public_path($target))) {
+                    throw new RuntimeException('Referensi aset stylesheet tidak dapat diekspor: '.$reference);
+                }
+                $this->assetFiles[$target] = public_path($target);
+            }
         }
     }
 

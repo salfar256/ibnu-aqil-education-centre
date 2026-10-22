@@ -16,6 +16,7 @@
             <p class="eyebrow">Temukan jenjang</p>
             <h2 id="finder-heading">Jenjang mana yang<br><em>tepat untuknya?</em></h2>
             <p>Jawab dua sampai tiga pertanyaan singkat. Kami tunjukkan unit yang sesuai, lalu Anda bisa langsung bertanya kepada admin PPDB.</p>
+            @if(is_file(public_path('assets/foto/web/santri-jempol.webp')))<img class="finder-figure float-figure" src="{{ asset('assets/foto/web/santri-jempol.webp') }}" alt="" width="900" height="789" loading="lazy" decoding="async">@endif
         </div>
         <div class="finder" data-finder data-wa="https://wa.me/{{ $finderWa }}" data-greeting="{{ WhatsApp::GREETING }}" data-reveal>
             <div class="finder-step" data-step="stage">

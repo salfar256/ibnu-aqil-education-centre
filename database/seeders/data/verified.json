@@ -56,12 +56,14 @@
     "tiktok_url": "https://www.tiktok.com/@ibnuaqilmedia",
     "maps_url": "https://share.google/1qFq51ITYcl8wqM9V",
     "social_source": "Diberikan langsung oleh pengguna pada 19 Oktober 2026; parameter pelacakan berbagi (si, _r, _t) dihapus.",
-    "maps_source": "Tautan bagikan Google Maps dari pengguna, 19 Oktober 2026."
+    "maps_source": "Tautan bagikan Google Maps dari pengguna, 19 Oktober 2026.",
+    "founding_year": 1992,
+    "founding_year_source": "Dikonfirmasi pengguna 22 Oktober 2026 (menggantikan 1994 dari brosur)."
   },
   "about": {
     "title": "Pendidikan dan pembinaan dalam satu lingkungan Ibnu Aqil",
-    "excerpt": "Kawasan pendidikan Islam Yayasan Haji Agus Salim Bogor sejak 1994: MI, SMP, SMA Boarding School, SMK, pondok pesantren, dan KBIHU.",
-    "body": "Ibnu Aqil Education Centre adalah kawasan pendidikan di bawah Yayasan Haji Agus Salim Bogor (YHASB) di Laladon, Ciomas, Kabupaten Bogor. Berawal dari Pondok Pesantren Ibnu Aqil yang didirikan KH. Agus Salim, S.Sos., M.M. pada tahun 1994, kini Ibnu Aqil menaungi Madrasah Ibtidaiyah, SMP, SMA Boarding School, SMK, Pondok Pesantren Ma'had Ad-Dirasah Al-Islamiyyah Ibnu Aqil, serta KBIHU Ibnu Aqil.\n\nSetiap unit berbagi lingkungan yang sama. Hari dimulai dengan shalat Dhuha berjamaah dan tadarus, pelajaran umum berjalan beriringan dengan bimbingan baca tulis Al-Qur'an metode Tilawati, dan santri yang tinggal di asrama mendalami kitab kuning melalui metode bandongan, sorogan, dan klasikal. SMP, SMA, dan SMK Ibnu Aqil terakreditasi A.\n\nDengan motto \"menjaga tradisi lama yang baik, serta mengambil tradisi baru yang lebih baik\", Ibnu Aqil membekali putra-putri dengan ilmu, akhlak, dan keterampilan untuk melanjutkan studi maupun berkarya di tengah masyarakat.",
+    "excerpt": "Kawasan pendidikan Islam Yayasan Haji Agus Salim Bogor sejak 1992: MI, SMP, SMA Boarding School, SMK, dan pondok pesantren.",
+    "body": "Ibnu Aqil Education Centre adalah kawasan pendidikan di bawah Yayasan Haji Agus Salim Bogor (YHASB) di Laladon, Ciomas, Kabupaten Bogor. Berawal dari Pondok Pesantren Ibnu Aqil yang didirikan KH. Agus Salim, S.Sos., M.M. pada tahun 1992, kini Ibnu Aqil menaungi Madrasah Ibtidaiyah, SMP, SMA Boarding School, SMK, serta Pondok Pesantren Ma'had Ad-Dirasah Al-Islamiyyah Ibnu Aqil dalam satu lingkungan.\n\nSetiap unit berbagi lingkungan yang sama. Hari dimulai dengan shalat Dhuha berjamaah dan tadarus, pelajaran umum berjalan beriringan dengan bimbingan baca tulis Al-Qur'an metode Tilawati, dan santri yang tinggal di asrama mendalami kitab kuning melalui metode bandongan, sorogan, dan klasikal. SMP, SMA, dan SMK Ibnu Aqil terakreditasi A.\n\nDengan motto \"menjaga tradisi lama yang baik, serta mengambil tradisi baru yang lebih baik\", Ibnu Aqil membekali putra-putri dengan ilmu, akhlak, dan keterampilan untuk melanjutkan studi maupun berkarya di tengah masyarakat.",
     "source_section": "Identitas YHASB; daftar unit; program unggulan yayasan pada brosur 2026–2027.",
     "status": "published"
   },
@@ -156,12 +158,12 @@
       "category": "Pondok Pesantren",
       "title": "Mendalami ilmu, membiasakan ibadah, membangun karakter",
       "excerpt": "Kajian kitab kuning, bahasa Arab dan Inggris, tahsin dan tahfidz Al-Qur'an, serta pembinaan kepemimpinan.",
-      "body": "Pondok Pesantren Ibnu Aqil (Ma'had Ad-Dirasah Al-Islamiyyah Ibnu Aqil, MDIIA) adalah lembaga pendidikan Islam putra dan putri berbasis faham Ahlussunnah wal Jama'ah an-Nahdliyyah. Pesantren didirikan oleh KH. Agus Salim, S.Sos., M.M. pada tahun 1994 dengan tujuan mencetak generasi yang mampu menghadapi kemajuan zaman dan tantangan global dengan akhlak dan ilmu yang mumpuni.\n\nMotto pesantren:\nالمحافظة على القديم الصالح والأخذ بالجديد الأصلح\n\"Menjaga tradisi lama yang baik, serta mengambil tradisi baru yang lebih baik.\"\n\nMetode pengajian:\n• Bandongan: kiai membacakan kitab, menerjemahkan, dan menjelaskan.\n• Sorogan: santri menghadap guru secara perorangan dengan membawa kitab yang dipelajari.\n• Klasikal: pengajaran per kelas agar santri lebih mudah memahami pelajaran sesuai tingkat kemampuannya.",
+      "body": "Pondok Pesantren Ibnu Aqil (Ma'had Ad-Dirasah Al-Islamiyyah Ibnu Aqil, MDIIA) adalah lembaga pendidikan Islam putra dan putri berbasis faham Ahlussunnah wal Jama'ah an-Nahdliyyah. Pesantren didirikan oleh KH. Agus Salim, S.Sos., M.M. pada tahun 1992 dengan tujuan mencetak generasi yang mampu menghadapi kemajuan zaman dan tantangan global dengan akhlak dan ilmu yang mumpuni.\n\nMotto pesantren:\nالمحافظة على القديم الصالح والأخذ بالجديد الأصلح\n\"Menjaga tradisi lama yang baik, serta mengambil tradisi baru yang lebih baik.\"\n\nMetode pengajian:\n• Bandongan: kiai membacakan kitab, menerjemahkan, dan menjelaskan.\n• Sorogan: santri menghadap guru secara perorangan dengan membawa kitab yang dipelajari.\n• Klasikal: pengajaran per kelas agar santri lebih mudah memahami pelajaran sesuai tingkat kemampuannya.",
       "programs": [
         "Character building",
         "Tahsin wa Tahfidzil Qur'an",
         "Tahfidz wa Fahmul 1000 Hadits",
-        "31 kitab kuning dari berbagai bidang ilmu",
+        "30+ kitab kuning dari berbagai bidang ilmu",
         "Bahasa Arab dan Inggris",
         "Pembinaan dan pembiasaan ibadah, zikir, dan riyadhah",
         "Kepemimpinan agama dan sosial kemasyarakatan",
@@ -169,20 +171,6 @@
         "Bahtsul masail"
       ],
       "source_section": "Brosur Ponpes v1 (Canva DAGTx3cfnGc); PONDOK PESANTREN pada brosur 2026–2027.",
-      "status": "published"
-    },
-    {
-      "slug": "kbihu",
-      "name": "KBIHU Ibnu Aqil",
-      "category": "Bimbingan Ibadah Haji dan Umrah",
-      "title": "Mengenal tuntunan ibadah haji dan umrah",
-      "excerpt": "Informasi bimbingan ibadah haji dan umrah serta pembelajaran manasik Ibnu Aqil.",
-      "body": "KBIHU Ibnu Aqil menyediakan informasi bimbingan ibadah haji dan umrah. Materi manasik dalam sumber Ibnu Aqil membahas tawaf, sa'i, dan tahallul.\n\nHubungi pengelola melalui kontak resmi untuk informasi layanan, jadwal bimbingan, dan ketentuan yang berlaku.",
-      "programs": [
-        "Bimbingan ibadah haji dan umrah",
-        "Pembelajaran manasik"
-      ],
-      "source_section": "KBIHU; didukung Canva DAHQcYpktYU untuk materi manasik.",
       "status": "published"
     }
   ],
@@ -257,8 +245,8 @@
     "Testimoni atau statistik yang tidak bersumber",
     "Nama pengurus sebagai jabatan aktif di luar yang dibutuhkan profil",
     "Detail internal anggaran pengimbasan",
-    "Paket perjalanan dan legalitas KBIHU tanpa dokumen",
-    "Nominal biaya dari brosur lama"
+    "Nominal biaya dari brosur lama",
+    "KBIHU dihapus dari website atas permintaan pengguna, 22 Oktober 2026"
   ],
   "visual_identity": {
     "observed_palette": [
@@ -282,8 +270,7 @@
         "smp": "public/assets/logo/smp.png",
         "sma": "public/assets/logo/sma.png",
         "smk": "public/assets/logo/smk.png",
-        "mi": "public/assets/logo/mi.png",
-        "kbihu": "public/assets/logo/kbihu.png"
+        "mi": "public/assets/logo/mi.png"
       }
     }
   }

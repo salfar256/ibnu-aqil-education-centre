@@ -698,6 +698,219 @@
       "sha256": "7a1d4f912d3226a2a27fe0e3ccc1f288d45fa4de91b179f633c7b2df160c96be",
       "authorization": "Pengguna menyatakan foto kegiatan pada brosur lama sudah disetujui siswa dan wali, dan meminta foto dipakai di website (19 Oktober 2026).",
       "limitation": "Resolusi terbatas karena diambil dari brosur; ganti dengan foto asli bila tersedia."
+    },
+    {
+      "file": "public/assets/foto/web/futsal-latihan.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 316693
+    },
+    {
+      "file": "public/assets/foto/web/futsal.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 328705
+    },
+    {
+      "file": "public/assets/foto/web/karate.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 179223
+    },
+    {
+      "file": "public/assets/foto/web/kelas-tik.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 304374
+    },
+    {
+      "file": "public/assets/foto/web/kh-agus-salim.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 193551
+    },
+    {
+      "file": "public/assets/foto/web/lab-komputer-praktik.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 240568
+    },
+    {
+      "file": "public/assets/foto/web/lalaran-targhib.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 253758
+    },
+    {
+      "file": "public/assets/foto/web/masjid-cahaya-ilahi-wide.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 299274
+    },
+    {
+      "file": "public/assets/foto/web/masjid-cahaya-ilahi.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 249517
+    },
+    {
+      "file": "public/assets/foto/web/math-club-2.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 223307
+    },
+    {
+      "file": "public/assets/foto/web/math-club.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 271619
+    },
+    {
+      "file": "public/assets/foto/web/mc-santri.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 115909
+    },
+    {
+      "file": "public/assets/foto/web/mi-belajar-koridor.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 180099
+    },
+    {
+      "file": "public/assets/foto/web/mi-belajar-lesehan.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 127562
+    },
+    {
+      "file": "public/assets/foto/web/mi-foto-bersama.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 261236
+    },
+    {
+      "file": "public/assets/foto/web/mi-guru-siswa.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 116662
+    },
+    {
+      "file": "public/assets/foto/web/mi-guru.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 118856
+    },
+    {
+      "file": "public/assets/foto/web/mi-kegiatan-bersama.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 152013
+    },
+    {
+      "file": "public/assets/foto/web/mi-market-day-mahkota.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 165626
+    },
+    {
+      "file": "public/assets/foto/web/mi-market-day.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 192635
+    },
+    {
+      "file": "public/assets/foto/web/mi-penyambutan.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 163452
+    },
+    {
+      "file": "public/assets/foto/web/mi-sanlat.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 163554
+    },
+    {
+      "file": "public/assets/foto/web/mi-seluruh-siswa.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 195965
+    },
+    {
+      "file": "public/assets/foto/web/perpustakaan.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 169035
+    },
+    {
+      "file": "public/assets/foto/web/pramuka-membaca-buku.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 132294
+    },
+    {
+      "file": "public/assets/foto/web/pramuka.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 217217
+    },
+    {
+      "file": "public/assets/foto/web/santri-berkumpul.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 239249
+    },
+    {
+      "file": "public/assets/foto/web/santri-jempol.webp",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 178538
+    },
+    {
+      "file": "public/assets/foto/web/science-club.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 235271
+    },
+    {
+      "file": "public/assets/foto/web/silat-atraksi-api.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 148562
+    },
+    {
+      "file": "public/assets/foto/web/silat-jurus.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 118264
+    },
+    {
+      "file": "public/assets/foto/web/silat-panggung.jpg",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 194243
+    },
+    {
+      "file": "public/assets/foto/web/siswa-buku.webp",
+      "source": "Folder Google Drive \"Foto Untuk Web\" milik pengguna (salinan lokal \"Claude Foto Web\"), diberikan 22 Oktober 2026",
+      "operation": "Potong bilah hitam/transparan, perkecil, dan kompres ulang (JPEG/WebP); tidak ada perubahan isi foto.",
+      "bytes": 34650
+    },
+    {
+      "file": "public/assets/fonts/aref-ruqaa-arabic-700.woff2",
+      "source": "Fontsource (npm) 5.1.0, subset Arab",
+      "license": "SIL Open Font License 1.1; lihat public/assets/fonts/LICENSE-*.txt"
+    },
+    {
+      "file": "public/assets/fonts/amiri-arabic-400.woff2",
+      "source": "Fontsource (npm) 5.1.0, subset Arab",
+      "license": "SIL Open Font License 1.1; lihat public/assets/fonts/LICENSE-*.txt"
+    },
+    {
+      "file": "public/assets/ornament/pattern-*.svg",
+      "source": "Pola geometris bintang delapan dibuat untuk website ini",
+      "operation": "SVG buatan sendiri"
     }
   ]
 }
