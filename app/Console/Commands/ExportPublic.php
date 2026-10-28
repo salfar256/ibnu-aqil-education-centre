@@ -268,7 +268,7 @@ class ExportPublic extends Command
         }
         if (str_starts_with($path, '/assets/')) {
             $relative = ltrim($path, '/');
-            if (!preg_match('~^assets/(?:[a-zA-Z0-9_-]+/)*[a-zA-Z0-9_.-]+\.(?:css|js|svg|png|jpg|jpeg|webp|gif|ico)$~i', $relative) || str_contains($relative, '..') || !is_file(public_path($relative)) || is_link(public_path($relative))) {
+            if (!preg_match('~^assets/(?:[a-zA-Z0-9_-]+/)*[a-zA-Z0-9_.-]+\.(?:css|js|svg|png|jpg|jpeg|webp|gif|ico|webmanifest)$~i', $relative) || str_contains($relative, '..') || !is_file(public_path($relative)) || is_link(public_path($relative))) {
                 return null;
             }
             $this->assetFiles[$relative] = public_path($relative);

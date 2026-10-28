@@ -137,8 +137,9 @@ class PublicSiteTest extends TestCase
         $this->page('kontak');
 
         $this->get(route('public.home'))->assertOk()
-            ->assertSee('assets/foto/web/masjid-cahaya-ilahi-wide.jpg', false)->assertSee('assets/foto/web/kelas-tik.jpg', false)->assertSee('assets/foto/web/kh-agus-salim.jpg', false)->assertSee('Bismillahirrahmanirrahim')
-            ->assertSee('Empat langkah')->assertSee('Chat WhatsApp PPDB')->assertSee('KH. Agus Salim');
+            ->assertSee('assets/foto/web/masjid-hero.webp', false)->assertSee('assets/foto/web/kelas-tik.jpg', false)->assertSee('assets/foto/web/pembina-kh-agus-salim.webp', false)->assertSee('assets/foto/web/ketua-yayasan.webp', false)->assertSee('Bismillahirrahmanirrahim')
+            ->assertSee('Empat langkah')->assertSee('Chat WhatsApp PPDB')->assertSee('KH. Agus Salim')->assertSee('Hj. Saidah Hilmiyah, S.Pd., M.M.')->assertSee('Ketua Yayasan')
+            ->assertSee('class="ia-bottom-nav"', false)->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false)->assertSee('manifest.webmanifest', false);
         $this->get(route('public.achievements'))->assertOk()->assertSee('Juara 1 Pencak Silat tingkat Nasional')->assertDontSee('Belum ada prestasi');
         $this->get(route('public.gallery'))->assertOk()->assertSee('assets/foto/kegiatan/silat-gasmi.jpg', false)->assertSee('Laboratorium komputer');
         $this->get(route('public.page', 'kontak'))->assertOk()->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false);

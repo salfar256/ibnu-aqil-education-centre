@@ -65,10 +65,19 @@ class SchoolProfile {
   'mi-guru-siswa'=>['Guru dan siswa MI di halaman sekolah','MI'],
   'mi-sanlat'=>['Pesantren kilat (Sanlat) MI Ibnu Aqil','MI'],
   'mi-guru'=>['Dewan guru MI Ibnu Aqil','MI'],
+  'siswa-smp'=>['Siswa SMP Ibnu Aqil','SMP'],
+  'siswa-sma'=>['Siswa dan siswi SMA Ibnu Aqil Boarding School','SMA'],
+  'siswi-sma'=>['Siswi SMA Ibnu Aqil Boarding School','SMA'],
+  'siswa-smk'=>['Siswa SMK Ibnu Aqil','SMK'],
+  'siswi-smk'=>['Siswi SMK Ibnu Aqil jurusan Farmasi','SMK'],
  ];
  private const MARQUEE=[
   ['masjid-cahaya-ilahi','kelas-tik','silat-panggung','mi-market-day','science-club','lalaran-targhib','futsal','perpustakaan','mi-penyambutan','pramuka'],
   ['math-club','santri-berkumpul','karate','mi-seluruh-siswa','lab-komputer-praktik','silat-atraksi-api','mc-santri','futsal-latihan','mi-market-day-mahkota','math-club-2'],
+ ];
+ public const LEADERS=[
+  ['ketua-yayasan','Hj. Saidah Hilmiyah, S.Pd., M.M.','Ketua Yayasan'],
+  ['pembina-kh-agus-salim','KH. Agus Salim, S.Sos., M.M.','Pendiri & Pembina Yayasan'],
  ];
  public const STATS=[
   ['1992','Ibnu Aqil berdiri'],
@@ -78,12 +87,12 @@ class SchoolProfile {
   ['25+','Pilihan ekstrakurikuler'],
  ];
  public const HIGHLIGHTS=[
-  ['shalat-dhuha','Ibadah yang dibiasakan','Shalat Dhuha berjamaah, tadarus Al-Qur\'an, bimbingan BTQ metode Tilawati, dan Majlis Bina Ruhiah menjadi bagian dari hari-hari siswa.'],
-  ['santriwati-kitab','Tradisi kitab kuning dan tahfidz','Santri mempelajari lebih dari 30 kitab kuning dengan metode Amsilati, bandongan, sorogan, dan klasikal, serta program tahfidz Al-Qur\'an dan hadis.'],
-  ['santri-putra','Asrama putra dan putri','SMA Ibnu Aqil Boarding School dan pondok pesantren membina kemandirian, adab, dan kepemimpinan dalam lingkungan asrama.'],
-  ['praktik-farmasi','Siap kuliah dan berkarya','SMK membuka jurusan Farmasi, Akuntansi dan Keuangan Lembaga, serta Bisnis dan Pemasaran, dengan PKL, kunjungan industri, dan teaching factory.'],
-  ['silat-gasmi','Bakat yang diasah','Lebih dari 25 ekstrakurikuler, dari Pencak Silat GASMI, Paskibra, dan Pramuka sampai tilawah, kaligrafi, hadroh, dan English Club.'],
-  ['tadarus-bersama','Lingkungan yang lengkap','Masjid tiga lantai, laboratorium komputer, sains, dan farmasi, lapangan luas, aula, auditorium, serta pusat manasik.'],
+  ['masjid-cahaya-ilahi','Ibadah yang dibiasakan','Shalat Dhuha berjamaah, tadarus Al-Qur\'an, bimbingan BTQ metode Tilawati, dan Majlis Bina Ruhiah menjadi bagian dari hari-hari siswa.'],
+  ['lalaran-targhib','Tradisi kitab kuning dan tahfidz','Santri mempelajari lebih dari 30 kitab kuning dengan metode Amsilati, bandongan, sorogan, dan klasikal, serta program tahfidz Al-Qur\'an dan hadis.'],
+  ['santri-berkumpul','Asrama putra dan putri','SMA Ibnu Aqil Boarding School dan pondok pesantren membina kemandirian, adab, dan kepemimpinan dalam lingkungan asrama.'],
+  ['siswi-smk','Siap kuliah dan berkarya','SMK membuka jurusan Farmasi, Akuntansi dan Keuangan Lembaga, serta Bisnis dan Pemasaran, dengan PKL, kunjungan industri, dan teaching factory.'],
+  ['silat-panggung','Bakat yang diasah','Lebih dari 25 ekstrakurikuler, dari Pencak Silat GASMI, Paskibra, dan Pramuka sampai tilawah, kaligrafi, hadroh, dan English Club.'],
+  ['lab-komputer-praktik','Lingkungan yang lengkap','Masjid tiga lantai, laboratorium komputer, sains, dan farmasi, lapangan luas, aula, auditorium, serta pusat manasik.'],
  ];
  public const ACHIEVEMENTS=[
   ['Juara 3 Lomba Cerdas Cermat Akuntansi','Himpunan Mahasiswa Akuntansi UIKA Bogor','Siswa Ibnu Aqil'],
@@ -106,11 +115,13 @@ class SchoolProfile {
   ['Jam belajar MI','Senin–Jumat, 07.25–14.00 WIB'],
   ['Jam belajar SMP, SMA, SMK','Senin–Jumat, 07.15–14.20 WIB'],
  ];
- public static function photo(string $key):?array{if(isset(self::ACTIVITIES[$key])){$file='assets/foto/kegiatan/'.$key.'.jpg';[$caption,$tag]=self::ACTIVITIES[$key];}elseif(isset(self::WEB_PHOTOS[$key])){$file='assets/foto/web/'.$key.'.jpg';[$caption,$tag]=self::WEB_PHOTOS[$key];}else return null;$path=public_path($file);if(!is_file($path)||is_link($path)||!($size=@getimagesize($path)))return null;return ['key'=>$key,'src'=>asset($file),'alt'=>$caption,'caption'=>$caption,'tag'=>$tag,'width'=>$size[0],'height'=>$size[1]];}
+ public static function photo(string $key):?array{if(isset(self::ACTIVITIES[$key])){$file='assets/foto/kegiatan/'.$key.'.jpg';[$caption,$tag]=self::ACTIVITIES[$key];}elseif(isset(self::WEB_PHOTOS[$key])){$file=is_file(public_path('assets/foto/web/'.$key.'.webp'))?'assets/foto/web/'.$key.'.webp':'assets/foto/web/'.$key.'.jpg';[$caption,$tag]=self::WEB_PHOTOS[$key];}else return null;$path=public_path($file);if(!is_file($path)||is_link($path)||!($size=@getimagesize($path)))return null;return ['key'=>$key,'src'=>asset($file),'alt'=>$caption,'caption'=>$caption,'tag'=>$tag,'width'=>$size[0],'height'=>$size[1]];}
  public static function activities(?int $limit=null):array{$photos=array_values(array_filter(array_map(fn($k)=>self::photo($k),array_keys(self::ACTIVITIES))));return $limit?array_slice($photos,0,$limit):$photos;}
  public static function marquee():array{return array_map(fn($row)=>array_values(array_filter(array_map(fn($k)=>self::photo($k),$row))),self::MARQUEE);}
  public static function unitPhotos(string $slug):array{return array_values(array_filter(array_map(fn($k)=>self::photo($k),self::UNIT_PHOTOS[$slug]??[])));}
  public static function facilities():array{$items=[];foreach(self::FACILITIES as [$file,$title,$text]){$path=public_path($file);if(is_file($path)&&!is_link($path)&&($size=@getimagesize($path)))$items[]=['src'=>asset($file),'title'=>$title,'text'=>$text,'width'=>$size[0],'height'=>$size[1]];}return $items;}
  public static function highlights():array{return array_map(fn($h)=>['photo'=>self::photo($h[0]),'title'=>$h[1],'text'=>$h[2]],self::HIGHLIGHTS);}
  public static function founder():?array{$file=is_file(public_path('assets/foto/web/kh-agus-salim.jpg'))?'assets/foto/web/kh-agus-salim.jpg':'assets/foto/kegiatan/pendiri-kh-agus-salim.jpg';$path=public_path($file);if(!is_file($path)||is_link($path)||!($size=@getimagesize($path)))return null;return ['src'=>asset($file),'width'=>$size[0],'height'=>$size[1]];}
+ // Foundation leaders shown on the home hero; only portraits that exist on disk are returned.
+ public static function leaders():array{$out=[];foreach(self::LEADERS as [$file,$name,$role]){$rel='assets/foto/web/'.$file.'.webp';$path=public_path($rel);if(is_file($path)&&!is_link($path)&&($size=@getimagesize($path)))$out[]=['src'=>asset($rel),'name'=>$name,'role'=>$role,'width'=>$size[0],'height'=>$size[1]];}return $out;}
 }
