@@ -28,5 +28,7 @@
         'shield' => '<path d="M12 3.5 5 6v5.5c0 4.3 3 7.7 7 9 4-1.3 7-4.7 7-9V6Z"/><path d="m9 12 2 2 4-4"/>',
     ];
     $svg = $paths[$name] ?? $paths['sparkle'];
+    $size = is_scalar($size ?? null) ? $size : 24;
+    $class = is_scalar($class ?? null) ? $class : '';
 @endphp
 <svg class="ia-icon {{ $class ?? '' }}" viewBox="0 0 24 24" width="{{ $size ?? 24 }}" height="{{ $size ?? 24 }}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">{!! $svg !!}</svg>

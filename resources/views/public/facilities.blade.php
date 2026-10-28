@@ -57,8 +57,8 @@
         @if($activityPhotos !== [])
         <div class="ia-fac-grid ia-fac-grid-square">
             @foreach($activityPhotos as [$src, $caption])
-            @php($size = getimagesize(public_path($src)))
-            <figure class="ia-fac-item"><a href="{{ asset($src) }}" data-lightbox data-caption="{{ $caption }}" aria-label="Perbesar foto: {{ $caption }}"><img src="{{ asset($src) }}" alt="Kegiatan {{ $caption }} di Ibnu Aqil" width="{{ $size[0] }}" height="{{ $size[1] }}" loading="lazy" decoding="async"></a><figcaption>{{ $caption }}</figcaption></figure>
+            @php($imgSize = getimagesize(public_path($src)))
+            <figure class="ia-fac-item"><a href="{{ asset($src) }}" data-lightbox data-caption="{{ $caption }}" aria-label="Perbesar foto: {{ $caption }}"><img src="{{ asset($src) }}" alt="Kegiatan {{ $caption }} di Ibnu Aqil" width="{{ $imgSize[0] }}" height="{{ $imgSize[1] }}" loading="lazy" decoding="async"></a><figcaption>{{ $caption }}</figcaption></figure>
             @endforeach
         </div>
         @endif
