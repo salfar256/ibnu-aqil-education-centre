@@ -8,7 +8,6 @@ class Facilities
         ['mosque', 'Ibadah', 'fasilitas', [
             ['masjid-salapan-bentang', 'Masjid Salapan Bentang'],
             ['masjid-3-lantai', 'Masjid Salapan Bentang 3 lantai'],
-            ['halaman-masjid', 'Halaman masjid'],
             ['tempat-wudlu', 'Tempat wudlu'],
         ]],
         ['school', 'Gedung & lingkungan sekolah', 'fasilitas', [
@@ -34,7 +33,6 @@ class Facilities
         ['ball', 'Olahraga & prestasi', 'fasilitas', [
             ['lapangan-semi-indoor', 'Lapangan semi-indoor'],
             ['lapangan-olahraga', 'Lapangan olahraga beratap'],
-            ['lapangan-semi-indoor-2', 'Area olahraga'],
             ['lemari-prestasi', 'Lemari piala prestasi'],
             ['lemari-prestasi-2', 'Piala-piala siswa'],
         ]],
