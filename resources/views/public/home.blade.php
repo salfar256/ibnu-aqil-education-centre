@@ -47,7 +47,7 @@
             <h1>Assalamu'alaikum,<br><span>selamat datang di Ibnu&nbsp;Aqil</span></h1>
             <p class="ia-hero-lead">MI · SMP · SMA · SMK · Pondok Pesantren<br>Satu kawasan, satu keluarga, sejak 1992.</p>
             <div class="ia-hero-actions">
-                @if($ppdbUrl)<a class="ia-btn ia-btn-wa" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) <span class="ia-hide-sm">Chat </span>WhatsApp<span class="ia-hide-sm"> PPDB</span></a>@endif
+                @if($ppdbUrl)<a class="ia-btn ia-btn-wa" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) <span><span class="ia-hide-sm">Chat </span>WhatsApp<span class="ia-hide-sm"> PPDB</span></span></a>@endif
                 @if($tel)<a class="ia-btn ia-btn-light" href="{{ $tel }}">@include('public.partials.icon', ['name' => 'phone']) Telepon</a>@endif
             </div>
             <p class="ia-hero-hint">@include('public.partials.icon', ['name' => 'clock', 'size' => 18]) Admin melayani Senin–Jumat, 08.00–15.00 WIB</p>
