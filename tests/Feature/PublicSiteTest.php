@@ -133,7 +133,7 @@ class PublicSiteTest extends TestCase
             ->assertSee('class="ia-bottom-nav"', false)->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false)->assertSee('manifest.webmanifest', false);
         $this->get(route('public.achievements'))->assertOk()->assertSee('Juara 1 Pencak Silat tingkat Nasional')->assertDontSee('Belum ada prestasi');
         $this->page('fasilitas', ['body' => 'Daftar fasilitas terverifikasi.']);
-        $this->get(route('public.page', 'fasilitas'))->assertOk()->assertSee('assets/foto/fasilitas/masjid-salapan-bentang.webp', false)->assertSee('Laboratorium komputer')->assertSee('Security 24 jam')->assertSee('Kegiatan MI Ibnu Aqil')->assertSee('assets/foto/kegiatan-siswa/mi-market-day.webp', false)->assertDontSee('assets/ekskul/', false)
+        $this->get(route('public.page', 'fasilitas'))->assertOk()->assertSee('assets/foto/fasilitas/masjid-salapan-bentang.webp', false)->assertSee('Laboratorium komputer')->assertSee('Security 24 jam')->assertSee('assets/foto/fasilitas/tulisan-ibnu-aqil.webp', false)->assertSee('Mengaji bersama')->assertSee('Kegiatan MI Ibnu Aqil')->assertSee('assets/foto/kegiatan-siswa/mi-market-day.webp', false)->assertDontSee('assets/ekskul/', false)
             ->assertSee('Daftar fasilitas terverifikasi.');
         $this->get(route('public.page', 'kontak'))->assertOk()->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false);
     }
