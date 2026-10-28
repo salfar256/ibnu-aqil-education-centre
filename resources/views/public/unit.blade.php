@@ -81,6 +81,34 @@
     </div>
 </section>
 
+@if(!empty($info['facilities']))
+{{-- Fasilitas khusus unit, dari brosur --}}
+<section class="ia-section">
+    <div class="container">
+        <h2 class="ia-title">Fasilitas</h2>
+        <ul class="ia-programs">
+            @foreach($info['facilities'] as $facility)
+            <li><span class="ia-program-icon">@include('public.partials.icon', ['name' => 'check', 'size' => 26])</span><strong>{{ $facility }}</strong></li>
+            @endforeach
+        </ul>
+    </div>
+</section>
+@endif
+
+@if(!empty($info['achievements']))
+{{-- Prestasi terbaru, dari brosur --}}
+<section class="ia-section">
+    <div class="container">
+        <h2 class="ia-title">Prestasi terbaru</h2>
+        <ul class="ia-programs">
+            @foreach($info['achievements'] as $achievement)
+            <li><span class="ia-program-icon">@include('public.partials.icon', ['name' => 'medal', 'size' => 26])</span><strong>{{ $achievement }}</strong></li>
+            @endforeach
+        </ul>
+    </div>
+</section>
+@endif
+
 {{-- 4. Foto siswa --}}
 @if($info['student_photos'] !== [])
 <section class="ia-students">

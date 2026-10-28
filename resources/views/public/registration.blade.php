@@ -1,6 +1,6 @@
 @extends('layouts.public')
 @section('title', 'Info Pendaftaran PPDB 2027/2028 — Ibnu Aqil Education Center')
-@section('description', 'Cara mendaftar di Sekolah Ibnu Aqil tahun ajaran 2027/2028: alur, syarat dokumen, dan brosur MI, SMP, SMA yang bisa diunduh.')
+@section('description', 'Cara mendaftar di Sekolah Ibnu Aqil tahun ajaran 2027/2028: alur, syarat dokumen, dan brosur MI, SMP, SMA, dan SMK yang bisa diunduh.')
 @php
     use App\Services\{Units, WhatsApp};
     $icon = fn (string $name) => is_file(public_path('assets/icons/daftar/'.$name.'.webp')) ? asset('assets/icons/daftar/'.$name.'.webp') : null;

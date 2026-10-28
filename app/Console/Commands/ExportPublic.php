@@ -235,9 +235,9 @@ class ExportPublic extends Command
         foreach ($xpath->query('//meta[@property="og:url"]') as $node) {
             $node->setAttribute('content', $this->pageUrl($target));
         }
-        $output = $document->saveHTML();
-
-        return preg_replace('/<\?xml encoding="UTF-8">\s*/', '', $output);
+        // Serialize the root element so libxml keeps UTF-8 text (e.g. "—") instead of
+        // converting it to named entities like &mdash;, which search engines may show literally.
+        return "<!DOCTYPE html>\n".$document->saveHTML($document->documentElement);
     }
 
     private function link(string $value): ?string
