@@ -40,15 +40,14 @@
             <nav class="primary-nav" id="primary-nav" aria-label="Navigasi utama">
                 <a href="{{ route('public.page', 'tentang') }}" @if(request()->is('tentang')) aria-current="page" @endif>Tentang</a>
                 <details class="nav-dropdown">
-                    <summary>Unit Ibnu Aqil <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+                    <summary>Sekolah <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
                     <div class="nav-dropdown-panel">
-                        @foreach(['mi' => 'MI Ibnu Aqil', 'smp' => 'SMP Ibnu Aqil', 'sma' => 'SMA Ibnu Aqil', 'smk' => 'SMK Ibnu Aqil', 'pesantren' => 'Pondok Pesantren Ibnu Aqil'] as $slug => $label)
+                        @foreach(['mi' => 'MI Ibnu Aqil', 'smp' => 'SMP Ibnu Aqil', 'sma' => 'SMA Ibnu Aqil', 'smk' => 'SMK Ibnu Aqil', 'pesantren' => 'Pondok Pesantren (pilihan mondok)'] as $slug => $label)
                         <a href="{{ route('public.unit', $slug) }}">{{ $label }} <span aria-hidden="true">↗</span></a>
                         @endforeach
                     </div>
                 </details>
-                <a href="{{ route('public.news') }}" @if(request()->is('berita*')) aria-current="page" @endif>Berita</a>
-                <a href="{{ route('public.gallery') }}" @if(request()->is('galeri*')) aria-current="page" @endif>Galeri</a>
+                <a href="{{ route('public.page', 'fasilitas') }}" @if(request()->is('fasilitas')) aria-current="page" @endif>Fasilitas</a>
                 <a href="{{ route('public.page', 'kontak') }}" class="nav-portal" @if(request()->is('kontak')) aria-current="page" @endif>Kontak</a>
                 <a href="{{ route('public.page', 'pendaftaran') }}" class="button button-small">Info pendaftaran <span aria-hidden="true">↗</span></a>
             </nav>
@@ -62,8 +61,8 @@
                 <p>Ruang informasi Ibnu Aqil.<br>Terhubung melalui ilmu dan berbagi.</p>
                 @if($footerWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran di Ibnu Aqil.'))<a class="footer-portal" href="{{ $footerWa }}" target="_blank" rel="noopener noreferrer">Tanya admin PPDB via WhatsApp <span aria-hidden="true">↗</span></a>@endif
             </div>
-            <div><h2>Jelajahi</h2><a href="{{ route('public.page', 'tentang') }}">Tentang lembaga</a><a href="{{ route('public.page', 'fasilitas') }}">Fasilitas & program</a><a href="{{ route('public.page', 'prestasi') }}">Prestasi</a><a href="{{ route('public.news') }}">Berita & kegiatan</a><a href="{{ route('public.gallery') }}">Galeri</a></div>
-            <div><h2>Unit Ibnu Aqil</h2>@foreach(['mi' => 'MI', 'smp' => 'SMP', 'sma' => 'SMA', 'smk' => 'SMK', 'pesantren' => 'Pondok Pesantren'] as $slug => $label)<a href="{{ route('public.unit', $slug) }}">{{ $label }} Ibnu Aqil</a>@endforeach</div>
+            <div><h2>Jelajahi</h2><a href="{{ route('public.page', 'tentang') }}">Tentang Ibnu Aqil</a><a href="{{ route('public.page', 'fasilitas') }}">Fasilitas & ekskul</a><a href="{{ route('public.achievements') }}">Prestasi</a><a href="{{ route('public.page', 'pendaftaran') }}">Cara mendaftar</a></div>
+            <div><h2>Sekolah</h2>@foreach(['mi' => 'MI', 'smp' => 'SMP', 'sma' => 'SMA', 'smk' => 'SMK', 'pesantren' => 'Pondok Pesantren'] as $slug => $label)<a href="{{ route('public.unit', $slug) }}">{{ $label }} Ibnu Aqil</a>@endforeach</div>
             <div class="footer-contact"><h2>Mari terhubung</h2><a href="{{ route('public.page', 'pendaftaran') }}">Informasi pendaftaran <span aria-hidden="true">↗</span></a><a href="{{ route('public.page', 'kontak') }}">Hubungi kami <span aria-hidden="true">↗</span></a>
                 @if(!empty($settings['contact_address']))<p class="footer-address">{{ $settings['contact_address'] }}</p>@endif
                 @if($footerMapsUrl = \App\Services\SocialLinks::maps($settings ?? []))<a href="{{ $footerMapsUrl }}" target="_blank" rel="noopener noreferrer">Lihat lokasi di Google Maps <span aria-hidden="true">↗</span></a>@endif

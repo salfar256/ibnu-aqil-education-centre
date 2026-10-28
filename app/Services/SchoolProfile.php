@@ -89,7 +89,7 @@ class SchoolProfile {
  public const HIGHLIGHTS=[
   ['masjid-cahaya-ilahi','Ibadah yang dibiasakan','Shalat Dhuha berjamaah, tadarus Al-Qur\'an, bimbingan BTQ metode Tilawati, dan Majlis Bina Ruhiah menjadi bagian dari hari-hari siswa.'],
   ['lalaran-targhib','Tradisi kitab kuning dan tahfidz','Santri mempelajari lebih dari 30 kitab kuning dengan metode Amsilati, bandongan, sorogan, dan klasikal, serta program tahfidz Al-Qur\'an dan hadis.'],
-  ['santri-berkumpul','Asrama putra dan putri','SMA Ibnu Aqil Boarding School dan pondok pesantren membina kemandirian, adab, dan kepemimpinan dalam lingkungan asrama.'],
+  ['santri-berkumpul','Bisa sambil mondok','Siswa SMP dan SMA boleh memilih tinggal di asrama pesantren untuk membina kemandirian, adab, dan kepemimpinan. Sifatnya pilihan, tidak wajib.'],
   ['siswi-smk','Siap kuliah dan berkarya','SMK membuka jurusan Farmasi, Akuntansi dan Keuangan Lembaga, serta Bisnis dan Pemasaran, dengan PKL, kunjungan industri, dan teaching factory.'],
   ['silat-panggung','Bakat yang diasah','Lebih dari 25 ekstrakurikuler, dari Pencak Silat GASMI, Paskibra, dan Pramuka sampai tilawah, kaligrafi, hadroh, dan English Club.'],
   ['lab-komputer-praktik','Lingkungan yang lengkap','Masjid tiga lantai, laboratorium komputer, sains, dan farmasi, lapangan luas, aula, auditorium, serta pusat manasik.'],

@@ -164,7 +164,7 @@ class ExportPublic extends Command
     private function collectRoutes(): void
     {
         $this->routes['/'] = '/';
-        foreach (['berita' => 'news', 'galeri' => 'gallery', 'prestasi' => 'achievement'] as $path => $kind) {
+        foreach (['prestasi' => 'achievement'] as $path => $kind) {
             $this->routes['/'.$path] = '/'.$path;
             $lastPage = max(1, (int) ceil(Article::published()->where('kind', $kind)->count() / 12));
             for ($page = 2; $page <= $lastPage; $page++) {
@@ -175,10 +175,6 @@ class ExportPublic extends Command
             $this->assertSlug($page->slug);
             $path = $page->type === 'unit' ? '/unit/'.$page->slug : (in_array($page->slug, ['tentang', 'fasilitas', 'pendaftaran', 'kontak'], true) ? '/'.$page->slug : '/halaman/'.$page->slug);
             $this->routes[$path] = $path;
-        }
-        foreach (Article::published()->orderBy('id')->get() as $article) {
-            $this->assertSlug($article->slug);
-            $this->routes['/berita/'.$article->slug] = '/berita/'.$article->slug;
         }
     }
 

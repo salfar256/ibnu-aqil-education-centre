@@ -78,10 +78,10 @@ class PublicExportTest extends TestCase
         $this->artisan('app:export-public', ['--url' => self::URL, '--output' => $output])->assertExitCode(0);
         $root = base_path($output);
 
-        foreach (['index.html', 'tentang/index.html', 'unit/mi/index.html', 'halaman/catatan-publik/index.html', 'berita/index.html', 'berita/page/2/index.html', 'berita/publik-1/index.html', 'galeri/index.html', 'prestasi/index.html', 'portal/index.html', '404.html', 'sitemap.xml', 'robots.txt', '.nojekyll', 'assets/site.css', 'assets/site.js', 'media/'.$cover->id.'.png'] as $relative) {
+        foreach (['index.html', 'tentang/index.html', 'unit/mi/index.html', 'halaman/catatan-publik/index.html', 'prestasi/index.html', 'portal/index.html', '404.html', 'sitemap.xml', 'robots.txt', '.nojekyll', 'assets/site.css', 'assets/site.js', 'assets/ramah.css', 'assets/manifest.webmanifest'] as $relative) {
             $this->assertFileExists($root.'/'.$relative);
         }
-        foreach (['fasilitas/index.html', 'kontak/index.html', 'berita/draf-berita/index.html', 'berita/berita-masa-depan/index.html', 'berita/belum-verified/index.html', 'login/index.html', 'admin/index.html', 'storage/media/private.pdf', '.env', 'database/database.sqlite', 'media/'.$unused->id.'.png'] as $relative) {
+        foreach (['fasilitas/index.html', 'kontak/index.html', 'berita/index.html', 'galeri/index.html', 'berita/publik-1/index.html', 'berita/draf-berita/index.html', 'berita/berita-masa-depan/index.html', 'berita/belum-verified/index.html', 'login/index.html', 'admin/index.html', 'storage/media/private.pdf', '.env', 'database/database.sqlite', 'media/'.$unused->id.'.png'] as $relative) {
             $this->assertFileDoesNotExist($root.'/'.$relative);
         }
         $contents = '';
@@ -98,9 +98,8 @@ class PublicExportTest extends TestCase
         $this->assertStringContainsString('href="'.self::URL.'/portal/"', $home);
         $this->assertStringContainsString('href="'.self::URL.'/unit/mi/"', $home);
         $this->assertStringContainsString('src="'.self::URL.'/assets/', $home);
-        $this->assertStringContainsString('href="'.self::URL.'/berita/page/2/"', file_get_contents($root.'/berita/index.html'));
-        $this->assertStringContainsString('href="'.self::URL.'/berita/"', file_get_contents($root.'/berita/page/2/index.html'));
-        $this->assertStringContainsString('href="'.self::URL.'/berita/page/2/"', file_get_contents($root.'/berita/page/2/index.html'));
+        $this->assertStringNotContainsString('/berita/', $home);
+        $this->assertStringNotContainsString('/galeri/', $home);
         $this->assertStringContainsString('https://wa.me/6281234567890', file_get_contents($root.'/portal/index.html'));
         $this->assertStringNotContainsString('/portal/', file_get_contents($root.'/sitemap.xml'));
         $this->crawlLocalLinks($root);

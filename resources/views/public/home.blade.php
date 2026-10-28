@@ -6,22 +6,15 @@
     $leaders = SchoolProfile::leaders();
     $ppdbUrl = WhatsApp::link($settings, 'Saya ingin berkonsultasi tentang pendaftaran putra/putri saya di Ibnu Aqil tahun ajaran 2026/2027.');
     $costUrl = WhatsApp::link($settings, WhatsApp::costMessage());
-    $visitUrl = WhatsApp::link($settings, 'Saya ingin berkunjung ke kampus Ibnu Aqil untuk melihat sekolah dan asrama. Kapan waktu yang tepat?');
+    $visitUrl = WhatsApp::link($settings, 'Saya ingin berkunjung ke kampus Ibnu Aqil untuk melihat sekolah. Kapan waktu yang tepat?');
     $phone = $settings['contact_phone'] ?? '';
     $tel = $phone !== '' ? 'tel:'.preg_replace('/[^0-9+]/', '', $phone) : null;
     $mapsUrl = SocialLinks::maps($settings);
     $heroBg = is_file(public_path('assets/foto/web/masjid-hero.webp')) ? asset('assets/foto/web/masjid-hero.webp') : asset('assets/foto/web/masjid-cahaya-ilahi-wide.jpg');
-    $unitInfo = [
-        'mi' => ['photo' => 'mi-guru-siswa', 'age' => 'Usia 6–12 tahun', 'points' => ['Baca tulis Al-Qur\'an', 'Pembinaan karakter']],
-        'smp' => ['photo' => 'siswa-smp', 'age' => 'Lulus SD/MI', 'points' => ['BTQ Plus & tahfidz', 'Akreditasi A']],
-        'sma' => ['photo' => 'siswa-sma', 'age' => 'Lulus SMP/MTs', 'points' => ['Persiapan kuliah', 'Boarding (asrama)']],
-        'smk' => ['photo' => 'siswi-smk', 'age' => 'Lulus SMP/MTs', 'points' => ['Farmasi · Akuntansi · Bisnis', 'Siap kerja']],
-        'pesantren' => ['photo' => 'lalaran-targhib', 'age' => 'Santri mukim', 'points' => ['30+ kitab kuning', 'Asrama putra & putri']],
-    ];
     $reasons = [
         ['mosque', 'Ibadah harian', 'Dhuha, tadarus, BTQ Tilawati'],
         ['book', '30+ kitab kuning', 'Tradisi pesantren NU'],
-        ['bed', 'Asrama putra & putri', 'Terpisah dan diawasi'],
+        ['bed', 'Bisa sambil mondok', 'Pilihan untuk SMP & SMA'],
         ['medal', 'Akreditasi A', 'SMP, SMA, dan SMK'],
         ['ball', '25+ ekstrakurikuler', 'Silat, Pramuka, hadroh…'],
         ['star', 'Berdiri sejak 1992', 'Lebih dari 30 tahun'],
@@ -75,36 +68,17 @@
             @if($costUrl)<a class="ia-tile" href="{{ $costUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'wallet', 'size' => 30])<strong>Tanya rincian biaya</strong><span>Lewat WhatsApp</span></a>@endif
             @if($visitUrl)<a class="ia-tile" href="{{ $visitUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'calendar', 'size' => 30])<strong>Kunjungi kampus</strong><span>Atur jadwal</span></a>@endif
             @if($mapsUrl)<a class="ia-tile" href="{{ $mapsUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'pin', 'size' => 30])<strong>Lokasi</strong><span>Buka Google Maps</span></a>@endif
-            <a class="ia-tile" href="{{ route('public.gallery') }}">@include('public.partials.icon', ['name' => 'camera', 'size' => 30])<strong>Lihat foto</strong><span>Kegiatan santri</span></a>
+            <a class="ia-tile" href="{{ route('public.page', 'fasilitas') }}">@include('public.partials.icon', ['name' => 'camera', 'size' => 30])<strong>Fasilitas</strong><span>Lihat foto</span></a>
         </div>
     </div>
 </section>
 
-{{-- 3. Kartu sekolah: geser di HP --}}
+{{-- 3. Kartu sekolah: logo + warna khas tiap unit --}}
 <section class="ia-section" id="pilih-sekolah" aria-labelledby="units-heading">
     <div class="container">
-        <div class="ia-head"><h2 id="units-heading" class="ia-title">Pilih sekolah</h2><p class="ia-swipe-hint">Geser @include('public.partials.icon', ['name' => 'arrow', 'size' => 18])</p></div>
-        <div class="ia-units" id="unit-ibnu-aqil">
-            @foreach($units as $unit)
-            @php($info = $unitInfo[$unit->slug] ?? null)
-            @php($photo = $info ? SchoolProfile::photo($info['photo']) : null)
-            <article class="ia-unit">
-                <a class="ia-unit-photo" href="{{ route('public.unit', $unit->slug) }}" tabindex="-1" aria-hidden="true">
-                    @if($photo)<img src="{{ $photo['src'] }}" alt="" width="{{ $photo['width'] }}" height="{{ $photo['height'] }}" loading="lazy" decoding="async">@endif
-                    @if($logo = \App\Services\PublicPhotos::unitLogo($unit->slug))<img class="ia-unit-logo" src="{{ asset($logo) }}" alt="" width="56" height="56" loading="lazy">@endif
-                </a>
-                <div class="ia-unit-body">
-                    @if($info)<p class="ia-chip">@include('public.partials.icon', ['name' => 'user', 'size' => 15]) {{ $info['age'] }}</p>@endif
-                    <h3><a href="{{ route('public.unit', $unit->slug) }}">{{ $unit->title }}</a></h3>
-                    @if($info)<ul class="ia-points">@foreach($info['points'] as $point)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 18]) {{ $point }}</li>@endforeach</ul>@endif
-                    <div class="ia-unit-actions">
-                        <a class="ia-btn ia-btn-small" href="{{ route('public.unit', $unit->slug) }}">Lihat @include('public.partials.icon', ['name' => 'arrow', 'size' => 18])</a>
-                        @if($unitWa = WhatsApp::link($settings, WhatsApp::unitMessage($unit->slug)))<a class="ia-icon-btn" href="{{ $unitWa }}" target="_blank" rel="noopener noreferrer" aria-label="Tanya {{ $unit->title }} lewat WhatsApp">@include('public.partials.icon', ['name' => 'whatsapp'])</a>@endif
-                    </div>
-                </div>
-            </article>
-            @endforeach
-        </div>
+        <div class="ia-head"><h2 id="units-heading" class="ia-title">Pilih sekolah</h2></div>
+        <span id="unit-ibnu-aqil"></span>
+        @include('public.partials.unit-cards', ['only' => $units->pluck('slug')->all()])
     </div>
 </section>
 
@@ -120,7 +94,6 @@
     </div>
 </section>
 
-@include('public.partials.level-finder')
 
 {{-- 5. Alur daftar --}}
 <section class="ia-section" aria-labelledby="steps-heading">
@@ -136,24 +109,19 @@
 
 {{-- 6. Suasana: foto bergerak --}}
 <section class="ia-section ia-life" aria-labelledby="life-heading">
-    <div class="container"><div class="ia-head"><h2 id="life-heading" class="ia-title">Suasana sehari-hari</h2><a class="ia-link" href="{{ route('public.gallery') }}">Semua foto @include('public.partials.icon', ['name' => 'chev', 'size' => 18])</a></div></div>
+    <div class="container"><div class="ia-head"><h2 id="life-heading" class="ia-title">Suasana sehari-hari</h2><a class="ia-link" href="{{ route('public.page', 'fasilitas') }}">Lihat fasilitas @include('public.partials.icon', ['name' => 'chev', 'size' => 18])</a></div></div>
     @include('public.partials.photo-marquee')
 </section>
 
 @include('public.partials.wa-faq')
 
-@if($news->isNotEmpty())
-<section class="ia-section"><div class="container"><div class="ia-head"><h2 class="ia-title">Kabar terbaru</h2><a class="ia-link" href="{{ route('public.news') }}">Semua berita @include('public.partials.icon', ['name' => 'chev', 'size' => 18])</a></div>
-    <div class="news-grid">@foreach($news as $article)@include('public.partials.article-card', ['article' => $article])@endforeach</div>
-</div></section>
-@endif
 
 {{-- 7. Kontak & lokasi --}}
 <section class="ia-contact" aria-labelledby="contact-heading">
     <div class="container ia-contact-inner">
         <div>
             <h2 id="contact-heading">Masih ragu? Tanya saja.</h2>
-            <p>Admin kami siap menjelaskan dengan sabar, termasuk soal biaya dan asrama.</p>
+            <p>Admin kami siap menjelaskan dengan sabar, termasuk soal biaya dan pilihan mondok.</p>
             <ul class="ia-contact-list">
                 @if(!empty($settings['address']))<li>@include('public.partials.icon', ['name' => 'pin']) <span>{{ strtok($settings['address'], "\n") }}</span></li>@endif
                 <li>@include('public.partials.icon', ['name' => 'clock']) <span>Senin–Jumat, 08.00–15.00 WIB</span></li>

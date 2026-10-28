@@ -66,12 +66,12 @@ class WhatsApp {
     {
         $unit = $slug ? self::unitName($slug) : 'Ibnu Aqil';
         $items = [
-            ['Berapa biaya masuk dan biaya bulanannya?', 'Rincian biaya terbaru untuk tahun ajaran 2026/2027 disampaikan langsung oleh admin PPDB, sesuai unit dan pilihan asrama.', self::costMessage($slug)],
+            ['Berapa biaya masuk dan biaya bulanannya?', 'Rincian biaya terbaru untuk tahun ajaran 2026/2027 disampaikan langsung oleh admin PPDB, sesuai unit dan pilihan mondok.', self::costMessage($slug)],
             ['Dokumen apa saja yang perlu disiapkan?', $slug === 'mi'
                 ? 'Untuk MI: formulir pendaftaran, pas foto berwarna 3x4, fotokopi KTP orang tua atau wali, dan fotokopi kartu keluarga.'
                 : 'Umumnya formulir pendaftaran, fotokopi ijazah yang dilegalisir, pas foto 3x4, fotokopi KTP orang tua atau wali, kartu keluarga, akta kelahiran, kartu NISN (jika ada), dan surat keterangan berkelakuan baik dari sekolah asal.',
                 'Dokumen apa saja yang perlu disiapkan untuk mendaftar di '.$unit.'?'],
-            ['Apakah tersedia asrama?', 'Ibnu Aqil memiliki asrama putra dan putri di lingkungan pesantren. Admin dapat menjelaskan ketentuan asrama untuk jenjang yang Anda pilih.', 'Apakah '.$unit.' menyediakan asrama, dan bagaimana ketentuannya?'],
+            ['Apakah harus mondok (tinggal di asrama)?', 'Tidak wajib. Mondok di Pondok Pesantren Ibnu Aqil adalah pilihan khusus untuk siswa SMP dan SMA yang ingin, dengan asrama putra dan putri terpisah.', 'Saya ingin tahu tentang pilihan mondok untuk siswa SMP/SMA di Ibnu Aqil. Bagaimana ketentuannya?'],
             ['Apakah kuota masih tersedia?', 'Kuota setiap unit terbatas. Ketersediaan tempat dan periode pendaftaran dipastikan langsung oleh admin PPDB.', 'Apakah kuota pendaftaran '.$unit.' masih tersedia?'],
             ['Bisakah saya melihat kampus terlebih dahulu?', 'Bisa. Kantor pendaftaran melayani setiap hari kerja pukul 08.00–15.00 WIB di kampus Laladon, Ciomas, Bogor.', 'Saya ingin berkunjung ke kampus untuk melihat '.$unit.'. Kapan waktu yang tepat?'],
             ['Bagaimana jadwal tes dan wawancara?', 'Tes seleksi dan wawancara dilaksanakan sesuai jadwal dari panitia PPDB setelah formulir dan dokumen diserahkan.', 'Kapan jadwal tes dan wawancara untuk '.$unit.'?'],

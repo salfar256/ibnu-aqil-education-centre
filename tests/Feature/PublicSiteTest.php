@@ -32,8 +32,9 @@ class PublicSiteTest extends TestCase
             $response->assertSee(route('public.unit', $slug), false);
             $this->get(route('public.unit', $slug))->assertOk()->assertSee(strtoupper($slug).' Ibnu Aqil');
         }
-        $this->get(route('public.news'))->assertOk();
-        $this->get(route('public.gallery'))->assertOk();
+        $response->assertDontSee('/berita', false)->assertDontSee('/galeri', false)->assertSee(route('public.page', 'fasilitas'), false);
+        $this->get('/berita')->assertNotFound();
+        $this->get('/galeri')->assertNotFound();
     }
 
     public function test_unverified_and_draft_public_pages_are_never_served(): void
@@ -48,21 +49,11 @@ class PublicSiteTest extends TestCase
         $this->get('/')->assertOk()->assertDontSee('KONTEN DRAF RAHASIA')->assertDontSee('KONTEN BELUM DIVERIFIKASI');
     }
 
-    public function test_news_requires_verified_published_content_and_reached_publication_date(): void
+    public function test_news_pages_are_not_published_even_for_published_articles(): void
     {
         $visible = $this->article('sudah-terbit');
-        $hidden = [
-            $this->article('draf-berita', ['status' => 'draft']),
-            $this->article('berita-belum-diverifikasi', ['verified_at' => null]),
-            $this->article('berita-masa-depan', ['published_at' => now()->addDay()]),
-        ];
-
-        $response = $this->get(route('public.news'))->assertOk()->assertSee($visible->title);
-        $this->get(route('public.article', $visible->slug))->assertOk()->assertSee($visible->body);
-        foreach ($hidden as $article) {
-            $response->assertDontSee($article->title);
-            $this->get(route('public.article', $article->slug))->assertNotFound();
-        }
+        $this->get('/berita/'.$visible->slug)->assertNotFound();
+        $this->get('/')->assertOk()->assertDontSee($visible->title);
     }
 
     public function test_public_content_is_escaped_and_has_canonical_and_sharing_metadata(): void
@@ -91,7 +82,7 @@ class PublicSiteTest extends TestCase
         $unverified = $this->page('halaman-belum-pasti', ['verified_at' => null]);
 
         $response = $this->get('/sitemap.xml')->assertOk();
-        $response->assertSee(route('public.page', $page->slug), false)->assertSee(route('public.article', $article->slug), false)->assertDontSee($draft->slug)->assertDontSee($unverified->slug)->assertDontSee('/portal')->assertDontSee('/admin')->assertDontSee('/berkas/');
+        $response->assertSee(route('public.page', $page->slug), false)->assertDontSee($article->slug)->assertDontSee('/berita', false)->assertDontSee($draft->slug)->assertDontSee($unverified->slug)->assertDontSee('/portal')->assertDontSee('/admin')->assertDontSee('/berkas/');
         $this->get('/robots.txt')->assertOk()->assertSee('Disallow: /portal')->assertSee('Disallow: /admin')->assertSee('Disallow: /berkas');
     }
 
@@ -141,7 +132,9 @@ class PublicSiteTest extends TestCase
             ->assertSee('Empat langkah')->assertSee('Chat WhatsApp PPDB')->assertSee('KH. Agus Salim')->assertSee('Hj. Saidah Hilmiyah, S.Pd., M.M.')->assertSee('Ketua Yayasan')
             ->assertSee('class="ia-bottom-nav"', false)->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false)->assertSee('manifest.webmanifest', false);
         $this->get(route('public.achievements'))->assertOk()->assertSee('Juara 1 Pencak Silat tingkat Nasional')->assertDontSee('Belum ada prestasi');
-        $this->get(route('public.gallery'))->assertOk()->assertSee('assets/foto/kegiatan/silat-gasmi.jpg', false)->assertSee('Laboratorium komputer');
+        $this->page('fasilitas', ['body' => 'Daftar fasilitas terverifikasi.']);
+        $this->get(route('public.page', 'fasilitas'))->assertOk()->assertSee('assets/foto/fasilitas/masjid-depan.webp', false)->assertSee('Laboratorium komputer')
+            ->assertSee('assets/ekskul/pencak-silat.webp', false)->assertSee('Ekstrakurikuler')->assertSee('Daftar fasilitas terverifikasi.');
         $this->get(route('public.page', 'kontak'))->assertOk()->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false);
     }
 
@@ -150,7 +143,7 @@ class PublicSiteTest extends TestCase
         $this->seed(\Database\Seeders\DatabaseSeeder::class);
         $home = $this->get('/')->assertOk();
         $home->assertSee('https://wa.me/6285810183161?text=', false)
-            ->assertSee('data-finder', false)
+            ->assertDontSee('data-finder', false)
             ->assertSee('Yang sering')
             ->assertSee('Tanya rincian biaya')
             ->assertDontSee('Portal Pengimbasan')
@@ -159,5 +152,17 @@ class PublicSiteTest extends TestCase
         $unit->assertSee(rawurlencode('pendaftaran di SMK Ibnu Aqil'), false)->assertDontSee('Portal Pengimbasan');
         $this->get('/unit/kbihu')->assertNotFound();
         $this->get('/')->assertDontSee('KBIHU')->assertSee('1992')->assertSee('30+');
+    }
+
+    public function test_unit_pages_show_leader_vision_and_optional_boarding_only_for_smp_and_sma(): void
+    {
+        $this->seed(\Database\Seeders\DatabaseSeeder::class);
+        $this->get('/unit/sma')->assertOk()->assertSee('Hidmatullah, S.E., M.Pd.')->assertSee('assets/foto/pimpinan/sma.webp', false)->assertSee('Visi kami')->assertDontSee('Misi')->assertSee('Bisa sambil mondok (pilihan)');
+        $this->get('/unit/smp')->assertOk()->assertSee('Ade Irawan, S.Pd.I.')->assertSee('Bisa sambil mondok (pilihan)')->assertSee('assets/ekskul/panahan.webp', false);
+        $this->get('/unit/smk')->assertOk()->assertSee('Hj. Eva Fauziah, M.Pd.')->assertDontSee('Bisa sambil mondok');
+        $this->get('/unit/mi')->assertOk()->assertSee('Dr. Hj. Fuzna Nur Aqilah, M.Pd.')->assertDontSee('Bisa sambil mondok');
+        $this->get('/unit/pesantren')->assertOk()->assertSee('Opsional untuk siswa SMP &amp; SMA', false);
+        $this->get('/tentang')->assertOk()->assertSee('KH. Agus Salim, S.Sos., M.M.')->assertSee('Menjaga tradisi yang baik')->assertSee('Sekolah Ibnu Aqil')->assertSee(route('public.unit', 'smk'), false);
+        $this->get('/')->assertOk()->assertSee('ia-c-smk', false)->assertSee('Pilihan untuk SMP &amp; SMA', false);
     }
 }
