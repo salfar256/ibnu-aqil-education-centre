@@ -1,12 +1,12 @@
 @extends('layouts.public')
-@section('title', 'Ibnu Aqil Education Centre — MI, SMP, SMA, SMK, Pesantren Bogor')
-@section('description', 'Ibnu Aqil, Yayasan Haji Agus Salim Bogor: MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren di Laladon, Ciomas. Informasi PPDB 2026/2027 melalui WhatsApp PPDB.')
+@section('title', 'Ibnu Aqil Education Center — MI, SMP, SMA, SMK, Pesantren Bogor')
+@section('description', 'Yayasan Haji Agus Salim Bogor (YHASB) · Ibnu Aqil Education Center: MI, SMP, SMA, SMK, dan Pondok Pesantren di Laladon, Ciomas. PPDB 2027/2028.')
 @php
     use App\Services\{WhatsApp, SchoolProfile, SocialLinks};
     $leaders = SchoolProfile::leaders();
-    $ppdbUrl = WhatsApp::link($settings, 'Saya ingin berkonsultasi tentang pendaftaran putra/putri saya di Ibnu Aqil tahun ajaran 2026/2027.');
+    $ppdbUrl = WhatsApp::link($settings, 'Saya ingin berkonsultasi tentang pendaftaran putra/putri saya di Ibnu Aqil tahun ajaran 2027/2028.');
     $costUrl = WhatsApp::link($settings, WhatsApp::costMessage());
-    $visitUrl = WhatsApp::link($settings, 'Saya ingin berkunjung ke kampus Ibnu Aqil untuk melihat sekolah. Kapan waktu yang tepat?');
+    $visitUrl = WhatsApp::link($settings, 'Saya ingin berkunjung ke sekolah Ibnu Aqil. Kapan waktu yang tepat?');
     $phone = $settings['contact_phone'] ?? '';
     $tel = $phone !== '' ? 'tel:'.preg_replace('/[^0-9+]/', '', $phone) : null;
     $mapsUrl = SocialLinks::maps($settings);
@@ -14,7 +14,7 @@
     $reasons = [
         ['mosque', 'Ibadah harian', 'Dhuha, tadarus, BTQ Tilawati'],
         ['book', '30+ kitab kuning', 'Tradisi pesantren NU'],
-        ['bed', 'Bisa sambil mondok', 'Pilihan untuk SMP & SMA'],
+        ['bed', 'Ayo mondok!', 'Untuk siswa SMP & SMA'],
         ['medal', 'Akreditasi A', 'SMP, SMA, dan SMK'],
         ['ball', '25+ ekstrakurikuler', 'Silat, Pramuka, hadroh…'],
         ['star', 'Berdiri sejak 1992', 'Lebih dari 30 tahun'],
@@ -36,8 +36,9 @@
     <div class="ia-hero-inner container">
         <div class="ia-hero-copy">
             <svg class="calligraphy-draw ia-bismillah" viewBox="0 0 690 150" role="img" aria-label="Bismillahirrahmanirrahim"><text x="345" y="112" text-anchor="middle" lang="ar" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</text></svg>
-            <p class="ia-pill">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB 2026/2027 · Laladon, Ciomas, Bogor</p>
-            <h1>Assalamu'alaikum,<br><span>selamat datang di Ibnu&nbsp;Aqil</span></h1>
+            <p class="ia-pill">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB 2027/2028 · Sekolah Ibnu Aqil</p>
+            <h1>Assalamu'alaikum,<br><span>selamat datang di Yayasan Haji Agus Salim Bogor</span></h1>
+            <p class="ia-hero-brand">YHASB · Ibnu Aqil Education Center</p>
             <p class="ia-hero-lead">MI · SMP · SMA · SMK · Pondok Pesantren<br>Satu kawasan, satu keluarga, sejak 1992.</p>
             <div class="ia-hero-actions">
                 @if($ppdbUrl)<a class="ia-btn ia-btn-wa" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) <span><span class="ia-hide-sm">Chat </span>WhatsApp<span class="ia-hide-sm"> PPDB</span></span></a>@endif
@@ -64,9 +65,9 @@
         <h2 id="quick-heading" class="ia-title">Bapak/Ibu ingin apa hari ini?</h2>
         <div class="ia-quick-grid">
             <a class="ia-tile ia-tile-green" href="{{ route('public.page', 'pendaftaran') }}">@include('public.partials.icon', ['name' => 'form', 'size' => 30])<strong>Cara daftar</strong><span>Syarat & alur</span></a>
-            <a class="ia-tile" href="#pilih-sekolah">@include('public.partials.icon', ['name' => 'school', 'size' => 30])<strong>Pilih sekolah</strong><span>MI sampai SMK</span></a>
+            <a class="ia-tile" href="#pilih-sekolah">@include('public.partials.icon', ['name' => 'school', 'size' => 30])<strong>Pilih sekolah</strong><span>MI, SMP, SMA, SMK</span></a>
             @if($costUrl)<a class="ia-tile" href="{{ $costUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'wallet', 'size' => 30])<strong>Tanya rincian biaya</strong><span>Lewat WhatsApp</span></a>@endif
-            @if($visitUrl)<a class="ia-tile" href="{{ $visitUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'calendar', 'size' => 30])<strong>Kunjungi kampus</strong><span>Atur jadwal</span></a>@endif
+            @if($visitUrl)<a class="ia-tile" href="{{ $visitUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'calendar', 'size' => 30])<strong>Kunjungi sekolah</strong><span>Atur jadwal</span></a>@endif
             @if($mapsUrl)<a class="ia-tile" href="{{ $mapsUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'pin', 'size' => 30])<strong>Lokasi</strong><span>Buka Google Maps</span></a>@endif
             <a class="ia-tile" href="{{ route('public.page', 'fasilitas') }}">@include('public.partials.icon', ['name' => 'camera', 'size' => 30])<strong>Fasilitas</strong><span>Lihat foto</span></a>
         </div>
@@ -121,7 +122,7 @@
     <div class="container ia-contact-inner">
         <div>
             <h2 id="contact-heading">Masih ragu? Tanya saja.</h2>
-            <p>Admin kami siap menjelaskan dengan sabar, termasuk soal biaya dan pilihan mondok.</p>
+            <p>Admin kami siap menjelaskan dengan sabar, termasuk soal biaya dan program mondok.</p>
             <ul class="ia-contact-list">
                 @if(!empty($settings['address']))<li>@include('public.partials.icon', ['name' => 'pin']) <span>{{ strtok($settings['address'], "\n") }}</span></li>@endif
                 <li>@include('public.partials.icon', ['name' => 'clock']) <span>Senin–Jumat, 08.00–15.00 WIB</span></li>

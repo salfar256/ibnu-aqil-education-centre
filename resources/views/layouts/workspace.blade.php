@@ -12,7 +12,7 @@
 <a class="skip-link" href="#main">Langsung ke isi</a>
 <div class="workspace">
     <aside class="sidebar" id="workspace-navigation" aria-label="Navigasi pengelolaan">
-        <a class="brand" href="{{ route('admin.index') }}"><img class="official-logo" src="{{ asset('assets/logo-yhasb.png') }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="44" height="45"><span>Ibnu Aqil<small>Education Centre</small></span></a>
+        <a class="brand" href="{{ route('admin.index') }}"><img class="official-logo" src="{{ asset('assets/logo-yhasb.png') }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="44" height="45"><span>Ibnu Aqil<small>Education Center</small></span></a>
         <div class="workspace-label">RUANG PENGELOLAAN</div>
         <nav>
             <a href="{{ route('admin.index') }}" @class(['nav-link', 'active' => request()->routeIs('admin.index')])><span aria-hidden="true">◫</span> Ringkasan</a>
@@ -44,7 +44,7 @@
                 <div class="alert alert-error" role="alert" tabindex="-1"><strong>Periksa kembali formulir.</strong><ul>@foreach($errors->all() as $error)<li>{{ $error }}</li>@endforeach</ul></div>
             @endif
             @yield('content')
-            <footer class="workspace-footer">Ibnu Aqil Education Centre <span>Ruang kerja aman · akses sesuai peran</span></footer>
+            <footer class="workspace-footer">Ibnu Aqil Education Center <span>Ruang kerja aman · akses sesuai peran</span></footer>
         </main>
     </div>
 </div>

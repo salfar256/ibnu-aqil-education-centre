@@ -3,7 +3,7 @@
     $listingTitle = match($kind) { 'galeri' => 'Galeri Ibnu Aqil', 'prestasi' => 'Prestasi', default => 'Berita & kegiatan' };
     $listingDescription = match($kind) { 'galeri' => 'Dokumentasi yang dibagikan dari lingkungan dan kegiatan Ibnu Aqil.', 'prestasi' => 'Informasi prestasi yang diterbitkan oleh pengelola Ibnu Aqil.', default => 'Cerita, kabar, dan kegiatan yang diterbitkan dari Ibnu Aqil.' };
 @endphp
-@section('title', $listingTitle.' — Ibnu Aqil Education Centre')
+@section('title', $listingTitle.' — Ibnu Aqil Education Center')
 @section('description', $listingDescription)
 @section('content')
 <section class="page-hero"><div class="container"><nav class="breadcrumb" aria-label="Jejak halaman"><a href="{{ route('public.home') }}">Beranda</a><span aria-hidden="true">/</span><span aria-current="page">{{ $listingTitle }}</span></nav><div class="page-hero-grid"><div data-reveal><p class="eyebrow">Cerita dari Ibnu Aqil</p><h1>{{ $listingTitle }}</h1><p class="page-lead">{{ $listingDescription }}</p></div><span class="page-ornament" aria-hidden="true">✳</span></div></div></section>

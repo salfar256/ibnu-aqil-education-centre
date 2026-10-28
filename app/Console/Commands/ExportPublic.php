@@ -264,7 +264,7 @@ class ExportPublic extends Command
         }
         if (str_starts_with($path, '/assets/')) {
             $relative = ltrim($path, '/');
-            if (!preg_match('~^assets/(?:[a-zA-Z0-9_-]+/)*[a-zA-Z0-9_.-]+\.(?:css|js|svg|png|jpg|jpeg|webp|gif|ico|webmanifest)$~i', $relative) || str_contains($relative, '..') || !is_file(public_path($relative)) || is_link(public_path($relative))) {
+            if (!preg_match('~^assets/(?:[a-zA-Z0-9_-]+/)*[a-zA-Z0-9_.-]+\.(?:css|js|svg|png|jpg|jpeg|webp|gif|ico|webmanifest|pdf)$~i', $relative) || str_contains($relative, '..') || !is_file(public_path($relative)) || is_link(public_path($relative))) {
                 return null;
             }
             $this->assetFiles[$relative] = public_path($relative);
@@ -314,7 +314,7 @@ class ExportPublic extends Command
         }
         $home = e($this->pageUrl('/'));
 
-        return '<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,follow"><title>'.e($title).' — Ibnu Aqil Education Centre</title><meta name="description" content="'.e($description).'"><link rel="stylesheet" href="'.e($this->baseUrl).'/assets/site.css"></head><body><a class="skip-link" href="#main-content">Lewati ke konten utama</a><header class="site-header"><div class="container header-inner"><a class="brand" href="'.$home.'"><span class="brand-name">Ibnu Aqil<small>EDUCATION CENTRE</small></span></a><a class="text-link" href="'.$home.'">Kembali ke beranda <span aria-hidden="true">↗</span></a></div></header><main id="main-content"><section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Ibnu Aqil Education Centre</p><h1>'.e($title).'</h1><p class="page-lead">'.e($description).'</p></div><span class="page-ornament" aria-hidden="true">✳</span></div></section><section class="section"><div class="container prose">'.$actions.'<p style="margin-top:32px"><a class="text-link" href="'.$home.'">← Jelajahi website Ibnu Aqil</a></p></div></section></main></body></html>';
+        return '<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,follow"><title>'.e($title).' — Ibnu Aqil Education Center</title><meta name="description" content="'.e($description).'"><link rel="stylesheet" href="'.e($this->baseUrl).'/assets/site.css"></head><body><a class="skip-link" href="#main-content">Lewati ke konten utama</a><header class="site-header"><div class="container header-inner"><a class="brand" href="'.$home.'"><span class="brand-name">Ibnu Aqil<small>EDUCATION CENTER</small></span></a><a class="text-link" href="'.$home.'">Kembali ke beranda <span aria-hidden="true">↗</span></a></div></header><main id="main-content"><section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Ibnu Aqil Education Center</p><h1>'.e($title).'</h1><p class="page-lead">'.e($description).'</p></div><span class="page-ornament" aria-hidden="true">✳</span></div></section><section class="section"><div class="container prose">'.$actions.'<p style="margin-top:32px"><a class="text-link" href="'.$home.'">← Jelajahi website Ibnu Aqil</a></p></div></section></main></body></html>';
     }
 
     private function sitemap(): string

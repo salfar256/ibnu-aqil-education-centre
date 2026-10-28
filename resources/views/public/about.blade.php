@@ -1,5 +1,5 @@
 @extends('layouts.public')
-@section('title', 'Tentang Sekolah Ibnu Aqil — Ibnu Aqil Education Centre')
+@section('title', 'Tentang Sekolah Ibnu Aqil — Ibnu Aqil Education Center')
 @section('description', $page->summary ?: 'Sekolah Ibnu Aqil di Laladon, Ciomas, Bogor, berdiri sejak 1992.')
 @php
     $founder = is_file(public_path('assets/foto/web/pembina-kh-agus-salim.webp'))

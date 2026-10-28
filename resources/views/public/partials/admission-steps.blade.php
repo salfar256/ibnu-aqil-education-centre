@@ -6,7 +6,7 @@
         @endforeach
     </ol>
     <aside class="admission-card" data-reveal>
-        <p class="eyebrow">PPDB 2026/2027</p>
+        <p class="eyebrow">PPDB 2027/2028</p>
         <h3>Konsultasikan pilihan unit untuk putra-putri Anda.</h3>
         <dl class="schedule-list">@foreach(\App\Services\SchoolProfile::SCHEDULE as [$label, $value])<div><dt>{{ $label }}</dt><dd>{{ $value }}</dd></div>@endforeach</dl>
         @if($ppdbUrl)<a class="button button-whatsapp" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">Chat WhatsApp PPDB <span aria-hidden="true">↗</span></a>@endif

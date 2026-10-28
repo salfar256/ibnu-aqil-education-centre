@@ -1,10 +1,11 @@
 @extends('layouts.public')
-@section('title', 'Fasilitas & Ekstrakurikuler — Ibnu Aqil Education Centre')
+@section('title', 'Fasilitas & Ekstrakurikuler — Ibnu Aqil Education Center')
 @section('description', 'Foto fasilitas Sekolah Ibnu Aqil: masjid, ruang belajar, laboratorium, lapangan olahraga, asrama, dan ekstrakurikuler.')
 @php
     use App\Services\{Facilities, Units};
     $groups = Facilities::groups();
-    $ekskul = Units::ekskul(array_keys(Units::EKSKUL));
+    $ekskul = Units::ekskul(['futsal', 'handball', 'badminton', 'panahan', 'silat', 'karate', 'pramuka', 'tahfidz', 'tilawah', 'kaligrafi', 'sains-club', 'math-club', 'english-club', 'komputer', 'drumband', 'paduan-suara']);
+    $ekskulMi = Units::ekskul(['pagar-nusa', 'degung', 'english-club', 'mewarnai', 'pramuka', 'tahfidz', 'futsal', 'calistung'], 'lucu');
     $activityPhotos = array_values(array_filter([
         ['assets/foto/fasilitas/ekskul-silat.webp', 'Pencak Silat'],
         ['assets/foto/fasilitas/ekskul-handball.webp', 'Handball'],
@@ -49,8 +50,15 @@
     <div class="container">
         <h2 id="ekskul-heading" class="ia-title ia-title-icon">@include('public.partials.icon', ['name' => 'star', 'size' => 30]) Ekstrakurikuler</h2>
         <p class="ia-note">Pilihan ekskul berbeda di setiap sekolah. Lihat halaman masing-masing sekolah untuk daftarnya.</p>
+        <h3 class="ia-subtitle">SMP · SMA · SMK</h3>
         <ul class="ia-ekskul">
             @foreach($ekskul as $e)
+            <li>@if($e['src'])<img src="{{ $e['src'] }}" alt="" width="96" height="96" loading="lazy" decoding="async">@endif<span>{{ $e['label'] }}</span></li>
+            @endforeach
+        </ul>
+        <h3 class="ia-subtitle">MI Ibnu Aqil</h3>
+        <ul class="ia-ekskul ia-ekskul-lucu">
+            @foreach($ekskulMi as $e)
             <li>@if($e['src'])<img src="{{ $e['src'] }}" alt="" width="96" height="96" loading="lazy" decoding="async">@endif<span>{{ $e['label'] }}</span></li>
             @endforeach
         </ul>

@@ -1,20 +1,21 @@
 <?php
 namespace App\Services;
 
-// Short, display-ready profile of each unit: brand colour, leader portrait, vision and highlights.
-// Long texts stay in the CMS; this keeps the public pages brief for parents who skim.
+// Short, display-ready profile of each unit: brand colour, leader portrait, vision, brochure programs,
+// student photos, ekstrakurikuler stickers and downloadable brochures. Programs follow the 2027/2028 brochures.
 class Units
 {
     public const ORDER = ['mi', 'smp', 'sma', 'smk', 'pesantren'];
 
-    // Ekstrakurikuler → [label, sticker file in assets/ekskul or null]
+    public const PPDB_YEAR = '2027/2028';
+
+    // Ekstrakurikuler → label and sticker file name (inside assets/ekskul/formal or assets/ekskul/lucu).
     public const EKSKUL = [
         'tahfidz' => ["Tahfidz Al-Qur'an", 'tahfidz'],
         'tilawah' => ['Tilawah', 'tilawah'],
         'kaligrafi' => ['Kaligrafi', 'kaligrafi'],
-        'hadroh' => ['Marawis & Hadroh', 'hadroh'],
-        'paduan-suara' => ['Paduan Suara', 'paduan-suara'],
-        'angklung' => ['Angklung & Degung', 'angklung-degung'],
+        'paduan-suara' => ['Musik & Paduan Suara', 'paduan-suara'],
+        'seni' => ['Seni', 'paduan-suara'],
         'drumband' => ['Drumband', 'drumband'],
         'pramuka' => ['Pramuka', 'pramuka'],
         'math-club' => ['Math Club', 'math-club'],
@@ -26,60 +27,142 @@ class Units
         'badminton' => ['Bulu Tangkis', 'badminton'],
         'panahan' => ['Panahan', 'panahan'],
         'karate' => ['Karate', 'karate'],
-        'silat' => ['Pencak Silat GASMI', 'pencak-silat'],
-        'menggambar' => ['Seni & Menggambar', 'menggambar'],
+        'silat' => ['Pencak Silat', 'pencak-silat'],
+        'silat-gasmi' => ['Pencak Silat GASMI', 'pencak-silat'],
+        'pagar-nusa' => ['Bela Diri Pagar Nusa', 'pencak-silat'],
+        'degung' => ['Seni Musik Degung', 'angklung-degung'],
+        'mewarnai' => ['Mewarnai', 'mewarnai'],
+        'calistung' => ['Calistung (kelas 1–2)', 'calistung'],
     ];
 
     public const UNITS = [
         'mi' => [
             'short' => 'MI', 'name' => 'MI Ibnu Aqil', 'color' => 'mi',
-            'who' => 'Usia 6–12 tahun', 'line' => 'Belajar ceria, akhlak terbina.',
+            'who' => 'Usia 6–12 tahun', 'line' => 'Madrasah lebih baik, lebih baik madrasah.',
             'leader' => ['Dr. Hj. Fuzna Nur Aqilah, M.Pd.', 'Kepala Madrasah'],
             'vision' => 'Generasi Qur\'ani yang ceria, berakhlak mulia, dan cinta belajar sejak dini.',
-            'highlights' => [['book', 'Baca tulis Al-Qur\'an'], ['star', 'Pembinaan karakter'], ['compass', 'Outing class'], ['mosque', 'Program kepesantrenan']],
+            'motto' => 'Faqih · Fashih · Shalih',
+            'programs' => [
+                ['book', 'Bimbingan baca tulis Al-Qur\'an'],
+                ['mosque', 'Shalat Dhuha & Dzuhur berjamaah'],
+                ['sun', 'Tadarus bersama'],
+                ['heart', 'Layanan bimbingan & konseling'],
+                ['star', 'Kepesantrenan (kitab kuning dasar)'],
+                ['people', 'Character building'],
+                ['compass', 'Outing class'],
+                ['cart', 'Market day'],
+                ['chef', 'Cooking class'],
+                ['mic', 'Pentas seni'],
+                ['tent', 'Perkemahan pramuka'],
+                ['leaf', 'Adiwiyata'],
+            ],
             'schedule' => 'Senin–Jumat · 07.25–14.00 WIB',
             'boarding' => null,
-            'ekskul' => [],
+            'ekskul_style' => 'lucu',
+            'ekskul' => ['pagar-nusa', 'degung', 'english-club', 'mewarnai', 'pramuka', 'tahfidz', 'futsal', 'calistung'],
+            'students' => ['mi-1', 'mi-2', 'mi-3'],
+            'brochure' => ['pages' => 2, 'drive' => 'https://drive.google.com/drive/folders/1HR7xfHbaDrTaDwnyYcQaz27yCIl9UW-v?usp=drive_link'],
         ],
         'smp' => [
             'short' => 'SMP', 'name' => 'SMP Ibnu Aqil', 'color' => 'smp',
-            'who' => 'Lulusan SD/MI', 'line' => 'Tumbuh berprestasi, kuat mengaji.',
+            'who' => 'Lulusan SD/MI', 'line' => 'Berakhlak mulia, berilmu, berprestasi.',
             'leader' => ['Ade Irawan, S.Pd.I.', 'Kepala Sekolah'],
             'vision' => 'Pelajar berakhlak, berprestasi, dan cakap digital dengan jiwa santri.',
-            'highlights' => [['medal', 'Terakreditasi A'], ['book', 'BTQ Plus & tahfidz'], ['mosque', 'Dhuha & tadarus setiap hari'], ['check', 'Absensi elektronik']],
+            'motto' => 'Berakhlak Mulia · Berilmu · Berprestasi',
+            'programs' => [
+                ['medal', 'Terakreditasi A'],
+                ['book', 'BTQ Plus metode Tilawati'],
+                ['star', 'Tahfidz Al-Qur\'an'],
+                ['sun', 'Dhuha & tadarus setiap hari'],
+                ['mosque', 'Muatan lokal keagamaan & pesantren'],
+                ['check', 'Absensi elektronik'],
+                ['shield', 'Keamanan 24 jam'],
+                ['ball', '16 pilihan ekstrakurikuler'],
+            ],
             'schedule' => 'Senin–Jumat · 07.15–14.20 WIB',
-            'boarding' => 'Bisa sambil mondok (pilihan)',
-            'ekskul' => ['pramuka', 'futsal', 'handball', 'badminton', 'panahan', 'hadroh', 'karate', 'silat', 'angklung', 'komputer', 'paduan-suara', 'math-club', 'english-club', 'sains-club', 'kaligrafi', 'tilawah'],
+            'boarding' => 'Ayo sambil mondok di pesantren!',
+            'ekskul_style' => 'formal',
+            'ekskul' => ['futsal', 'handball', 'badminton', 'panahan', 'silat', 'karate', 'pramuka', 'tahfidz', 'kaligrafi', 'tilawah', 'sains-club', 'math-club', 'english-club', 'komputer', 'drumband', 'paduan-suara'],
+            'students' => ['smp-1', 'smp-2'],
+            'brochure' => ['pages' => 1, 'drive' => 'https://drive.google.com/drive/folders/143UuA-_LvFdWcTkaxfSvZ34NsfFa9lSP?usp=drive_link'],
         ],
         'sma' => [
             'short' => 'SMA', 'name' => 'SMA Ibnu Aqil Boarding School', 'color' => 'sma',
             'who' => 'Lulusan SMP/MTs', 'line' => 'Siap kuliah, siap memimpin.',
             'leader' => ['Hidmatullah, S.E., M.Pd.', 'Kepala Sekolah'],
             'vision' => 'Melahirkan pemimpin muda yang berakhlak, unggul akademik, dan siap bersaing di tingkat global.',
-            'highlights' => [['medal', 'Terakreditasi A'], ['school', 'Bimbingan belajar intensif'], ['people', 'English Conversation'], ['sparkle', 'Santripreneur & kepemimpinan']],
+            'motto' => 'Islamic Boarding School',
+            'programs' => [
+                ['medal', 'Terakreditasi A'],
+                ['mosque', 'Bimbingan praktik ibadah & Dhuha bersama'],
+                ['school', 'Bimbingan belajar intensif'],
+                ['laptop', 'Penguasaan TIK'],
+                ['book', 'Hafalan Al-Qur\'an & hadis'],
+                ['star', 'BTQ metode Tilawati'],
+                ['sparkle', 'Pengembangan life skill'],
+                ['mic', 'Bimbingan dakwah Islamiyah'],
+                ['sun', 'Pembiasaan tadarus Al-Qur\'an'],
+                ['book', 'Program baca kitab kuning'],
+                ['people', 'Pelatihan profesi mengajar (kelas akhir)'],
+            ],
             'schedule' => 'Senin–Jumat · 07.15–14.20 WIB',
-            'boarding' => 'Bisa sambil mondok (pilihan)',
-            'ekskul' => ['paduan-suara', 'badminton', 'silat', 'pramuka', 'handball', 'futsal'],
+            'boarding' => 'Ayo sambil mondok di pesantren!',
+            'ekskul_style' => 'formal',
+            'ekskul' => ['paduan-suara', 'badminton', 'silat-gasmi', 'pramuka', 'handball', 'futsal'],
+            'students' => ['sma-1', 'sma-2'],
+            'brochure' => ['pages' => 2, 'drive' => 'https://drive.google.com/drive/folders/1HuzLAXhcfCX4RqkH8mnv-dao7P6qJy4b?usp=drive_link'],
+            'note' => 'Tidak menerima siswa pindahan.',
         ],
         'smk' => [
             'short' => 'SMK', 'name' => 'SMK Ibnu Aqil', 'color' => 'smk',
-            'who' => 'Lulusan SMP/MTs', 'line' => 'Terampil, siap kerja, siap kuliah.',
+            'who' => 'Lulusan SMP/MTs', 'line' => '3 jurusan: Farmasi, Akuntansi, Bisnis.',
             'leader' => ['Hj. Eva Fauziah, M.Pd.', 'Kepala Sekolah'],
             'vision' => 'Lulusan kompeten, jujur, dan produktif yang siap berkarya di dunia kerja maupun kuliah.',
-            'highlights' => [['medal', 'Terakreditasi A'], ['form', 'Farmasi · Akuntansi · Bisnis'], ['compass', 'PKL & kunjungan industri'], ['sparkle', 'Peluang kerja ke Jerman, Jepang, Korea']],
+            'motto' => 'Terampil · Siap kerja · Siap kuliah',
+            'majors' => [
+                ['pill', 'Farmasi', 'Bidang kesehatan & ilmu obat, praktik di apotek simulasi.'],
+                ['calc', 'Akuntansi & Keuangan Lembaga', 'Keterampilan praktis dunia keuangan dan akuntansi.'],
+                ['cart', 'Bisnis & Pemasaran', 'Manajemen, pemasaran digital, periklanan, dan wirausaha.'],
+            ],
+            'programs' => [
+                ['medal', 'Terakreditasi A'],
+                ['briefcase', 'Praktik kerja lapangan (PKL)'],
+                ['compass', 'Kunjungan industri'],
+                ['school', 'Teaching factory & guru dari DU/DI'],
+                ['globe', 'Peluang karier ke Jerman, Jepang, Korea'],
+                ['star', 'Persiapan masuk PTN'],
+                ['sun', 'Dhuha & tadarus bersama'],
+                ['book', 'BTQ metode Tilawati'],
+            ],
             'schedule' => 'Senin–Jumat · 07.15–14.20 WIB',
             'boarding' => null,
-            'ekskul' => ['futsal', 'silat', 'handball', 'badminton', 'menggambar'],
+            'ekskul_style' => 'formal',
+            'ekskul' => ['futsal', 'silat', 'handball', 'badminton', 'seni'],
+            'students' => ['smk-1', 'smk-2', 'smk-3'],
+            'brochure' => null,
         ],
         'pesantren' => [
             'short' => 'Pesantren', 'name' => 'Pondok Pesantren Ibnu Aqil', 'color' => 'pesantren',
-            'who' => 'Siswa SMP & SMA yang ingin mondok', 'line' => 'Mondok itu pilihan, bukan kewajiban.',
+            'who' => 'Untuk siswa SMP & SMA', 'line' => 'Ayo mondok! Ilmu, adab, dan kemandirian.',
             'leader' => ['Hj. Mia Hamidiyah, S.Sos., M.M.', 'Pengasuh Ma\'had (MDIIA)'],
             'vision' => 'Santri yang alim, berakhlak karimah, dan menghidupkan tradisi kitab kuning di era digital.',
-            'highlights' => [['book', '30+ kitab kuning'], ['mosque', 'Tahfidz Al-Qur\'an & 1000 hadis'], ['bed', 'Asrama putra & putri'], ['people', 'Public speaking & bahtsul masail']],
-            'schedule' => 'Khusus siswa SMP dan SMA · opsional',
-            'boarding' => 'Opsional untuk siswa SMP & SMA',
+            'motto' => 'Menjaga tradisi yang baik, mengambil yang lebih baik',
+            'programs' => [
+                ['book', '30+ kitab kuning'],
+                ['star', 'Tahsin & tahfidz Al-Qur\'an'],
+                ['book', 'Tahfidz & fahmu 1000 hadis'],
+                ['globe', 'Bahasa Arab & Inggris'],
+                ['mosque', 'Pembiasaan ibadah, zikir & riyadhah'],
+                ['mic', 'Public speaking'],
+                ['people', 'Bahtsul masail'],
+                ['bed', 'Asrama putra & putri terpisah'],
+            ],
+            'schedule' => 'Pilihan untuk siswa SMP & SMA',
+            'boarding' => 'Ayo mondok bagi siswa SMP & SMA!',
+            'ekskul_style' => 'formal',
             'ekskul' => [],
+            'students' => ['smp-1', 'sma-3'],
+            'brochure' => null,
         ],
     ];
 
@@ -92,10 +175,26 @@ class Units
         $unit['slug'] = $slug;
         $logo = PublicPhotos::unitLogo($slug);
         $unit['logo'] = $logo ? asset($logo) : null;
-        $rel = 'assets/foto/pimpinan/'.$slug.'.webp';
-        $path = public_path($rel);
-        $unit['leader_photo'] = is_file($path) && !is_link($path) && ($size = @getimagesize($path))
-            ? ['src' => asset($rel), 'width' => $size[0], 'height' => $size[1]] : null;
+        $unit['leader_photo'] = self::image('assets/foto/pimpinan/'.$slug.'.webp');
+        $unit['student_photos'] = array_values(array_filter(array_map(fn ($k) => self::image('assets/foto/siswa/'.$k.'.webp'), $unit['students'] ?? [])));
+        $unit['brochure_files'] = null;
+        if (!empty($unit['brochure'])) {
+            $pdf = 'assets/brosur/brosur-'.$slug.'-2027-2028.pdf';
+            $pages = [];
+            for ($i = 1; $i <= $unit['brochure']['pages']; $i++) {
+                $preview = self::image('assets/brosur/brosur-'.$slug.'-'.$i.'.jpg');
+                $hd = 'assets/brosur/brosur-'.$slug.'-'.$i.'-hd.jpg';
+                if ($preview) {
+                    $pages[] = $preview + ['hd' => is_file(public_path($hd)) ? asset($hd) : $preview['src']];
+                }
+            }
+            $unit['brochure_files'] = [
+                'pdf' => is_file(public_path($pdf)) ? asset($pdf) : null,
+                'pdf_kb' => is_file(public_path($pdf)) ? (int) round(filesize(public_path($pdf)) / 1024) : null,
+                'pages' => $pages,
+                'drive' => $unit['brochure']['drive'] ?? null,
+            ];
+        }
 
         return $unit;
     }
@@ -105,7 +204,7 @@ class Units
         return array_map(fn ($slug) => self::get($slug), self::ORDER);
     }
 
-    public static function ekskul(array $keys): array
+    public static function ekskul(array $keys, string $style = 'formal'): array
     {
         $out = [];
         foreach ($keys as $key) {
@@ -113,10 +212,18 @@ class Units
                 continue;
             }
             [$label, $file] = self::EKSKUL[$key];
-            $rel = $file ? 'assets/ekskul/'.$file.'.webp' : null;
-            $out[] = ['key' => $key, 'label' => $label, 'src' => $rel && is_file(public_path($rel)) ? asset($rel) : null];
+            $rel = 'assets/ekskul/'.$style.'/'.$file.'.webp';
+            $out[] = ['key' => $key, 'label' => $label, 'src' => is_file(public_path($rel)) ? asset($rel) : null];
         }
 
         return $out;
+    }
+
+    private static function image(string $rel): ?array
+    {
+        $path = public_path($rel);
+
+        return is_file($path) && !is_link($path) && ($size = @getimagesize($path))
+            ? ['src' => asset($rel), 'width' => $size[0], 'height' => $size[1]] : null;
     }
 }

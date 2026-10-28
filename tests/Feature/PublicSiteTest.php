@@ -27,7 +27,7 @@ class PublicSiteTest extends TestCase
             $this->page($slug, ['title' => strtoupper($slug).' Ibnu Aqil', 'type' => 'unit']);
         }
         $response = $this->get(route('public.home'))->assertOk();
-        $response->assertSee('Ibnu Aqil Education Centre')->assertDontSee('Portal Pengimbasan')->assertSee('id="primary-nav"', false)->assertSee('aria-controls="primary-nav"', false)->assertSee('Lewati ke konten utama');
+        $response->assertSee('Ibnu Aqil Education Center')->assertDontSee('Portal Pengimbasan')->assertSee('id="primary-nav"', false)->assertSee('aria-controls="primary-nav"', false)->assertSee('Lewati ke konten utama');
         foreach (['mi', 'smp', 'sma', 'smk', 'pesantren'] as $slug) {
             $response->assertSee(route('public.unit', $slug), false);
             $this->get(route('public.unit', $slug))->assertOk()->assertSee(strtoupper($slug).' Ibnu Aqil');
@@ -134,7 +134,7 @@ class PublicSiteTest extends TestCase
         $this->get(route('public.achievements'))->assertOk()->assertSee('Juara 1 Pencak Silat tingkat Nasional')->assertDontSee('Belum ada prestasi');
         $this->page('fasilitas', ['body' => 'Daftar fasilitas terverifikasi.']);
         $this->get(route('public.page', 'fasilitas'))->assertOk()->assertSee('assets/foto/fasilitas/masjid-depan.webp', false)->assertSee('Laboratorium komputer')
-            ->assertSee('assets/ekskul/pencak-silat.webp', false)->assertSee('Ekstrakurikuler')->assertSee('Daftar fasilitas terverifikasi.');
+            ->assertSee('assets/ekskul/formal/pencak-silat.webp', false)->assertSee('assets/ekskul/lucu/calistung.webp', false)->assertSee('Ekstrakurikuler')->assertSee('Daftar fasilitas terverifikasi.');
         $this->get(route('public.page', 'kontak'))->assertOk()->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false);
     }
 
@@ -157,12 +157,13 @@ class PublicSiteTest extends TestCase
     public function test_unit_pages_show_leader_vision_and_optional_boarding_only_for_smp_and_sma(): void
     {
         $this->seed(\Database\Seeders\DatabaseSeeder::class);
-        $this->get('/unit/sma')->assertOk()->assertSee('Hidmatullah, S.E., M.Pd.')->assertSee('assets/foto/pimpinan/sma.webp', false)->assertSee('Visi kami')->assertDontSee('Misi')->assertSee('Bisa sambil mondok (pilihan)');
-        $this->get('/unit/smp')->assertOk()->assertSee('Ade Irawan, S.Pd.I.')->assertSee('Bisa sambil mondok (pilihan)')->assertSee('assets/ekskul/panahan.webp', false);
-        $this->get('/unit/smk')->assertOk()->assertSee('Hj. Eva Fauziah, M.Pd.')->assertDontSee('Bisa sambil mondok');
-        $this->get('/unit/mi')->assertOk()->assertSee('Dr. Hj. Fuzna Nur Aqilah, M.Pd.')->assertDontSee('Bisa sambil mondok');
-        $this->get('/unit/pesantren')->assertOk()->assertSee('Opsional untuk siswa SMP &amp; SMA', false);
+        $this->get('/unit/sma')->assertOk()->assertSee('Hidmatullah, S.E., M.Pd.')->assertSee('assets/foto/pimpinan/sma.webp', false)->assertSee('Visi kami')->assertDontSee('Misi')->assertSee('Ayo sambil mondok di pesantren!')->assertSee('assets/foto/siswa/sma-1.webp', false)->assertSee('assets/brosur/brosur-sma-2027-2028.pdf', false);
+        $this->get('/unit/smp')->assertOk()->assertSee('Ade Irawan, S.Pd.I.')->assertSee('Ayo sambil mondok di pesantren!')->assertSee('assets/ekskul/formal/panahan.webp', false);
+        $this->get('/unit/smk')->assertOk()->assertSee('Hj. Eva Fauziah, M.Pd.')->assertDontSee('Ayo sambil mondok')->assertSee('3 jurusan pilihan')->assertSee('Akuntansi &amp; Keuangan Lembaga', false);
+        $this->get('/unit/mi')->assertOk()->assertSee('Dr. Hj. Fuzna Nur Aqilah, M.Pd.')->assertDontSee('Ayo sambil mondok')->assertSee('assets/ekskul/lucu/calistung.webp', false)->assertSee('assets/brosur/brosur-mi-2027-2028.pdf', false);
+        $this->get('/unit/pesantren')->assertOk()->assertSee('Untuk siswa SMP &amp; SMA', false);
         $this->get('/tentang')->assertOk()->assertSee('KH. Agus Salim, S.Sos., M.M.')->assertSee('Menjaga tradisi yang baik')->assertSee('Sekolah Ibnu Aqil')->assertSee(route('public.unit', 'smk'), false);
-        $this->get('/')->assertOk()->assertSee('ia-c-smk', false)->assertSee('Pilihan untuk SMP &amp; SMA', false);
+        $this->get('/')->assertOk()->assertSee('ia-c-smk', false)->assertSee('Untuk siswa SMP &amp; SMA', false)->assertSee('PPDB 2027/2028 · Sekolah Ibnu Aqil')->assertSee('Yayasan Haji Agus Salim Bogor')->assertSee('Kunjungi sekolah')->assertSee('MI, SMP, SMA, SMK');
+        $this->get('/pendaftaran')->assertOk()->assertSee('Alur pendaftaran')->assertSee('assets/icons/daftar/isi-formulir.webp', false)->assertSee('assets/foto/siswa/mi-1.webp', false)->assertSee('assets/brosur/brosur-smp-2027-2028.pdf', false);
     }
 }

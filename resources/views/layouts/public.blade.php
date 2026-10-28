@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#103e35">
-    <title>@yield('title', 'Ibnu Aqil Education Centre')</title>
-    <meta name="description" content="@yield('description', 'MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2026/2027 langsung kepada admin PPDB melalui WhatsApp.')">
+    <title>@yield('title', 'Ibnu Aqil Education Center')</title>
+    <meta name="description" content="@yield('description', 'MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2027/2028 langsung kepada admin PPDB melalui WhatsApp.')">
     <link rel="canonical" href="{{ request()->url() }}">
     <meta property="og:type" content="@yield('og_type', 'website')">
-    <meta property="og:title" content="@yield('title', 'Ibnu Aqil Education Centre')">
-    <meta property="og:description" content="@yield('description', 'MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2026/2027 langsung kepada admin PPDB melalui WhatsApp.')">
+    <meta property="og:title" content="@yield('title', 'Ibnu Aqil Education Center')">
+    <meta property="og:description" content="@yield('description', 'MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2027/2028 langsung kepada admin PPDB melalui WhatsApp.')">
     <meta property="og:url" content="{{ request()->url() }}">
-    <meta property="og:site_name" content="Ibnu Aqil Education Centre">
+    <meta property="og:site_name" content="Ibnu Aqil Education Center">
     <meta property="og:image" content="{{ asset('assets/brosur-2026-2027.jpg') }}">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="{{ asset('assets/favicon.svg') }}" type="image/svg+xml">
@@ -29,12 +29,12 @@
 <body>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
     <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
-    <div class="topline"><div class="container"><span>Ibnu Aqil Education Centre</span>@if($toplineWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran tahun ajaran 2026/2027.'))<a href="{{ $toplineWa }}" target="_blank" rel="noopener noreferrer">Informasi PPDB 2026/2027 — tanya admin via WhatsApp <span aria-hidden="true">↗</span></a>@endif</div></div>
+    <div class="topline"><div class="container"><span>Ibnu Aqil Education Center</span>@if($toplineWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran tahun ajaran 2027/2028.'))<a href="{{ $toplineWa }}" target="_blank" rel="noopener noreferrer">Informasi PPDB 2027/2028 — tanya admin via WhatsApp <span aria-hidden="true">↗</span></a>@endif</div></div>
     <header class="site-header">
         <div class="container header-inner">
-            <a class="brand" href="{{ route('public.home') }}" aria-label="Ibnu Aqil Education Centre, beranda">
+            <a class="brand" href="{{ route('public.home') }}" aria-label="Ibnu Aqil Education Center, beranda">
                 <img class="official-logo" src="{{ asset(\App\Services\PublicPhotos::logo()) }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="48" height="49">
-                <span class="brand-name">Ibnu Aqil<small>EDUCATION CENTRE</small></span>
+                <span class="brand-name">Ibnu Aqil<small>EDUCATION CENTER</small></span>
             </a>
             <button type="button" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="sr-only">Buka menu navigasi</span></button>
             <nav class="primary-nav" id="primary-nav" aria-label="Navigasi utama">
@@ -42,7 +42,7 @@
                 <details class="nav-dropdown">
                     <summary>Sekolah <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
                     <div class="nav-dropdown-panel">
-                        @foreach(['mi' => 'MI Ibnu Aqil', 'smp' => 'SMP Ibnu Aqil', 'sma' => 'SMA Ibnu Aqil', 'smk' => 'SMK Ibnu Aqil', 'pesantren' => 'Pondok Pesantren (pilihan mondok)'] as $slug => $label)
+                        @foreach(['mi' => 'MI Ibnu Aqil', 'smp' => 'SMP Ibnu Aqil', 'sma' => 'SMA Ibnu Aqil', 'smk' => 'SMK Ibnu Aqil', 'pesantren' => 'Pondok Pesantren (ayo mondok!)'] as $slug => $label)
                         <a href="{{ route('public.unit', $slug) }}">{{ $label }} <span aria-hidden="true">↗</span></a>
                         @endforeach
                     </div>
@@ -57,7 +57,7 @@
     <footer class="site-footer">
         <div class="container footer-main">
             <div class="footer-brand-column">
-                <a class="brand brand-light" href="{{ route('public.home') }}"><img class="official-logo" src="{{ asset(\App\Services\PublicPhotos::logo()) }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="48" height="49"><span class="brand-name">Ibnu Aqil<small>EDUCATION CENTRE</small></span></a>
+                <a class="brand brand-light" href="{{ route('public.home') }}"><img class="official-logo" src="{{ asset(\App\Services\PublicPhotos::logo()) }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="48" height="49"><span class="brand-name">Ibnu Aqil<small>EDUCATION CENTER</small></span></a>
                 <p>Ruang informasi Ibnu Aqil.<br>Terhubung melalui ilmu dan berbagi.</p>
                 @if($footerWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran di Ibnu Aqil.'))<a class="footer-portal" href="{{ $footerWa }}" target="_blank" rel="noopener noreferrer">Tanya admin PPDB via WhatsApp <span aria-hidden="true">↗</span></a>@endif
             </div>
@@ -70,7 +70,7 @@
                 @include('public.partials.social-links')
             </div>
         </div>
-        <div class="container footer-bottom"><span>© {{ date('Y') }} Ibnu Aqil Education Centre</span><a href="{{ route('login') }}">Akses pengelola <span aria-hidden="true">↗</span></a></div>
+        <div class="container footer-bottom"><span>© {{ date('Y') }} Ibnu Aqil Education Center</span><a href="{{ route('login') }}">Akses pengelola <span aria-hidden="true">↗</span></a></div>
     </footer>
     @php($waMenu = \App\Services\WhatsApp::menu($waSettings))
     @if($waMenu !== [])

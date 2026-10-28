@@ -45,7 +45,7 @@ class WhatsApp {
     {
         $target = $slug ? self::unitName($slug) : 'unit Ibnu Aqil';
 
-        return 'Saya ingin mengetahui rincian biaya pendaftaran '.$target.' tahun ajaran 2026/2027, serta apakah ada program keringanan atau cicilan.';
+        return 'Saya ingin mengetahui rincian biaya pendaftaran '.$target.' tahun ajaran 2027/2028, serta apakah ada program keringanan atau cicilan.';
     }
 
     // Topics shown in the floating WhatsApp menu on every page.
@@ -56,7 +56,7 @@ class WhatsApp {
             $items[] = ['label' => self::UNITS[$slug][1], 'href' => self::link($settings, self::unitMessage($slug))];
         }
         $items[] = ['label' => 'Rincian biaya', 'href' => self::link($settings, self::costMessage())];
-        $items[] = ['label' => 'Kunjungan ke kampus', 'href' => self::link($settings, 'Saya ingin berkunjung ke kampus Ibnu Aqil untuk melihat sekolah dan asrama. Kapan waktu yang tepat?')];
+        $items[] = ['label' => 'Kunjungi sekolah', 'href' => self::link($settings, 'Saya ingin berkunjung ke sekolah Ibnu Aqil. Kapan waktu yang tepat?')];
 
         return array_values(array_filter($items, fn ($item) => $item['href'] !== null));
     }
@@ -66,14 +66,14 @@ class WhatsApp {
     {
         $unit = $slug ? self::unitName($slug) : 'Ibnu Aqil';
         $items = [
-            ['Berapa biaya masuk dan biaya bulanannya?', 'Rincian biaya terbaru untuk tahun ajaran 2026/2027 disampaikan langsung oleh admin PPDB, sesuai unit dan pilihan mondok.', self::costMessage($slug)],
+            ['Berapa biaya masuk dan biaya bulanannya?', 'Rincian biaya terbaru untuk tahun ajaran 2027/2028 disampaikan langsung oleh admin PPDB, sesuai unit dan pilihan mondok.', self::costMessage($slug)],
             ['Dokumen apa saja yang perlu disiapkan?', $slug === 'mi'
                 ? 'Untuk MI: formulir pendaftaran, pas foto berwarna 3x4, fotokopi KTP orang tua atau wali, dan fotokopi kartu keluarga.'
                 : 'Umumnya formulir pendaftaran, fotokopi ijazah yang dilegalisir, pas foto 3x4, fotokopi KTP orang tua atau wali, kartu keluarga, akta kelahiran, kartu NISN (jika ada), dan surat keterangan berkelakuan baik dari sekolah asal.',
                 'Dokumen apa saja yang perlu disiapkan untuk mendaftar di '.$unit.'?'],
-            ['Apakah harus mondok (tinggal di asrama)?', 'Tidak wajib. Mondok di Pondok Pesantren Ibnu Aqil adalah pilihan khusus untuk siswa SMP dan SMA yang ingin, dengan asrama putra dan putri terpisah.', 'Saya ingin tahu tentang pilihan mondok untuk siswa SMP/SMA di Ibnu Aqil. Bagaimana ketentuannya?'],
+            ['Bisakah sambil mondok di pesantren?', 'Bisa, dan kami ajak! Siswa SMP dan SMA yang ingin bisa sambil mondok di Pondok Pesantren Ibnu Aqil, dengan asrama putra dan putri terpisah.', 'Saya ingin tahu tentang pilihan mondok untuk siswa SMP/SMA di Ibnu Aqil. Bagaimana ketentuannya?'],
             ['Apakah kuota masih tersedia?', 'Kuota setiap unit terbatas. Ketersediaan tempat dan periode pendaftaran dipastikan langsung oleh admin PPDB.', 'Apakah kuota pendaftaran '.$unit.' masih tersedia?'],
-            ['Bisakah saya melihat kampus terlebih dahulu?', 'Bisa. Kantor pendaftaran melayani setiap hari kerja pukul 08.00–15.00 WIB di kampus Laladon, Ciomas, Bogor.', 'Saya ingin berkunjung ke kampus untuk melihat '.$unit.'. Kapan waktu yang tepat?'],
+            ['Bisakah saya melihat sekolah terlebih dahulu?', 'Bisa. Kantor pendaftaran melayani setiap hari kerja pukul 08.00–15.00 WIB di kampus Laladon, Ciomas, Bogor.', 'Saya ingin berkunjung ke sekolah untuk melihat '.$unit.'. Kapan waktu yang tepat?'],
             ['Bagaimana jadwal tes dan wawancara?', 'Tes seleksi dan wawancara dilaksanakan sesuai jadwal dari panitia PPDB setelah formulir dan dokumen diserahkan.', 'Kapan jadwal tes dan wawancara untuk '.$unit.'?'],
         ];
 

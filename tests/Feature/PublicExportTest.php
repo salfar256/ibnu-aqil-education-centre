@@ -78,7 +78,7 @@ class PublicExportTest extends TestCase
         $this->artisan('app:export-public', ['--url' => self::URL, '--output' => $output])->assertExitCode(0);
         $root = base_path($output);
 
-        foreach (['index.html', 'tentang/index.html', 'unit/mi/index.html', 'halaman/catatan-publik/index.html', 'prestasi/index.html', 'portal/index.html', '404.html', 'sitemap.xml', 'robots.txt', '.nojekyll', 'assets/site.css', 'assets/site.js', 'assets/ramah.css', 'assets/manifest.webmanifest'] as $relative) {
+        foreach (['index.html', 'tentang/index.html', 'unit/mi/index.html', 'halaman/catatan-publik/index.html', 'prestasi/index.html', 'portal/index.html', '404.html', 'sitemap.xml', 'robots.txt', '.nojekyll', 'assets/site.css', 'assets/site.js', 'assets/ramah.css', 'assets/manifest.webmanifest', 'assets/brosur/brosur-mi-2027-2028.pdf'] as $relative) {
             $this->assertFileExists($root.'/'.$relative);
         }
         foreach (['fasilitas/index.html', 'kontak/index.html', 'berita/index.html', 'galeri/index.html', 'berita/publik-1/index.html', 'berita/draf-berita/index.html', 'berita/berita-masa-depan/index.html', 'berita/belum-verified/index.html', 'login/index.html', 'admin/index.html', 'storage/media/private.pdf', '.env', 'database/database.sqlite', 'media/'.$unused->id.'.png'] as $relative) {

@@ -308,3 +308,106 @@ p{color:var(--ia-muted)}
 }
 
 .ia-section .ia-title+.ia-reasons{margin-top:22px}
+
+/* ===== Revisi PPDB 2027/2028 ===== */
+.ia-hero-brand{display:inline-block;margin-top:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:clamp(13px,1.2vw,15px);color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:10px}
+.ia-hero h1 span{display:inline}
+.ia-ppdb-tag{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:6px 13px;border-radius:999px;margin-bottom:10px}
+.ia-c-mi .ia-ppdb-tag{background:rgba(255,255,255,.45)}
+.ia-fact-mondok a{display:inline-flex;align-items:center;gap:7px;color:inherit}
+.ia-unit-facts li.ia-fact-mondok{background:#fff;color:var(--u2);border-color:#fff;font-weight:800}
+.ia-c-mi .ia-unit-facts li.ia-fact-mondok{color:#3f7a12}
+.ia-motto{margin-top:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:14px;color:var(--u2)}
+.ia-c-mi .ia-motto{color:#3f7a12}
+/* Jurusan SMK */
+.ia-majors-section{background:linear-gradient(180deg,var(--u-soft),#fff)}
+.ia-majors{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ia-majors li{position:relative;display:flex;flex-direction:column;gap:6px;background:#fff;border:2px solid var(--u);border-radius:20px;padding:24px 20px;box-shadow:0 14px 30px -20px var(--u2)}
+.ia-major-icon{display:grid;place-items:center;width:64px;height:64px;border-radius:18px;background:linear-gradient(150deg,var(--u),var(--u2));color:#fff;margin-bottom:8px}
+.ia-major-num{position:absolute;top:18px;right:20px;font-family:var(--serif);font-size:44px;line-height:1;color:var(--u-soft);font-weight:700}
+.ia-majors strong{font-size:20px;color:var(--ia-ink);line-height:1.25}
+.ia-majors span:not(.ia-major-icon):not(.ia-major-num){font-size:15.5px;color:var(--ia-muted)}
+/* Program unggulan */
+.ia-programs{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ia-programs li{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #e6e3d6;border-radius:16px;padding:14px}
+.ia-program-icon{display:grid;place-items:center;flex:none;width:48px;height:48px;border-radius:14px;background:var(--u-soft,var(--ia-mint));color:var(--u2,var(--ia-green-2))}
+.ia-c-mi .ia-program-icon{color:#3f7a12}
+.ia-programs strong{font-size:15.5px;line-height:1.3;color:var(--ia-ink)}
+/* Foto siswa */
+.ia-students{background:linear-gradient(160deg,var(--u),var(--u2));color:var(--u-ink);overflow:hidden}
+.ia-students-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:end;padding-top:40px}
+.ia-students-copy{padding-bottom:48px}
+.ia-students .ia-title{color:inherit}
+.ia-students p{color:inherit;opacity:.92;font-size:18px;margin-top:8px}
+.ia-students-row{display:flex;justify-content:center;align-items:flex-end;gap:4px}
+.ia-students-row img{max-height:min(54vh,440px);width:auto;flex:0 1 auto;min-width:0;object-fit:contain;filter:drop-shadow(0 16px 24px rgba(0,0,0,.28))}
+.ia-mondok-cta{display:flex;align-items:center;gap:12px;margin-top:22px;background:#fff;color:var(--ia-ink);border-radius:18px;padding:14px 18px;box-shadow:0 14px 30px -16px rgba(0,0,0,.5);max-width:440px}
+.ia-mondok-cta .ia-icon{color:var(--u2);flex:none}
+.ia-mondok-cta strong{display:block;font-size:17px}
+.ia-mondok-cta small{display:block;font-size:14px;color:var(--ia-muted)}
+/* Ekskul MI lucu */
+.ia-ekskul-lucu li{border-radius:24px;border-style:dashed;border-color:#c9e3a8}
+.ia-subtitle{font-size:18px;font-weight:800;color:var(--ia-ink);margin-top:26px}
+/* Brosur */
+.ia-brochure-inner{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center}
+.ia-brochure-inner p{margin:8px 0 18px;font-size:17px}
+.ia-brochure-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.ia-brochure-pages{display:flex;gap:12px}
+.ia-brochure-pages a{flex:1;border-radius:14px;overflow:hidden;box-shadow:0 14px 30px -18px rgba(0,0,0,.5);background:#eee}
+.ia-brochure-pages img{width:100%;height:100%;object-fit:cover}
+.ia-brochure-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:22px}
+.ia-brochure-card{display:flex;flex-direction:column;background:#fff;border:1px solid #e6e3d6;border-radius:20px;overflow:hidden;border-top:6px solid var(--u)}
+.ia-brochure-thumb{aspect-ratio:4/3;background:var(--u-soft);overflow:hidden}
+.ia-brochure-thumb a,.ia-brochure-thumb img{display:block;width:100%;height:100%;object-fit:cover}
+.ia-brochure-empty{display:grid;place-items:center;height:100%}
+.ia-brochure-body{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:16px}
+.ia-brochure-body strong{font-size:17px;color:var(--ia-ink)}
+/* Halaman pendaftaran */
+.ia-reg-hero{background:linear-gradient(150deg,#13503f 0%,var(--ia-green) 55%,#0a2e26 100%);color:#fff;overflow:hidden}
+.ia-reg-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end;padding-top:40px}
+.ia-reg-copy{padding-bottom:56px}
+.ia-reg-copy .ia-crumb{color:#cfe0d6}
+.ia-reg-copy h1{font-family:var(--serif);font-size:clamp(38px,5vw,64px);line-height:1.05;color:#fff;margin:6px 0 20px}
+.ia-reg-copy h1 span{color:var(--ia-gold);font-style:italic}
+.ia-reg-students{display:flex;justify-content:center;align-items:flex-end}
+.ia-reg-students img{max-height:min(60vh,480px);width:auto;min-width:0;flex:0 1 auto;filter:drop-shadow(0 18px 26px rgba(0,0,0,.35))}
+.ia-reg-students img+img{margin-left:-26px}
+.ia-reg-quick{padding:28px 0}
+.ia-reg-quick-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.ia-reg-quick-item{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;background:#fff;border:1px solid #e8e2cf;border-radius:18px;padding:16px 10px;transition:transform .15s,box-shadow .2s}
+.ia-reg-quick-item:hover{transform:translateY(-3px);box-shadow:var(--ia-shadow)}
+.ia-reg-quick-item img{width:64px;height:64px;object-fit:contain}
+.ia-reg-quick-item strong{font-size:16px;color:var(--ia-ink)}
+.ia-reg-steps{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.ia-reg-steps li{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;background:var(--ia-cream);border:1px solid #ece6d4;border-radius:18px;padding:22px 12px 18px}
+.ia-reg-steps img{width:72px;height:72px;object-fit:contain;margin-bottom:4px}
+.ia-reg-steps strong{font-size:17px;color:var(--ia-ink)}
+.ia-reg-steps span:not(.ia-step-num){font-size:14px;color:var(--ia-muted)}
+.ia-reg-steps .ia-step-num{top:10px;right:10px;width:30px;height:30px;font-size:14px}
+.ia-title-img{width:48px;height:48px;object-fit:contain}
+.ia-docs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.ia-docs-card{background:#fff;border-radius:20px;border:1px solid #e6e3d6;border-top:6px solid var(--u);padding:20px}
+.ia-docs-card h3{font-size:19px;font-weight:800;color:var(--ia-ink);margin-bottom:10px}
+.ia-docs-card ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ia-docs-card li{display:flex;gap:8px;align-items:flex-start;font-size:16px;color:var(--ia-ink)}
+.ia-docs-card .ia-icon{color:var(--ia-wa);flex:none;margin-top:2px}
+.ia-note{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:15.5px}
+@media (max-width:1100px){
+  .ia-programs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ia-reg-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ia-brochure-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .ia-majors{grid-template-columns:1fr}
+  .ia-programs{grid-template-columns:1fr;gap:8px}
+  .ia-programs li{padding:10px 12px}
+  .ia-students-inner,.ia-brochure-inner,.ia-reg-hero-inner,.ia-docs{grid-template-columns:1fr}
+  .ia-students-copy,.ia-reg-copy{padding-bottom:16px}
+  .ia-students-row img,.ia-reg-students img{max-height:300px}
+  .ia-reg-quick-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .ia-reg-quick-item{padding:12px 6px}.ia-reg-quick-item img{width:48px;height:48px}.ia-reg-quick-item strong{font-size:13.5px}
+  .ia-reg-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .ia-brochure-cards{grid-template-columns:1fr 1fr;gap:10px}
+  .ia-brochure-body{padding:12px}.ia-brochure-body strong{font-size:15px}
+  .ia-hero-brand{font-size:12px}
+}
