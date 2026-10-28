@@ -14,12 +14,24 @@
     <meta property="og:site_name" content="Ibnu Aqil Education Center">
     <meta property="og:image" content="{{ asset('assets/brosur-2026-2027.jpg') }}">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="{{ asset('assets/favicon.svg') }}" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('assets/icons/favicon-48.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/icons/favicon-96.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('assets/icons/favicon-192.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/site.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/ramah.css') }}">
     <link rel="manifest" href="{{ asset('assets/manifest.webmanifest') }}">
     <link rel="apple-touch-icon" href="{{ asset('assets/icons/icon-192.png') }}">
-    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('assets/icons/icon-512.png') }}">
+    @php($orgSchema = array_filter([
+        '@context' => 'https://schema.org',
+        '@type' => 'EducationalOrganization',
+        'name' => 'Ibnu Aqil Education Center',
+        'alternateName' => ['Sekolah Ibnu Aqil', 'Yayasan Haji Agus Salim Bogor'],
+        'url' => route('public.home'),
+        'logo' => asset('assets/icons/favicon-192.png'),
+        'foundingDate' => '1992',
+        'sameAs' => array_values(array_column(\App\Services\SocialLinks::social($settings ?? []), 'url')),
+    ]))
+    <script type="application/ld+json">{!! json_encode($orgSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}</script>
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Ibnu Aqil">
     <script src="{{ asset('assets/site.js') }}" defer></script>

@@ -64,6 +64,10 @@ class ExportPublic extends Command
             $documents['sitemap.xml'] = $this->sitemap();
             $documents['robots.txt'] = "User-agent: *\nAllow: /\nDisallow: ".$this->basePath."/portal/\nSitemap: ".$this->baseUrl."/sitemap.xml\n";
             $documents['.nojekyll'] = '';
+            // Browsers and search engines also look for /favicon.ico at the site root.
+            if (is_file(public_path('favicon.ico')) && filesize(public_path('favicon.ico')) > 0) {
+                $documents['favicon.ico'] = (string) file_get_contents(public_path('favicon.ico'));
+            }
 
             // Add assets only after every page rendered successfully. No recursive delete.
             if (!is_dir($output) && !mkdir($output, 0755, true) && !is_dir($output)) {
