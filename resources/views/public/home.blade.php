@@ -44,10 +44,10 @@
         <div class="ia-hero-copy">
             <svg class="calligraphy-draw ia-bismillah" viewBox="0 0 690 150" role="img" aria-label="Bismillahirrahmanirrahim"><text x="345" y="112" text-anchor="middle" lang="ar" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</text></svg>
             <p class="ia-pill">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB 2026/2027 · Laladon, Ciomas, Bogor</p>
-            <h1>Assalamu'alaikum,<br><span>selamat datang di Ibnu Aqil</span></h1>
+            <h1>Assalamu'alaikum,<br><span>selamat datang di Ibnu&nbsp;Aqil</span></h1>
             <p class="ia-hero-lead">MI · SMP · SMA · SMK · Pondok Pesantren<br>Satu kawasan, satu keluarga, sejak 1992.</p>
             <div class="ia-hero-actions">
-                @if($ppdbUrl)<a class="ia-btn ia-btn-wa" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) Chat WhatsApp PPDB</a>@endif
+                @if($ppdbUrl)<a class="ia-btn ia-btn-wa" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) <span class="ia-hide-sm">Chat </span>WhatsApp<span class="ia-hide-sm"> PPDB</span></a>@endif
                 @if($tel)<a class="ia-btn ia-btn-light" href="{{ $tel }}">@include('public.partials.icon', ['name' => 'phone']) Telepon</a>@endif
             </div>
             <p class="ia-hero-hint">@include('public.partials.icon', ['name' => 'clock', 'size' => 18]) Admin melayani Senin–Jumat, 08.00–15.00 WIB</p>
