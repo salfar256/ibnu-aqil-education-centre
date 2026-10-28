@@ -50,8 +50,9 @@ jobs:
         run: |
           touch database/database.sqlite
           php artisan migrate --seed --force
-          php artisan app:export-public --url="$APP_URL" --output=pages
+          php artisan app:export-public --url="$APP_URL" --output=pages > export-output.txt 2>&1 || { echo "EXPORT FAILED" >> export-output.txt; tail -50 storage/logs/*.log >> export-output.txt 2>/dev/null || true; mkdir -p pages; }
           cp test-output.txt pages/_test-output.txt
+          cp export-output.txt pages/_export-output.txt
       - name: Save preview to preview-build branch
         run: |
           cd pages
