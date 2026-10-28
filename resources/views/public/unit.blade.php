@@ -86,7 +86,7 @@
 <section class="ia-students">
     <div class="container ia-students-inner">
         <div class="ia-students-copy">
-            <h2 class="ia-title">Siswa {{ $info['short'] }} Ibnu Aqil</h2>
+            <h2 class="ia-title">{{ $info['people'] ?? 'Siswa' }} {{ $unit->slug === 'pesantren' ? 'Pondok Pesantren' : $info['short'] }} Ibnu Aqil</h2>
             <p>Semangat belajar, rapi, dan percaya diri.</p>
             @if($info['boarding'] && $unit->slug !== 'pesantren' && $mondokUrl)
             <a class="ia-mondok-cta" href="{{ route('public.unit', 'pesantren') }}">@include('public.partials.icon', ['name' => 'bed', 'size' => 22]) <span><strong>{{ $info['boarding'] }}</strong><small>Siswa {{ $info['short'] }} bisa tinggal di asrama pesantren. Pilihan, tidak wajib.</small></span></a>
@@ -94,7 +94,7 @@
         </div>
         <div class="ia-students-row">
             @foreach($info['student_photos'] as $photo)
-            <img src="{{ $photo['src'] }}" alt="Siswa {{ $unit->title }}" width="{{ $photo['width'] }}" height="{{ $photo['height'] }}" loading="lazy" decoding="async">
+            <img src="{{ $photo['src'] }}" alt="{{ $info['people'] ?? 'Siswa' }} {{ $unit->title }}" width="{{ $photo['width'] }}" height="{{ $photo['height'] }}" loading="lazy" decoding="async">
             @endforeach
         </div>
     </div>

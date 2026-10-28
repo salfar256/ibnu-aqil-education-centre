@@ -58,15 +58,20 @@
         <div class="container footer-main">
             <div class="footer-brand-column">
                 <a class="brand brand-light" href="{{ route('public.home') }}"><img class="official-logo" src="{{ asset(\App\Services\PublicPhotos::logo()) }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="48" height="49"><span class="brand-name">Ibnu Aqil<small>EDUCATION CENTER</small></span></a>
-                <p>Ruang informasi Ibnu Aqil.<br>Terhubung melalui ilmu dan berbagi.</p>
+                <p>Yayasan Haji Agus Salim Bogor (YHASB)<br>MI · SMP · SMA · SMK · Pondok Pesantren</p>
                 @if($footerWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran di Ibnu Aqil.'))<a class="footer-portal" href="{{ $footerWa }}" target="_blank" rel="noopener noreferrer">Tanya admin PPDB via WhatsApp <span aria-hidden="true">↗</span></a>@endif
             </div>
-            <div><h2>Jelajahi</h2><a href="{{ route('public.page', 'tentang') }}">Tentang Ibnu Aqil</a><a href="{{ route('public.page', 'fasilitas') }}">Fasilitas & ekskul</a><a href="{{ route('public.achievements') }}">Prestasi</a><a href="{{ route('public.page', 'pendaftaran') }}">Cara mendaftar</a></div>
+            <div><h2>Jelajahi</h2><a href="{{ route('public.page', 'tentang') }}">Tentang Ibnu Aqil</a><a href="{{ route('public.page', 'fasilitas') }}">Fasilitas & kegiatan</a><a href="{{ route('public.page', 'pendaftaran') }}">Cara mendaftar</a><a href="{{ route('public.page', 'kontak') }}">Kontak</a></div>
             <div><h2>Sekolah</h2>@foreach(['mi' => 'MI', 'smp' => 'SMP', 'sma' => 'SMA', 'smk' => 'SMK', 'pesantren' => 'Pondok Pesantren'] as $slug => $label)<a href="{{ route('public.unit', $slug) }}">{{ $label }} Ibnu Aqil</a>@endforeach</div>
-            <div class="footer-contact"><h2>Mari terhubung</h2><a href="{{ route('public.page', 'pendaftaran') }}">Informasi pendaftaran <span aria-hidden="true">↗</span></a><a href="{{ route('public.page', 'kontak') }}">Hubungi kami <span aria-hidden="true">↗</span></a>
-                @if(!empty($settings['contact_address']))<p class="footer-address">{{ $settings['contact_address'] }}</p>@endif
-                @if($footerMapsUrl = \App\Services\SocialLinks::maps($settings ?? []))<a href="{{ $footerMapsUrl }}" target="_blank" rel="noopener noreferrer">Lihat lokasi di Google Maps <span aria-hidden="true">↗</span></a>@endif
-                @if(!empty($settings['contact_email']) && filter_var($settings['contact_email'], FILTER_VALIDATE_EMAIL))<a class="contact-value" href="mailto:{{ $settings['contact_email'] }}">{{ $settings['contact_email'] }}</a>@endif
+            <div class="footer-contact"><h2>Mari terhubung</h2>
+                <ul class="ia-foot-list">
+                    @if(!empty($settings['contact_address']))<li>@include('public.partials.icon', ['name' => 'pin', 'size' => 18])<span>{{ strtok($settings['contact_address'], "\n") }}</span></li>@endif
+                    @if(!empty($settings['contact_phone']))<li>@include('public.partials.icon', ['name' => 'phone', 'size' => 18])<a href="tel:{{ preg_replace('/[^0-9+]/', '', $settings['contact_phone']) }}">{{ $settings['contact_phone'] }}</a></li>@endif
+                    @if($footerWa)<li>@include('public.partials.icon', ['name' => 'whatsapp', 'size' => 18])<a href="{{ $footerWa }}" target="_blank" rel="noopener noreferrer">WhatsApp PPDB</a></li>@endif
+                    @if($footerMapsUrl = \App\Services\SocialLinks::maps($settings ?? []))<li>@include('public.partials.icon', ['name' => 'compass', 'size' => 18])<a href="{{ $footerMapsUrl }}" target="_blank" rel="noopener noreferrer">Petunjuk arah (Google Maps)</a></li>@endif
+                    <li>@include('public.partials.icon', ['name' => 'clock', 'size' => 18])<span>Senin–Jumat · 08.00–15.00 WIB</span></li>
+                </ul>
+                <p class="ia-foot-social-title">Ikuti kami di media sosial</p>
                 @include('public.partials.social-links')
             </div>
         </div>

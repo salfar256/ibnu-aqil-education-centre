@@ -14,13 +14,6 @@
         ['wawancara', 'Tes & wawancara', 'Sesuai jadwal dari panitia PPDB.'],
         ['daftar-ulang', 'Daftar ulang', 'Setelah diterima, selesaikan administrasi.'],
     ];
-    $quick = [
-        ['sekolah', 'Pilih sekolah', route('public.home').'#pilih-sekolah', false],
-        ['program', 'Program unggulan', route('public.unit', 'smp'), false],
-        ['prestasi', 'Prestasi', route('public.achievements'), false],
-        ['dokumen', 'Syarat dokumen', '#syarat', false],
-        ['whatsapp', 'Tanya admin', $ppdbUrl, true],
-    ];
     $docsMi = ['Formulir pendaftaran', 'Fotokopi KTP orang tua/wali (2 lembar)', 'Fotokopi Kartu Keluarga (2 lembar)', 'Fotokopi akta lahir (2 lembar)', 'Fotokopi STTB RA/TK/PAUD (2 lembar)', 'Pernah sekolah formal minimal 1 tahun'];
     $docsUpper = ['Formulir pendaftaran', 'Fotokopi ijazah legalisir (2 lembar)', 'Pas foto 3×4 (3 lembar)', 'Fotokopi KTP orang tua/wali (2 lembar)', 'Fotokopi Kartu Keluarga (2 lembar)', 'Fotokopi akta lahir (2 lembar)', 'Fotokopi kartu NISN (jika ada)', 'Surat keterangan berkelakuan baik dari sekolah asal'];
 @endphp
@@ -49,17 +42,6 @@
             @endforeach
         </div>
         @endif
-    </div>
-</section>
-
-{{-- Menu cepat ber-ikon --}}
-<section class="ia-quick ia-reg-quick">
-    <div class="container">
-        <div class="ia-reg-quick-grid">
-            @foreach($quick as [$ic, $label, $href, $external])
-            @if($href)<a class="ia-reg-quick-item" href="{{ $href }}" @if($external) target="_blank" rel="noopener noreferrer" @endif>@if($icon($ic))<img src="{{ $icon($ic) }}" alt="" width="72" height="72" loading="lazy">@endif<strong>{{ $label }}</strong></a>@endif
-            @endforeach
-        </div>
     </div>
 </section>
 

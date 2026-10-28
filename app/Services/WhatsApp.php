@@ -71,9 +71,9 @@ class WhatsApp {
                 ? 'Untuk MI: formulir pendaftaran, pas foto berwarna 3x4, fotokopi KTP orang tua atau wali, dan fotokopi kartu keluarga.'
                 : 'Umumnya formulir pendaftaran, fotokopi ijazah yang dilegalisir, pas foto 3x4, fotokopi KTP orang tua atau wali, kartu keluarga, akta kelahiran, kartu NISN (jika ada), dan surat keterangan berkelakuan baik dari sekolah asal.',
                 'Dokumen apa saja yang perlu disiapkan untuk mendaftar di '.$unit.'?'],
-            ['Bisakah sambil mondok di pesantren?', 'Bisa, dan kami ajak! Siswa SMP dan SMA yang ingin bisa sambil mondok di Pondok Pesantren Ibnu Aqil, dengan asrama putra dan putri terpisah.', 'Saya ingin tahu tentang pilihan mondok untuk siswa SMP/SMA di Ibnu Aqil. Bagaimana ketentuannya?'],
+            ['Bisakah sambil mondok di pesantren?', 'Bisa, dan kami ajak! Siswa SMP dan SMA yang ingin bisa menjadi santri di Pondok Pesantren Ibnu Aqil, dengan asrama putra dan putri terpisah.', 'Saya ingin tahu tentang pilihan mondok untuk siswa SMP/SMA di Ibnu Aqil. Bagaimana ketentuannya?'],
             ['Apakah kuota masih tersedia?', 'Kuota setiap unit terbatas. Ketersediaan tempat dan periode pendaftaran dipastikan langsung oleh admin PPDB.', 'Apakah kuota pendaftaran '.$unit.' masih tersedia?'],
-            ['Bisakah saya melihat sekolah terlebih dahulu?', 'Bisa. Kantor pendaftaran melayani setiap hari kerja pukul 08.00–15.00 WIB di kampus Laladon, Ciomas, Bogor.', 'Saya ingin berkunjung ke sekolah untuk melihat '.$unit.'. Kapan waktu yang tepat?'],
+            ['Bisakah saya melihat sekolah terlebih dahulu?', 'Bisa. Kantor pendaftaran melayani setiap hari kerja pukul 08.00–15.00 WIB di sekolah Ibnu Aqil, Laladon, Ciomas, Bogor.', 'Saya ingin berkunjung ke sekolah untuk melihat '.$unit.'. Kapan waktu yang tepat?'],
             ['Bagaimana jadwal tes dan wawancara?', 'Tes seleksi dan wawancara dilaksanakan sesuai jadwal dari panitia PPDB setelah formulir dan dokumen diserahkan.', 'Kapan jadwal tes dan wawancara untuk '.$unit.'?'],
         ];
 

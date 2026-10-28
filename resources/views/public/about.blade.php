@@ -47,7 +47,7 @@
 
 <section class="ia-contact">
     <div class="container ia-contact-inner">
-        <div><h2>Ingin melihat langsung?</h2><p>Atur kunjungan ke kampus atau tanya apa saja lewat WhatsApp.</p></div>
+        <div><h2>Ingin melihat langsung?</h2><p>Atur kunjungan ke sekolah atau tanya apa saja lewat WhatsApp.</p></div>
         <div class="ia-contact-actions">
             @if($ppdbUrl)<a class="ia-btn ia-btn-wa ia-btn-block" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) Chat WhatsApp PPDB</a>@endif
             <a class="ia-btn ia-btn-light ia-btn-block" href="{{ route('public.page', 'fasilitas') }}">@include('public.partials.icon', ['name' => 'camera']) Lihat fasilitas</a>

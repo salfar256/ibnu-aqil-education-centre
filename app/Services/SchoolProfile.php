@@ -25,7 +25,7 @@ class SchoolProfile {
   ['assets/foto/kegiatan/lapangan-upacara.jpg','Lapangan olahraga dan upacara','Dua lapangan luas di area sekolah dan masjid untuk upacara, olahraga, dan aktivitas luar ruang.'],
   ['assets/foto/manasik-kabah.jpg','Pusat manasik','Replika Ka\'bah untuk praktik manasik haji dan umrah.'],
   ['assets/foto/kegiatan/gedung-sekolah.jpg','Gedung sekolah','Ruang kelas, perpustakaan, ruang bimbingan dan konseling, serta aula serbaguna.'],
-  ['assets/foto/kegiatan/gerbang-sekolah.jpg','Kampus Laladon','Satu kawasan untuk MI, SMP, SMA, SMK, pesantren, dan asrama putra-putri.'],
+  ['assets/foto/kegiatan/gerbang-sekolah.jpg','Sekolah Ibnu Aqil Laladon','Satu kawasan untuk MI, SMP, SMA, SMK, pesantren, dan asrama putra-putri.'],
  ];
  private const UNIT_PHOTOS=[
   'mi'=>['mi-seluruh-siswa','mi-market-day','mi-penyambutan','mi-belajar-lesehan','mi-market-day-mahkota','mi-guru-siswa','mi-belajar-koridor','mi-sanlat'],
@@ -77,7 +77,7 @@ class SchoolProfile {
  ];
  public const LEADERS=[
   ['ketua-yayasan','Hj. Saidah Hilmiyah, S.Pd., M.M.','Ketua Yayasan'],
-  ['pembina-kh-agus-salim','KH. Agus Salim, S.Sos., M.M.','Pendiri & Pembina Yayasan'],
+  ['pembina-kh-agus-salim-hero','KH. Agus Salim, S.Sos., M.M.','Pendiri & Pembina Yayasan'],
  ];
  public const STATS=[
   ['1992','Ibnu Aqil berdiri'],

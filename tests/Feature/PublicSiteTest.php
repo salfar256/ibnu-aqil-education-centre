@@ -115,7 +115,7 @@ class PublicSiteTest extends TestCase
         $this->get(route('public.page', 'kontak'))->assertOk()
             ->assertSee('WhatsApp PPDB')->assertSee('https://wa.me/6285810183161', false)
             ->assertSee('https://www.instagram.com/ibnuaqilmedia', false)->assertSee('https://www.youtube.com/@ibnuaqilmedia', false)
-            ->assertSee('https://www.tiktok.com/@ibnuaqilmedia', false)->assertSee('Buka di Google Maps');
+            ->assertSee('https://www.tiktok.com/@ibnuaqilmedia', false)->assertSee('Petunjuk arah')->assertSee('Yuk, ikuti media sosial kami!')->assertDontSee('Cihideung');
 
         Setting::where('key', 'youtube_url')->update(['value' => 'https://evil.example/@ibnuaqilmedia']);
         $this->get(route('public.page', 'kontak'))->assertOk()->assertDontSee('evil.example');
@@ -128,13 +128,13 @@ class PublicSiteTest extends TestCase
         $this->page('kontak');
 
         $this->get(route('public.home'))->assertOk()
-            ->assertSee('assets/foto/web/masjid-hero.webp', false)->assertSee('assets/foto/web/kelas-tik.jpg', false)->assertSee('assets/foto/web/pembina-kh-agus-salim.webp', false)->assertSee('assets/foto/web/ketua-yayasan.webp', false)->assertSee('Bismillahirrahmanirrahim')
+            ->assertSee('assets/foto/web/masjid-hero.webp', false)->assertSee('assets/foto/web/kelas-tik.jpg', false)->assertSee('assets/foto/web/pembina-kh-agus-salim-hero.webp', false)->assertSee('assets/foto/web/ketua-yayasan.webp', false)->assertSee('Bismillahirrahmanirrahim')
             ->assertSee('Empat langkah')->assertSee('Chat WhatsApp PPDB')->assertSee('KH. Agus Salim')->assertSee('Hj. Saidah Hilmiyah, S.Pd., M.M.')->assertSee('Ketua Yayasan')
             ->assertSee('class="ia-bottom-nav"', false)->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false)->assertSee('manifest.webmanifest', false);
         $this->get(route('public.achievements'))->assertOk()->assertSee('Juara 1 Pencak Silat tingkat Nasional')->assertDontSee('Belum ada prestasi');
         $this->page('fasilitas', ['body' => 'Daftar fasilitas terverifikasi.']);
-        $this->get(route('public.page', 'fasilitas'))->assertOk()->assertSee('assets/foto/fasilitas/masjid-depan.webp', false)->assertSee('Laboratorium komputer')
-            ->assertSee('assets/ekskul/formal/pencak-silat.webp', false)->assertSee('assets/ekskul/lucu/calistung.webp', false)->assertSee('Ekstrakurikuler')->assertSee('Daftar fasilitas terverifikasi.');
+        $this->get(route('public.page', 'fasilitas'))->assertOk()->assertSee('assets/foto/fasilitas/masjid-salapan-bentang.webp', false)->assertSee('Laboratorium komputer')->assertSee('Security 24 jam')->assertSee('Kegiatan MI Ibnu Aqil')->assertSee('assets/foto/kegiatan-siswa/mi-market-day.webp', false)->assertDontSee('assets/ekskul/', false)
+            ->assertSee('Daftar fasilitas terverifikasi.');
         $this->get(route('public.page', 'kontak'))->assertOk()->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false);
     }
 
@@ -161,9 +161,9 @@ class PublicSiteTest extends TestCase
         $this->get('/unit/smp')->assertOk()->assertSee('Ade Irawan, S.Pd.I.')->assertSee('Ayo sambil mondok di pesantren!')->assertSee('assets/ekskul/formal/panahan.webp', false);
         $this->get('/unit/smk')->assertOk()->assertSee('Hj. Eva Fauziah, M.Pd.')->assertDontSee('Ayo sambil mondok')->assertSee('3 jurusan pilihan')->assertSee('Akuntansi &amp; Keuangan Lembaga', false);
         $this->get('/unit/mi')->assertOk()->assertSee('Dr. Hj. Fuzna Nur Aqilah, M.Pd.')->assertDontSee('Ayo sambil mondok')->assertSee('assets/ekskul/lucu/calistung.webp', false)->assertSee('assets/brosur/brosur-mi-2027-2028.pdf', false);
-        $this->get('/unit/pesantren')->assertOk()->assertSee('Untuk siswa SMP &amp; SMA', false);
+        $this->get('/unit/pesantren')->assertOk()->assertSee('Santri dari SMP &amp; SMA', false)->assertSee('Santri Pondok Pesantren Ibnu Aqil');
         $this->get('/tentang')->assertOk()->assertSee('KH. Agus Salim, S.Sos., M.M.')->assertSee('Menjaga tradisi yang baik')->assertSee('Sekolah Ibnu Aqil')->assertSee(route('public.unit', 'smk'), false);
-        $this->get('/')->assertOk()->assertSee('ia-c-smk', false)->assertSee('Untuk siswa SMP &amp; SMA', false)->assertSee('PPDB 2027/2028 · Sekolah Ibnu Aqil')->assertSee('Yayasan Haji Agus Salim Bogor')->assertSee('Kunjungi sekolah')->assertSee('MI, SMP, SMA, SMK');
-        $this->get('/pendaftaran')->assertOk()->assertSee('Alur pendaftaran')->assertSee('assets/icons/daftar/isi-formulir.webp', false)->assertSee('assets/foto/siswa/mi-1.webp', false)->assertSee('assets/brosur/brosur-smp-2027-2028.pdf', false);
+        $this->get('/')->assertOk()->assertSee('ia-c-smk', false)->assertSee('Santri dari SMP &amp; SMA', false)->assertSee('assets/foto/web/masjid-hero.webp', false)->assertDontSee('Terhubung melalui ilmu')->assertSee('PPDB 2027/2028 · Sekolah Ibnu Aqil')->assertSee('Yayasan Haji Agus Salim Bogor')->assertSee('Kunjungi sekolah')->assertSee('MI, SMP, SMA, SMK');
+        $this->get('/pendaftaran')->assertOk()->assertSee('Alur pendaftaran')->assertSee('assets/icons/daftar/isi-formulir.webp', false)->assertDontSee('Tanya admin</strong>', false)->assertSee('assets/foto/siswa/mi-1.webp', false)->assertSee('assets/brosur/brosur-smp-2027-2028.pdf', false);
     }
 }
