@@ -16,6 +16,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="{{ asset('assets/favicon.svg') }}" type="image/svg+xml">
     <link rel="stylesheet" href="{{ asset('assets/site.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/ramah.css') }}">
+    <link rel="manifest" href="{{ asset('assets/manifest.webmanifest') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/icons/icon-192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('assets/icons/icon-512.png') }}">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Ibnu Aqil">
     <script src="{{ asset('assets/site.js') }}" defer></script>
     @stack('head')
 </head>
@@ -77,6 +83,15 @@
         </div>
     </details>
     @endif
+    @php($navWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran di Ibnu Aqil.'))
+    @php($navMaps = \App\Services\SocialLinks::maps($waSettings))
+    <nav class="ia-bottom-nav" aria-label="Menu cepat">
+        <a href="{{ route('public.home') }}" @if(request()->routeIs('public.home')) aria-current="page" @endif>@include('public.partials.icon', ['name' => 'home'])<span>Beranda</span></a>
+        <a href="{{ route('public.home') }}#pilih-sekolah">@include('public.partials.icon', ['name' => 'school'])<span>Sekolah</span></a>
+        @if($navWa)<a class="ia-bottom-wa" href="{{ $navWa }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp'])<span>WhatsApp</span></a>@endif
+        <a href="{{ route('public.page', 'pendaftaran') }}" @if(request()->is('pendaftaran')) aria-current="page" @endif>@include('public.partials.icon', ['name' => 'form'])<span>Daftar</span></a>
+        @if($navMaps)<a href="{{ $navMaps }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'pin'])<span>Lokasi</span></a>@else<a href="{{ route('public.page', 'kontak') }}">@include('public.partials.icon', ['name' => 'phone'])<span>Kontak</span></a>@endif
+    </nav>
     <a class="back-to-top" href="#main-content" aria-label="Kembali ke atas"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <dialog class="lightbox" aria-label="Pratinjau gambar"><form method="dialog"><button type="submit" class="lightbox-close" aria-label="Tutup pratinjau">×</button></form><figure class="lightbox-figure"></figure><p class="lightbox-caption"></p></dialog>
 </body>
