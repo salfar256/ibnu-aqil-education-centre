@@ -165,24 +165,26 @@ class Units
             'who' => 'Santri dari SMP & SMA', 'line' => 'Ayo mondok! Ilmu, adab, dan kemandirian.',
             'leader' => ['Hj. Mia Hamidiyah, S.Sos., M.M.', 'Pengasuh Ma\'had (MDIIA)'],
             'vision' => 'Santri yang alim, berakhlak karimah, dan menghidupkan tradisi kitab kuning di era digital.',
-            'motto' => 'Menjaga tradisi yang baik, mengambil yang lebih baik',
+            'motto' => 'Menjaga tradisi lama yang baik, serta mengambil tradisi baru yang lebih baik',
             'programs' => [
-                ['book', '30+ kitab kuning'],
-                ['star', 'Tahsin & tahfidz Al-Qur\'an'],
-                ['book', 'Tahfidz & fahmu 1000 hadis'],
+                ['people', 'Character building'],
+                ['star', 'Tahsin wa tahfidzil Qur\'an'],
+                ['book', 'Kitab kuning berbagai bidang disiplin ilmu (30+ kitab)'],
                 ['globe', 'Bahasa Arab & Inggris'],
-                ['mosque', 'Pembiasaan ibadah, zikir & riyadhah'],
-                ['mic', 'Public speaking'],
-                ['people', 'Bahtsul masail'],
+                ['mosque', 'Pembinaan ibadah, zikir & riyadhah'],
+                ['medal', 'Kepemimpinan (agama & sosial kemasyarakatan)'],
+                ['book', 'Bimbingan kitab kuning metode Amtsilati'],
+                ['sun', 'Bimbingan baca Al-Qur\'an metode Tilawati'],
                 ['bed', 'Asrama putra & putri terpisah'],
             ],
+            'note' => 'Ma\'had Ad-Dirasah Al-Islamiyyah Ibnu Aqil (MDIIA). Kontak pendaftaran: 0856-8468-555 (WhatsApp) atau (0251) 8638879; pendaftaran online: 0858-1018-3161 (WhatsApp). Instagram: @ponpesibnuaqilputra dan @mdi.ibnuaqilputri.',
             'schedule' => 'Untuk santri SMP & SMA yang ingin mondok',
             'boarding' => 'Ayo mondok bagi santri SMP & SMA!',
             'ekskul_style' => 'formal',
             'ekskul' => [],
             'people' => 'Santri',
             'students' => ['smp-1', 'sma-3'],
-            'brochure' => null,
+            'brochure' => ['pages' => 1, 'year' => '2026/2027', 'drive' => 'https://drive.google.com/drive/folders/1qALATkx1TEwo5CUwnh2nH0kcbW5k24eF?usp=drive_link'],
         ],
     ];
 
@@ -213,6 +215,7 @@ class Units
                 'pdf_kb' => is_file(public_path($pdf)) ? (int) round(filesize(public_path($pdf)) / 1024) : null,
                 'pages' => $pages,
                 'drive' => $unit['brochure']['drive'] ?? null,
+                'year' => $unit['brochure']['year'] ?? self::PPDB_YEAR,
             ];
         }
 

@@ -134,7 +134,7 @@
 <section class="ia-section ia-brochure-section" id="brosur">
     <div class="container ia-brochure-inner">
         <div>
-            <h2 class="ia-title">Brosur PPDB {{ Units::PPDB_YEAR }}</h2>
+            <h2 class="ia-title">Brosur {{ $unit->slug === 'pesantren' ? 'Penerimaan Santri Baru' : 'PPDB' }} {{ $brochure['year'] }}</h2>
             <p>Simpan di HP, lalu kirim ke keluarga lewat WhatsApp.</p>
             <div class="ia-brochure-actions">
                 @if($brochure['pdf'])<a class="ia-btn ia-btn-small" href="{{ $brochure['pdf'] }}" download>@include('public.partials.icon', ['name' => 'download', 'size' => 20]) Unduh PDF ({{ number_format($brochure['pdf_kb'] / 1024, 1, ',', '') }} MB)</a>@endif
