@@ -312,7 +312,7 @@ p{color:var(--ia-muted)}
 /* ===== Revisi PPDB 2027/2028 ===== */
 .ia-hero-brand{display:inline-block;margin-top:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:clamp(13px,1.2vw,15px);color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:10px}
 .ia-hero h1 span{display:inline}
-.ia-ppdb-tag{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:6px 13px;border-radius:999px;margin-bottom:10px}
+.ia-ppdb-tag{color:inherit;display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:6px 13px;border-radius:999px;margin-bottom:10px}
 .ia-c-mi .ia-ppdb-tag{background:rgba(255,255,255,.45)}
 .ia-fact-mondok a{display:inline-flex;align-items:center;gap:7px;color:inherit}
 .ia-unit-facts li.ia-fact-mondok{background:#fff;color:var(--u2);border-color:#fff;font-weight:800}
