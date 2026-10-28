@@ -9,7 +9,7 @@ class Units
 
     public const PPDB_YEAR = '2027/2028';
 
-    // Ekstrakurikuler → label and sticker file name (inside assets/ekskul/formal or assets/ekskul/lucu).
+    // Ekstrakurikuler → label and sticker file name (inside assets/ekskul/formal, assets/ekskul/lucu or assets/ekskul/smk).
     public const EKSKUL = [
         'tahfidz' => ["Tahfidz Al-Qur'an", 'tahfidz'],
         'tilawah' => ['Tilawah', 'tilawah'],
@@ -140,7 +140,6 @@ class Units
                 ['mic', 'Ibnu Aqil Festival (BAQFEST/Pensi)'],
                 ['school', 'Training of Trainers (TOT)'],
             ],
-            'facilities' => ['Masjid Salapan Bentang', 'Ruang aula', 'Laboratorium komputer', 'Laboratorium farmasi', 'Perpustakaan', 'Lapangan indoor'],
             'achievements' => [
                 'Juara 2 Kategori KU-15, Tropeo Bandung Handball Club Invitation 2026',
                 'Juara 1 Handball Putri "Shark Handball", SOT Fest 3.0 SMAN Pesat Kota Bogor 2026',
@@ -156,8 +155,8 @@ class Units
             'note' => 'SPMB 2027/2028 dibuka 7 November 2026 sampai kuota terpenuhi, pukul 08.00–14.00 WIB. Pendaftaran dilakukan secara offline di sekolah. Admin SMK: 0858-1762-4288.',
             'schedule' => 'Senin–Jumat · 07.15–14.20 WIB',
             'boarding' => null,
-            'ekskul_style' => 'formal',
-            'ekskul' => ['futsal', 'handball', 'badminton', 'silat', 'paskibra', 'seni-tari', 'sastra-club', 'tahfidz', 'tilawah', 'btq', 'english-club', 'jerman-club', 'accounting-club'],
+            'ekskul_style' => 'smk',
+            'ekskul' => ['futsal', 'handball', 'badminton', 'seni-tari', 'paskibra', 'sastra-club', 'silat', 'tahfidz', 'tilawah', 'english-club', 'jerman-club', 'btq', 'accounting-club'],
             'students' => ['smk-1', 'smk-2', 'smk-3'],
             'brochure' => ['pages' => 3, 'drive' => 'https://drive.google.com/drive/folders/1Hp4Z9W3y0jd_zdQ6F2FyU8ut9_yrwwFz?usp=drive_link'],
         ],

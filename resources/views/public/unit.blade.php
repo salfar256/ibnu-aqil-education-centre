@@ -81,20 +81,6 @@
     </div>
 </section>
 
-@if(!empty($info['facilities']))
-{{-- Fasilitas khusus unit, dari brosur --}}
-<section class="ia-section">
-    <div class="container">
-        <h2 class="ia-title">Fasilitas</h2>
-        <ul class="ia-programs">
-            @foreach($info['facilities'] as $facility)
-            <li><span class="ia-program-icon">@include('public.partials.icon', ['name' => 'check', 'size' => 26])</span><strong>{{ $facility }}</strong></li>
-            @endforeach
-        </ul>
-    </div>
-</section>
-@endif
-
 @if(!empty($info['achievements']))
 {{-- Prestasi terbaru, dari brosur --}}
 <section class="ia-section">
