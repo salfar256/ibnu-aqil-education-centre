@@ -184,7 +184,7 @@ class Units
             'ekskul' => [],
             'people' => 'Santri',
             'students' => ['smp-1', 'sma-3'],
-            'brochure' => ['pages' => 1, 'year' => '2026/2027', 'drive' => 'https://drive.google.com/drive/folders/1qALATkx1TEwo5CUwnh2nH0kcbW5k24eF?usp=drive_link'],
+            'brochure' => ['pages' => 1, 'drive' => 'https://drive.google.com/drive/folders/1qALATkx1TEwo5CUwnh2nH0kcbW5k24eF?usp=drive_link'],
         ],
     ];
 

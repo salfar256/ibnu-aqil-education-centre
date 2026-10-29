@@ -65,7 +65,7 @@ class Facilities
             ['mi-mahkota', 'Kreasi kostum Market Day'],
             ['mi-food-festival', 'Food festival & bazar'],
             ['mi-pentas-seni', 'Pentas seni'],
-            ['mi-pramuka', 'Pramuka di aula'],
+            ['mi-pramuka', 'Shalat Dhuha bersama'],
             ['mi-olahraga', 'Olahraga bersama'],
             ['mi-belajar', 'Belajar bersama'],
             ['mi-koridor', 'Belajar kelompok'],
