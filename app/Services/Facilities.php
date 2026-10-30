@@ -36,7 +36,7 @@ class Facilities
             ['lemari-prestasi', 'Lemari piala prestasi'],
             ['lemari-prestasi-2', 'Piala-piala siswa'],
         ]],
-        ['bed', 'Asrama (pilihan untuk siswa SMP & SMA, tidak wajib)', 'fasilitas', [
+        ['bed', 'Asrama (wajib untuk SMA, pilihan untuk SMP)', 'fasilitas', [
             ['asrama-putra', 'Kawasan asrama santri putra'],
             ['lapangan-asrama-putra', 'Lapangan asrama putra'],
             ['asrama-lapangan', 'Asrama & lapangan'],

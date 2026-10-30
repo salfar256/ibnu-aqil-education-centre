@@ -157,7 +157,7 @@ class PublicSiteTest extends TestCase
     public function test_unit_pages_show_leader_vision_and_optional_boarding_only_for_smp_and_sma(): void
     {
         $this->seed(\Database\Seeders\DatabaseSeeder::class);
-        $this->get('/unit/sma')->assertOk()->assertSee('Hidmatullah, S.E., M.Pd.')->assertSee('assets/foto/pimpinan/sma.webp', false)->assertSee('Visi kami')->assertDontSee('Misi')->assertSee('Bisa sambil mondok (opsional)')->assertSee('assets/foto/siswa/sma-1.webp', false)->assertSee('assets/brosur/brosur-sma-2027-2028.pdf', false);
+        $this->get('/unit/sma')->assertOk()->assertSee('Hidmatullah, S.E., M.Pd.')->assertSee('assets/foto/pimpinan/sma.webp', false)->assertSee('Visi kami')->assertDontSee('Misi')->assertSee('Wajib mondok di pesantren')->assertSee('assets/foto/siswa/sma-1.webp', false)->assertSee('assets/brosur/brosur-sma-2027-2028.pdf', false);
         $this->get('/unit/smp')->assertOk()->assertSee('Ade Irawan, S.Pd.I.')->assertSee('Bisa sambil mondok (opsional)')->assertSee('assets/ekskul/formal/panahan.webp', false);
         $this->get('/unit/smk')->assertOk()->assertSee('Hj. Eva Fauziah, M.Pd.')->assertDontSee('Bisa sambil mondok (opsional)')->assertSee('3 jurusan pilihan')->assertSee('Akuntansi &amp; Keuangan Lembaga', false);
         $this->get('/unit/mi')->assertOk()->assertSee('Dr. Hj. Fuzna Nur Aqilah, M.Pd.')->assertDontSee('Bisa sambil mondok (opsional)')->assertSee('assets/ekskul/lucu/calistung.webp', false)->assertSee('assets/brosur/brosur-mi-2027-2028.pdf', false);

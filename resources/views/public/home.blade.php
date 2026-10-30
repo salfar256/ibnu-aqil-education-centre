@@ -14,7 +14,7 @@
     $reasons = [
         ['mosque', 'Ibadah harian', 'Dhuha, tadarus, BTQ Tilawati'],
         ['book', '30+ kitab kuning', 'Tradisi pesantren NU'],
-        ['bed', 'Mondok opsional', 'Pilihan untuk siswa SMP & SMA, tidak wajib'],
+        ['bed', 'Asrama pesantren', 'Wajib untuk SMA, pilihan untuk SMP'],
         ['medal', 'Akreditasi A', 'SMP, SMA, dan SMK'],
         ['ball', '25+ ekstrakurikuler', 'Silat, Pramuka, hadroh…'],
         ['star', 'Berdiri sejak 1992', 'Lebih dari 30 tahun'],
