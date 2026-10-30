@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /ibnu-aqil-education-centre/portal/
+Sitemap: https://salfar256.github.io/ibnu-aqil-education-centre/sitemap.xml

@@ -1,0 +1,59 @@
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Feature\AuthenticationTest[39m
+  [32;1m✓[39;22m[90m [39m[90mlogin and logout protect portal session[39m[90m                             [39m [90m0.20s[39m  
+  [32;1m✓[39;22m[90m [39m[90mself registration is not available[39m[90m                                  [39m [90m0.01s[39m  
+  [32;1m✓[39;22m[90m [39m[90mdisabled account and disabled school cannot login[39m[90m                   [39m [90m0.22s[39m  
+  [32;1m✓[39;22m[90m [39m[90mexisting session is rejected when school or user is disabled[39m[90m        [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mrepeated failed login blocks even the correct password temporarily[39m[90m  [39m [90m1.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mfirst login must change password before portal access[39m[90m               [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mpassword change requires correct current password and confirmation[39m[90m  [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mrecovery email sends framework reset notification[39m[90m                   [39m [90m0.21s[39m  
+  [32;1m✓[39;22m[90m [39m[90mpassword reset rejects invalid token and token cannot be reused[39m[90m     [39m [90m0.22s[39m  
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Feature\PortalSecurityTest[39m
+  [32;1m✓[39;22m[90m [39m[90mguest cannot open portal material or private file[39m[90m                   [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mschool cannot list open or download another schools material[39m[90m        [39m [90m0.03s[39m  
+  [32;1m✓[39;22m[90m [39m[90mrevocation removes material and file access immediately[39m[90m             [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mexpired grant is denied for detail and file urls[39m[90m                    [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mview only access does not grant a download[39m[90m                          [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mdraft future and unpublished activity materials remain private[39m[90m      [39m [90m0.03s[39m  
+  [32;1m✓[39;22m[90m [39m[90mportal search and filters preserve school scope[39m[90m                     [39m [90m0.03s[39m  
+  [32;1m✓[39;22m[90m [39m[90meditor cannot manage accounts public content or escalate own role[39m[90m   [39m [90m0.03s[39m  
+  [32;1m✓[39;22m[90m [39m[90mpartner cannot access admin or upload files[39m[90m                         [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mupload accepts safe pdf and photo and stores them outside public di[39m[90m…[39m [90m0.37s[39m  
+  [32;1m✓[39;22m[90m [39m[90mupload rejects disguised executable and active pdf without partial[39m[90m… [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90moversized upload and failed batch leave no persisted assets[39m[90m         [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90madmin can create account and disable it without a default password[39m[90m  [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90madmin publication and grant workflow controls partner access[39m[90m        [39m [90m0.03s[39m  
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Feature\PublicExportTest[39m
+  [32;1m✓[39;22m[90m [39m[90mexport only contains published verified public content and referenc[39m[90m…[39m [90m0.09s[39m  
+  [32;1m✓[39;22m[90m [39m[90mconfigured portal uses real https address without rendering login f[39m[90m…[39m [90m0.03s[39m  
+  [32;1m✓[39;22m[90m [39m[90mexport refuses nonempty protected and traversal output without dele[39m[90m…[39m [90m0.01s[39m  
+  [32;1m✓[39;22m[90m [39m[90mexport rejects unsafe base and portal urls[39m[90m                          [39m [90m0.01s[39m  
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Feature\PublicSiteTest[39m
+  [32;1m✓[39;22m[90m [39m[90mhome and public navigation render without external dependencies[39m[90m     [39m [90m0.04s[39m  
+  [32;1m✓[39;22m[90m [39m[90munverified and draft public pages are never served[39m[90m                  [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mnews pages are not published even for published articles[39m[90m            [39m [90m0.01s[39m  
+  [32;1m✓[39;22m[90m [39m[90mpublic content is escaped and has canonical and sharing metadata[39m[90m    [39m [90m0.01s[39m  
+  [32;1m✓[39;22m[90m [39m[90mpublic media cannot expose an asset marked private[39m[90m                  [39m [90m0.01s[39m  
+  [32;1m✓[39;22m[90m [39m[90msitemap contains verified public urls and excludes private surfaces[39m[90m [39m [90m0.01s[39m  
+  [32;1m✓[39;22m[90m [39m[90madmin must confirm verification before publication[39m[90m                  [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mofficial social and map links render and foreign urls are rejected[39m[90m  [39m [90m0.03s[39m  
+  [32;1m✓[39;22m[90m [39m[90mbrochure showcase renders photos achievements and admission flow[39m[90m    [39m [90m0.03s[39m  
+  [32;1m✓[39;22m[90m [39m[90mwhatsapp inquiries are prefilled per unit and portal is not promote[39m[90m…[39m [90m0.04s[39m  
+  [32;1m✓[39;22m[90m [39m[90munit pages show leader vision and optional boarding only for smp an[39m[90m…[39m [90m0.07s[39m  
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Feature\SecurityHardeningTest[39m
+  [32;1m✓[39;22m[90m [39m[90mpdf with escaped javascript names is rejected without stored assets[39m[90m [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mpdf with compressed object stream is rejected even when name is esc[39m[90m…[39m [90m0.01s[39m  
+  [32;1m✓[39;22m[90m [39m[90mordinary pdf remains readable after upload hardening[39m[90m                [39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mcontrolled video cannot be published and never embeds without provi[39m[90m…[39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mmalformed reset token is rejected before broker and does not change[39m[90m…[39m [90m0.02s[39m  
+  [32;1m✓[39;22m[90m [39m[90mreset email uses configured origin even when request host is hostil[39m[90m…[39m [90m0.01s[39m  
+  [32;1m✓[39;22m[90m [39m[90madmin account email is normalized and case variant duplicate is rej[39m[90m…[39m [90m0.01s[39m  
+
+  [90mTests:[39m    [32;1m45 passed[39;22m[90m (1121 assertions)[39m
+  [90mDuration:[39m [39m3.22s[39m
+
