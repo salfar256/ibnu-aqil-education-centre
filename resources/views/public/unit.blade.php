@@ -103,7 +103,7 @@
             <h2 class="ia-title">{{ $info['people'] ?? 'Siswa' }} {{ $unit->slug === 'pesantren' ? 'Pondok Pesantren' : $info['short'] }} Ibnu Aqil</h2>
             <p>Semangat belajar, rapi, dan percaya diri.</p>
             @if($info['boarding'] && $unit->slug !== 'pesantren' && $mondokUrl)
-            <a class="ia-mondok-cta" href="{{ route('public.unit', 'pesantren') }}">@include('public.partials.icon', ['name' => 'bed', 'size' => 22]) <span><strong>{{ $info['boarding'] }}</strong><small>Siswa {{ $info['short'] }} bisa tinggal di asrama pesantren. Pilihan, tidak wajib.</small></span></a>
+            <a class="ia-mondok-cta" href="{{ route('public.unit', 'pesantren') }}">@include('public.partials.icon', ['name' => 'bed', 'size' => 22]) <span><strong>{{ $info['boarding'] }}</strong><small>Tidak wajib. Siswa {{ $info['short'] }} boleh pulang-pergi dari rumah, atau tinggal di asrama pesantren bila ingin.</small></span></a>
             @endif
         </div>
         <div class="ia-students-row">

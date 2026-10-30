@@ -54,7 +54,7 @@
                 <details class="nav-dropdown">
                     <summary>Sekolah <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
                     <div class="nav-dropdown-panel">
-                        @foreach(['mi' => 'MI Ibnu Aqil', 'smp' => 'SMP Ibnu Aqil', 'sma' => 'SMA Ibnu Aqil', 'smk' => 'SMK Ibnu Aqil', 'pesantren' => 'Pondok Pesantren (ayo mondok!)'] as $slug => $label)
+                        @foreach(['mi' => 'MI Ibnu Aqil', 'smp' => 'SMP Ibnu Aqil', 'sma' => 'SMA Ibnu Aqil', 'smk' => 'SMK Ibnu Aqil', 'pesantren' => 'Pondok Pesantren (mondok opsional)'] as $slug => $label)
                         <a href="{{ route('public.unit', $slug) }}">{{ $label }} <span aria-hidden="true">↗</span></a>
                         @endforeach
                     </div>
