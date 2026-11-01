@@ -73,7 +73,7 @@ class Units
             'short' => 'SMP', 'name' => 'SMP Ibnu Aqil', 'color' => 'smp',
             'who' => 'Lulusan SD/MI', 'line' => 'Berakhlak mulia, berilmu, berprestasi.',
             'leader' => ['Ade Irawan, S.Pd.I.', 'Kepala Sekolah'],
-            'vision' => 'Pelajar berakhlak, berprestasi, dan cakap digital dengan jiwa santri.',
+            'vision' => 'Pelajar yang berakhlak mulia, berilmu, dan berprestasi, serta santun dalam bersikap dan cakap di era digital.',
             'motto' => 'Berakhlak Mulia · Berilmu · Berprestasi',
             'programs' => [
                 ['medal', 'Terakreditasi A'],
@@ -90,8 +90,8 @@ class Units
             'boarding_note' => 'Tidak wajib. Siswa SMP boleh pulang-pergi dari rumah, atau tinggal di asrama pesantren bila ingin.',
             'ekskul_style' => 'formal',
             'ekskul' => ['futsal', 'handball', 'badminton', 'panahan', 'silat', 'karate', 'pramuka', 'tahfidz', 'kaligrafi', 'tilawah', 'sains-club', 'math-club', 'english-club', 'komputer', 'drumband', 'paduan-suara'],
-            'students' => ['smp-1', 'smp-2'],
-            'brochure' => ['pages' => 1, 'drive' => 'https://drive.google.com/drive/folders/143UuA-_LvFdWcTkaxfSvZ34NsfFa9lSP?usp=drive_link'],
+            'students' => ['smp-1', 'smp-2', 'smp-3'],
+            'brochure' => ['pages' => 2, 'drive' => 'https://drive.google.com/drive/folders/143UuA-_LvFdWcTkaxfSvZ34NsfFa9lSP?usp=drive_link'],
         ],
         'sma' => [
             'short' => 'SMA', 'name' => 'SMA Ibnu Aqil Boarding School', 'color' => 'sma',
