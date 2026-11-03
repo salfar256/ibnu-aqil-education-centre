@@ -66,12 +66,13 @@ p{color:var(--ia-muted)}
 .ia-tile-green strong{color:#fff}.ia-tile-green span{color:#cfe0d6}
 
 /* ===== 3. Kartu sekolah (logo + warna khas) ===== */
+.ia-c-tk{--u:#ec4899;--u2:#be185d;--u-ink:#fff;--u-soft:#fdeef6}
 .ia-c-mi{--u:#86c440;--u2:#5f9e22;--u-ink:#10300a;--u-soft:#eef8e2}
 .ia-c-smp{--u:#2563eb;--u2:#1d4ed8;--u-ink:#fff;--u-soft:#e8efff}
 .ia-c-sma{--u:#f97316;--u2:#ea580c;--u-ink:#fff;--u-soft:#fff1e6}
 .ia-c-smk{--u:#7c3aed;--u2:#6d28d9;--u-ink:#fff;--u-soft:#f2ebff}
 .ia-c-pesantren{--u:#0f4d3a;--u2:#0a3a2b;--u-ink:#fff;--u-soft:#e6f0ec}
-.ia-units{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.ia-units{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
 .ia-unit{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:28px 18px 24px;border-radius:22px;background:linear-gradient(160deg,var(--u) 0%,var(--u2) 100%);color:var(--u-ink);box-shadow:0 14px 30px -18px var(--u2);transition:transform .18s ease,box-shadow .2s ease;overflow:hidden}
 .ia-unit:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.12);top:-90px;right:-80px}
 .ia-unit:hover{transform:translateY(-4px);box-shadow:0 22px 40px -18px var(--u2)}

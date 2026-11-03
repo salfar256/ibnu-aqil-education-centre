@@ -5,8 +5,8 @@
     use App\Services\{Units, WhatsApp};
     $info = Units::get($unit->slug);
     $color = $info['color'] ?? 'pesantren';
-    $ppdbUrl = WhatsApp::link($settings, WhatsApp::unitMessage($unit->slug));
-    $costUrl = WhatsApp::link($settings, WhatsApp::costMessage($unit->slug));
+    $ppdbUrl = WhatsApp::linkTo($info['whatsapp'] ?? null, $settings, WhatsApp::unitMessage($unit->slug));
+    $costUrl = WhatsApp::linkTo($info['whatsapp'] ?? null, $settings, WhatsApp::costMessage($unit->slug));
     $mondokUrl = WhatsApp::link($settings, 'Saya tertarik putra/putri saya sambil mondok di Pondok Pesantren Ibnu Aqil. Bagaimana ketentuannya?');
     $ekskul = $info ? Units::ekskul($info['ekskul'], $info['ekskul_style']) : [];
     $brochure = $info['brochure_files'] ?? null;
@@ -80,6 +80,34 @@
         @if(!empty($info['note']))<p class="ia-note">@include('public.partials.icon', ['name' => 'help', 'size' => 18]) {{ $info['note'] }}</p>@endif
     </div>
 </section>
+
+@if(!empty($info['facilities']))
+{{-- Fasilitas pendukung (hanya unit yang mencantumkannya) --}}
+<section class="ia-section">
+    <div class="container">
+        <h2 class="ia-title">Fasilitas pendukung</h2>
+        <ul class="ia-programs">
+            @foreach($info['facilities'] as $facility)
+            <li><span class="ia-program-icon">@include('public.partials.icon', ['name' => 'check', 'size' => 26])</span><strong>{{ $facility }}</strong></li>
+            @endforeach
+        </ul>
+    </div>
+</section>
+@endif
+
+@if(!empty($info['requirements']))
+{{-- Persyaratan pendaftaran khusus unit --}}
+<section class="ia-section">
+    <div class="container">
+        <h2 class="ia-title">Persyaratan pendaftaran</h2>
+        <ul class="ia-programs">
+            @foreach($info['requirements'] as $requirement)
+            <li><span class="ia-program-icon">@include('public.partials.icon', ['name' => 'form', 'size' => 26])</span><strong>{{ $requirement }}</strong></li>
+            @endforeach
+        </ul>
+    </div>
+</section>
+@endif
 
 @if(!empty($info['achievements']))
 {{-- Prestasi terbaru, dari brosur --}}

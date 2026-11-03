@@ -5,7 +5,7 @@ namespace App\Services;
 // student photos, ekstrakurikuler stickers and downloadable brochures. Programs follow the 2027/2028 brochures.
 class Units
 {
-    public const ORDER = ['mi', 'smp', 'sma', 'smk', 'pesantren'];
+    public const ORDER = ['tk', 'mi', 'smp', 'sma', 'smk', 'pesantren'];
 
     public const PPDB_YEAR = '2027/2028';
 
@@ -42,6 +42,43 @@ class Units
     ];
 
     public const UNITS = [
+        'tk' => [
+            'short' => 'TK', 'name' => 'TK Ibnu Aqil', 'color' => 'tk',
+            'who' => 'Unit baru · dibuka 2027/2028', 'line' => 'Unit baru! Mulai dibuka tahun ajaran 2027/2028.',
+            'leader' => ['Hj. Mia Hamidiyah, S.Sos., M.M.', 'Kepala Sekolah'],
+            'vision' => 'Mewujudkan generasi muslim yang berakhlak mulia, mandiri, terampil, cerdas, dan kreatif.',
+            'motto' => 'Mari belajar bersama',
+            'programs' => [
+                ['mosque', 'Praktik manasik haji'],
+                ['book', 'Bimbingan mengaji'],
+                ['star', 'Pembelajaran dengan metode sentra'],
+                ['heart', 'Bimbingan praktik ibadah'],
+                ['sun', 'Berenang'],
+                ['book', 'Hafalan surat, hadits, dan doa harian'],
+                ['compass', 'Outing class'],
+                ['ball', 'Ekstrakurikuler'],
+                ['sparkle', 'Media pembelajaran menarik'],
+            ],
+            'facilities' => [
+                'Outdoor: area bermain, lapangan olahraga, dan area manasik haji',
+                'Indoor: ruang kelas, media edukasi, toilet, dan aula serbaguna',
+            ],
+            'requirements' => [
+                'Mengisi formulir pendaftaran',
+                'Fotokopi akta kelahiran (2 lembar)',
+                'Fotokopi KTP orang tua/wali (2 lembar)',
+                'Fotokopi kartu keluarga (2 lembar)',
+                'Pas foto ukuran 3x4 (2 lembar)',
+            ],
+            'note' => 'TK Ibnu Aqil adalah unit baru yang mulai dibuka pada tahun ajaran 2027/2028. Pendaftaran dibuka 7 November 2026 sampai kuota terpenuhi, Senin–Jumat pukul 08.00–13.00 WIB, di Jl. Raya Lingkar Laladon No. 256, Ciomas. Telepon/WhatsApp TK: 0812-1113-1878.',
+            'whatsapp' => '6281211131878',
+            'schedule' => 'Senin–Kamis 07.30–11.00 · Jumat 07.30–09.30 WIB',
+            'boarding' => null,
+            'ekskul_style' => 'lucu',
+            'ekskul' => [],
+            'students' => ['tk-1', 'tk-2', 'tk-3'],
+            'brochure' => ['pages' => 2, 'drive' => 'https://drive.google.com/drive/folders/1TNGJJJx4mtMPPP8ivxx_j0ofbow5ey6L?usp=drive_link'],
+        ],
         'mi' => [
             'short' => 'MI', 'name' => 'MI Ibnu Aqil', 'color' => 'mi',
             'who' => 'Usia 6–12 tahun', 'line' => 'Madrasah lebih baik, lebih baik madrasah.',

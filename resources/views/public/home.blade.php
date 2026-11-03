@@ -65,7 +65,7 @@
         <h2 id="quick-heading" class="ia-title">Bapak/Ibu ingin apa hari ini?</h2>
         <div class="ia-quick-grid">
             <a class="ia-tile ia-tile-green" href="{{ route('public.page', 'pendaftaran') }}">@include('public.partials.icon', ['name' => 'form', 'size' => 30])<strong>Cara daftar</strong><span>Syarat & alur</span></a>
-            <a class="ia-tile" href="#pilih-sekolah">@include('public.partials.icon', ['name' => 'school', 'size' => 30])<strong>Pilih sekolah</strong><span>MI, SMP, SMA, SMK</span></a>
+            <a class="ia-tile" href="#pilih-sekolah">@include('public.partials.icon', ['name' => 'school', 'size' => 30])<strong>Pilih sekolah</strong><span>TK (baru), MI, SMP, SMA, SMK</span></a>
             @if($costUrl)<a class="ia-tile" href="{{ $costUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'wallet', 'size' => 30])<strong>Tanya rincian biaya</strong><span>Lewat WhatsApp</span></a>@endif
             @if($visitUrl)<a class="ia-tile" href="{{ $visitUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'calendar', 'size' => 30])<strong>Kunjungi sekolah</strong><span>Atur jadwal</span></a>@endif
             @if($mapsUrl)<a class="ia-tile" href="{{ $mapsUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'pin', 'size' => 30])<strong>Lokasi</strong><span>Buka Google Maps</span></a>@endif

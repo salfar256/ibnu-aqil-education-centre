@@ -7,6 +7,7 @@ class WhatsApp {
     public const GREETING = 'Assalamu\'alaikum, Admin PPDB Ibnu Aqil. ';
 
     public const UNITS = [
+        'tk' => ['TK', 'TK Ibnu Aqil'],
         'mi' => ['MI', 'MI Ibnu Aqil'],
         'smp' => ['SMP', 'SMP Ibnu Aqil'],
         'sma' => ['SMA', 'SMA Ibnu Aqil Boarding School'],
@@ -31,6 +32,16 @@ class WhatsApp {
         return 'https://wa.me/'.$number.($message !== '' ? '?text='.rawurlencode(self::GREETING.$message) : '');
     }
 
+    // A unit may have its own admin number (e.g. TK); otherwise the general PPDB number is used.
+    public static function linkTo(?string $number, array $settings, string $message = ''): ?string
+    {
+        if ($number !== null && preg_match('~^[0-9]{9,15}$~', $number)) {
+            return 'https://wa.me/'.$number.($message !== '' ? '?text='.rawurlencode(self::GREETING.$message) : '');
+        }
+
+        return self::link($settings, $message);
+    }
+
     public static function unitName(string $slug): string
     {
         return self::UNITS[$slug][1] ?? 'Ibnu Aqil';
@@ -52,7 +63,7 @@ class WhatsApp {
     public static function menu(array $settings): array
     {
         $items = [];
-        foreach (['mi', 'smp', 'sma', 'smk', 'pesantren'] as $slug) {
+        foreach (['tk', 'mi', 'smp', 'sma', 'smk', 'pesantren'] as $slug) {
             $items[] = ['label' => self::UNITS[$slug][1], 'href' => self::link($settings, self::unitMessage($slug))];
         }
         $items[] = ['label' => 'Rincian biaya', 'href' => self::link($settings, self::costMessage())];
@@ -67,9 +78,11 @@ class WhatsApp {
         $unit = $slug ? self::unitName($slug) : 'Ibnu Aqil';
         $items = [
             ['Berapa biaya masuk dan biaya bulanannya?', 'Rincian biaya terbaru untuk tahun ajaran 2027/2028 disampaikan langsung oleh admin PPDB, sesuai unit dan pilihan mondok.', self::costMessage($slug)],
-            ['Dokumen apa saja yang perlu disiapkan?', $slug === 'mi'
+            ['Dokumen apa saja yang perlu disiapkan?', $slug === 'tk'
+                ? 'Untuk TK: formulir pendaftaran, fotokopi akta kelahiran, fotokopi KTP orang tua atau wali, dan fotokopi kartu keluarga (masing-masing 2 lembar), serta pas foto 3x4 sebanyak 2 lembar.'
+                : ($slug === 'mi'
                 ? 'Untuk MI: formulir pendaftaran, pas foto berwarna 3x4, fotokopi KTP orang tua atau wali, dan fotokopi kartu keluarga.'
-                : 'Umumnya formulir pendaftaran, fotokopi ijazah yang dilegalisir, pas foto 3x4, fotokopi KTP orang tua atau wali, kartu keluarga, akta kelahiran, kartu NISN (jika ada), dan surat keterangan berkelakuan baik dari sekolah asal.',
+                : 'Umumnya formulir pendaftaran, fotokopi ijazah yang dilegalisir, pas foto 3x4, fotokopi KTP orang tua atau wali, kartu keluarga, akta kelahiran, kartu NISN (jika ada), dan surat keterangan berkelakuan baik dari sekolah asal.'),
                 'Dokumen apa saja yang perlu disiapkan untuk mendaftar di '.$unit.'?'],
             ['Apakah siswa wajib mondok?', 'Siswa SMA Ibnu Aqil Boarding School wajib mondok. Bagi siswa SMP, mondok bersifat pilihan: boleh pulang-pergi dari rumah atau tinggal di asrama. Asrama putra dan putri di Pondok Pesantren Ibnu Aqil terpisah.', 'Saya ingin tahu tentang ketentuan mondok untuk siswa SMP/SMA di Ibnu Aqil. Bagaimana ketentuannya?'],
             ['Apakah kuota masih tersedia?', 'Kuota setiap unit terbatas. Ketersediaan tempat dan periode pendaftaran dipastikan langsung oleh admin PPDB.', 'Apakah kuota pendaftaran '.$unit.' masih tersedia?'],

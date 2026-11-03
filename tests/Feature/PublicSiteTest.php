@@ -23,12 +23,12 @@ class PublicSiteTest extends TestCase
 
     public function test_home_and_public_navigation_render_without_external_dependencies(): void
     {
-        foreach (['mi', 'smp', 'sma', 'smk', 'pesantren'] as $slug) {
+        foreach (['tk', 'mi', 'smp', 'sma', 'smk', 'pesantren'] as $slug) {
             $this->page($slug, ['title' => strtoupper($slug).' Ibnu Aqil', 'type' => 'unit']);
         }
         $response = $this->get(route('public.home'))->assertOk();
         $response->assertSee('Ibnu Aqil Education Center')->assertDontSee('Portal Pengimbasan')->assertSee('id="primary-nav"', false)->assertSee('aria-controls="primary-nav"', false)->assertSee('Lewati ke konten utama');
-        foreach (['mi', 'smp', 'sma', 'smk', 'pesantren'] as $slug) {
+        foreach (['tk', 'mi', 'smp', 'sma', 'smk', 'pesantren'] as $slug) {
             $response->assertSee(route('public.unit', $slug), false);
             $this->get(route('public.unit', $slug))->assertOk()->assertSee(strtoupper($slug).' Ibnu Aqil');
         }

@@ -68,6 +68,27 @@
   },
   "units": [
     {
+      "slug": "tk",
+      "name": "TK Ibnu Aqil",
+      "category": "Taman Kanak-kanak (unit baru, dibuka tahun ajaran 2027/2028)",
+      "title": "Unit baru: bermain sambil belajar",
+      "excerpt": "TK Ibnu Aqil di Laladon, Ciomas, Bogor: unit baru yang mulai dibuka tahun ajaran 2027/2028, dengan metode sentra, bimbingan mengaji, dan praktik ibadah.",
+      "body": "TK Ibnu Aqil adalah unit baru di bawah Yayasan Haji Agus Salim Bogor yang mulai dibuka pada tahun ajaran 2027/2028, dipimpin oleh Kepala Sekolah Hj. Mia Hamidiyah, S.Sos., M.M.\n\nVisi: \"Mewujudkan generasi muslim yang berakhlak mulia, mandiri, terampil, cerdas, dan kreatif.\"\n\nJadwal belajar: Senin–Kamis pukul 07.30–11.00 WIB dan Jumat pukul 07.30–09.30 WIB.\n\nFasilitas pendukung: area bermain, lapangan olahraga, dan area manasik haji (outdoor); ruang kelas, media edukasi, toilet, dan aula serbaguna (indoor).\n\nPendaftaran dibuka 7 November 2026 sampai kuota terpenuhi, Senin–Jumat pukul 08.00–13.00 WIB, di Jl. Raya Lingkar Laladon No. 256, Kec. Ciomas, Kab. Bogor 16610. Telepon/WhatsApp: 0812-1113-1878.",
+      "programs": [
+        "Praktik manasik haji",
+        "Bimbingan mengaji",
+        "Pembelajaran dengan metode sentra",
+        "Bimbingan praktik ibadah",
+        "Berenang",
+        "Hafalan surat, hadits, dan doa harian",
+        "Outing class",
+        "Ekstrakurikuler",
+        "Media pembelajaran menarik"
+      ],
+      "source_section": "Brosur TK Ibnu Aqil TA 2027/2028",
+      "status": "published"
+    },
+    {
       "slug": "mi",
       "name": "MI Ibnu Aqil",
       "category": "Madrasah Ibtidaiyah",
