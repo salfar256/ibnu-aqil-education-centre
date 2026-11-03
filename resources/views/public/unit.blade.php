@@ -74,7 +74,7 @@
         <h2 class="ia-title">Program unggulan</h2>
         <ul class="ia-programs">
             @foreach($info['programs'] as [$icon, $label])
-            <li><span class="ia-program-icon">@include('public.partials.icon', ['name' => $icon, 'size' => 26])</span><strong>{{ $label }}</strong></li>
+            <li>@include('public.partials.program-icon', ['icon' => $icon])<strong>{{ $label }}</strong></li>
             @endforeach
         </ul>
         @if(!empty($info['note']))<p class="ia-note">@include('public.partials.icon', ['name' => 'help', 'size' => 18]) {{ $info['note'] }}</p>@endif
@@ -88,7 +88,8 @@
         <h2 class="ia-title">Fasilitas pendukung</h2>
         <ul class="ia-programs">
             @foreach($info['facilities'] as $facility)
-            <li><span class="ia-program-icon">@include('public.partials.icon', ['name' => 'check', 'size' => 26])</span><strong>{{ $facility }}</strong></li>
+            @php([$fIcon, $fLabel] = is_array($facility) ? $facility : ['check', $facility])
+            <li>@include('public.partials.program-icon', ['icon' => $fIcon])<strong>{{ $fLabel }}</strong></li>
             @endforeach
         </ul>
     </div>

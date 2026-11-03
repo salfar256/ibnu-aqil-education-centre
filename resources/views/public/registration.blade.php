@@ -1,6 +1,6 @@
 @extends('layouts.public')
 @section('title', 'Info Pendaftaran PPDB 2027/2028 — Ibnu Aqil Education Center')
-@section('description', 'Cara mendaftar di Sekolah Ibnu Aqil tahun ajaran 2027/2028: alur, syarat dokumen, dan brosur MI, SMP, SMA, dan SMK yang bisa diunduh.')
+@section('description', 'Cara mendaftar di Sekolah Ibnu Aqil tahun ajaran 2027/2028: alur, syarat dokumen, dan brosur TK, MI, SMP, SMA, SMK, dan Pondok Pesantren yang bisa diunduh.')
 @php
     use App\Services\{Units, WhatsApp};
     $icon = fn (string $name) => is_file(public_path('assets/icons/daftar/'.$name.'.webp')) ? asset('assets/icons/daftar/'.$name.'.webp') : null;
@@ -14,6 +14,7 @@
         ['wawancara', 'Tes & wawancara', 'Sesuai jadwal dari panitia PPDB.'],
         ['daftar-ulang', 'Daftar ulang', 'Setelah diterima, selesaikan administrasi.'],
     ];
+    $docsTk = ['Formulir pendaftaran', 'Fotokopi akta kelahiran (2 lembar)', 'Fotokopi KTP orang tua/wali (2 lembar)', 'Fotokopi Kartu Keluarga (2 lembar)', 'Pas foto 3×4 (2 lembar)'];
     $docsMi = ['Formulir pendaftaran', 'Fotokopi KTP orang tua/wali (2 lembar)', 'Fotokopi Kartu Keluarga (2 lembar)', 'Fotokopi akta lahir (2 lembar)', 'Fotokopi STTB RA/TK/PAUD (2 lembar)', 'Pernah sekolah formal minimal 1 tahun'];
     $docsUpper = ['Formulir pendaftaran', 'Fotokopi ijazah legalisir (2 lembar)', 'Pas foto 3×4 (3 lembar)', 'Fotokopi KTP orang tua/wali (2 lembar)', 'Fotokopi Kartu Keluarga (2 lembar)', 'Fotokopi akta lahir (2 lembar)', 'Fotokopi kartu NISN (jika ada)', 'Surat keterangan berkelakuan baik dari sekolah asal'];
 @endphp
@@ -66,6 +67,7 @@
     <div class="container">
         <h2 class="ia-title ia-title-icon">@if($icon('dokumen'))<img class="ia-title-img" src="{{ $icon('dokumen') }}" alt="" width="48" height="48" loading="lazy">@endif Syarat dokumen</h2>
         <div class="ia-docs">
+            <div class="ia-docs-card ia-c-tk"><h3>TK Ibnu Aqil <small>(baru, 2027)</small></h3><ul>@foreach($docsTk as $d)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 20]) {{ $d }}</li>@endforeach</ul></div>
             <div class="ia-docs-card ia-c-mi"><h3>MI Ibnu Aqil</h3><ul>@foreach($docsMi as $d)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 20]) {{ $d }}</li>@endforeach</ul></div>
             <div class="ia-docs-card ia-c-smp"><h3>SMP · SMA · SMK</h3><ul>@foreach($docsUpper as $d)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 20]) {{ $d }}</li>@endforeach</ul></div>
         </div>
@@ -79,7 +81,6 @@
         <h2 class="ia-title">Unduh brosur</h2>
         <div class="ia-brochure-cards">
             @foreach(Units::all() as $u)
-            @continue($u['slug'] === 'pesantren')
             <article class="ia-brochure-card ia-c-{{ $u['color'] }}">
                 <div class="ia-brochure-thumb">
                     @if($u['brochure_files'] && $u['brochure_files']['pages'] !== [])
