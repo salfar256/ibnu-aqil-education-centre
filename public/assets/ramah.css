@@ -476,6 +476,8 @@ p{color:var(--ia-muted)}
 /* ===== Pengumuman pembukaan PPDB ===== */
 .ia-hero-open{margin-top:18px;max-width:540px;padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.14);border-left:5px solid var(--ia-gold);backdrop-filter:blur(2px)}
 .ia-hero-open p{margin:0;color:#f3f7f1;font-size:15.5px;line-height:1.5}
-.ia-hero-open .ia-hero-open-date{display:flex;align-items:center;gap:8px;font-size:17px;margin-bottom:4px;color:#fff}
+.ia-hero-open .ia-hero-open-date{font-size:17px;margin-bottom:4px;color:#fff}
+.ia-hero-open .ia-hero-open-date .ia-icon{display:inline-block;vertical-align:-4px;margin-right:6px;color:var(--ia-gold)}
 .ia-hero-open .ia-hero-open-date strong{color:var(--ia-gold)}
-.ia-reg-lead{margin:10px 0 14px;font-size:17px;line-height:1.55;max-width:560px}
+.ia-reg-lead{margin:10px 0 14px;font-size:17px;line-height:1.55;max-width:560px;color:#e6efe9}
+.ia-reg-lead strong{color:var(--ia-gold)}
