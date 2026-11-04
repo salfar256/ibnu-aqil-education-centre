@@ -39,7 +39,11 @@
             <p class="ia-pill">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB 2027/2028 · Sekolah Ibnu Aqil</p>
             <h1>Assalamu'alaikum,<br><span>selamat datang di Yayasan Haji Agus Salim Bogor</span></h1>
             <p class="ia-hero-brand">YHASB · Ibnu Aqil Education Center</p>
-            <p class="ia-hero-lead">MI · SMP · SMA · SMK · Pondok Pesantren<br>Satu kawasan, satu keluarga, sejak 1992.</p>
+            <p class="ia-hero-lead">TK · MI · SMP · SMA · SMK · Pondok Pesantren<br>Satu kawasan, satu keluarga, sejak 1992.</p>
+            <div class="ia-hero-open">
+                <p class="ia-hero-open-date">@include('public.partials.icon', ['name' => 'calendar', 'size' => 20]) Pendaftaran dibuka <strong>{{ \App\Services\Units::PPDB_OPEN }}</strong></p>
+                <p>Kursi terbatas dan ditutup begitu kuota habis. Amankan tempat putra-putri Anda sejak hari pertama!</p>
+            </div>
             <div class="ia-hero-actions">
                 @if($ppdbUrl)<a class="ia-btn ia-btn-wa" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) <span><span class="ia-hide-sm">Chat </span>WhatsApp<span class="ia-hide-sm"> PPDB</span></span></a>@endif
                 @if($tel)<a class="ia-btn ia-btn-light" href="{{ $tel }}">@include('public.partials.icon', ['name' => 'phone']) Telepon</a>@endif

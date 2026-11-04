@@ -41,7 +41,7 @@
 <body>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
     <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
-    <div class="topline"><div class="container"><span>Ibnu Aqil Education Center</span>@if($toplineWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran tahun ajaran 2027/2028.'))<a href="{{ $toplineWa }}" target="_blank" rel="noopener noreferrer">Informasi PPDB 2027/2028 — tanya admin via WhatsApp <span aria-hidden="true">↗</span></a>@endif</div></div>
+    <div class="topline"><div class="container"><span>PPDB 2027/2028 dibuka {{ \App\Services\Units::PPDB_OPEN }} · sampai kuota habis</span>@if($toplineWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran tahun ajaran 2027/2028.'))<a href="{{ $toplineWa }}" target="_blank" rel="noopener noreferrer">Informasi PPDB 2027/2028 — tanya admin via WhatsApp <span aria-hidden="true">↗</span></a>@endif</div></div>
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="{{ route('public.home') }}" aria-label="Ibnu Aqil Education Center, beranda">

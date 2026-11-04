@@ -19,7 +19,7 @@
         <div class="ia-unit-hero-copy">
             <nav class="ia-crumb" aria-label="Jejak halaman"><a href="{{ route('public.home') }}">Beranda</a> <span aria-hidden="true">›</span> <a href="{{ route('public.home') }}#pilih-sekolah">Sekolah</a></nav>
             @if($info && $info['logo'])<span class="ia-unit-hero-logo"><img src="{{ $info['logo'] }}" alt="Logo {{ $unit->title }}" width="120" height="120" decoding="async"></span>@endif
-            <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB {{ Units::PPDB_YEAR }}</p>
+            <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB {{ Units::PPDB_YEAR }} · dibuka {{ Units::PPDB_OPEN }}</p>
             <h1>{{ $unit->title }}</h1>
             @if($info)<p class="ia-unit-hero-line">{{ $info['line'] }}</p>@endif
             <ul class="ia-unit-facts">

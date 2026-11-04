@@ -26,8 +26,10 @@
             <nav class="ia-crumb" aria-label="Jejak halaman"><a href="{{ route('public.home') }}">Beranda</a> <span aria-hidden="true">›</span> <span aria-current="page">Info pendaftaran</span></nav>
             <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB {{ Units::PPDB_YEAR }} · Sekolah Ibnu Aqil</p>
             <h1>Ayo daftar,<br><span>kuota terbatas!</span></h1>
+            <p class="ia-reg-lead">Pendaftaran tahun ajaran {{ Units::PPDB_YEAR }} dibuka <strong>{{ Units::PPDB_OPEN }}</strong> dan ditutup begitu kuota setiap unit habis. Siapkan berkas sejak sekarang dan datang di hari-hari pertama agar putra-putri Anda tidak kehabisan tempat.</p>
             <ul class="ia-unit-facts">
-                <li>@include('public.partials.icon', ['name' => 'calendar', 'size' => 18]) Dibuka mulai 14 November 2026</li>
+                <li>@include('public.partials.icon', ['name' => 'calendar', 'size' => 18]) Dibuka {{ Units::PPDB_OPEN }}</li>
+                <li>@include('public.partials.icon', ['name' => 'star', 'size' => 18]) Sampai kuota habis</li>
                 <li>@include('public.partials.icon', ['name' => 'clock', 'size' => 18]) Setiap hari kerja · 08.00–15.00 WIB</li>
             </ul>
             <div class="ia-hero-actions">

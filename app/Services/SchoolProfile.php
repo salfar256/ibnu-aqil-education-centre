@@ -111,6 +111,7 @@ class SchoolProfile {
   ['Daftar ulang','Setelah dinyatakan diterima, menyelesaikan biaya administrasi yang telah ditetapkan.'],
  ];
  public const SCHEDULE=[
+  ['Pembukaan pendaftaran','Sabtu, 7 November 2026 · sampai kuota habis'],
   ['Layanan pendaftaran','Setiap hari kerja, pukul 08.00–15.00 WIB'],
   ['Jam belajar MI','Senin–Jumat, 07.25–14.00 WIB'],
   ['Jam belajar SMP, SMA, SMK','Senin–Jumat, 07.15–14.20 WIB'],
