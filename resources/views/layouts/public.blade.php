@@ -18,6 +18,7 @@
     <meta property="og:image:alt" content="Masjid Ibnu Aqil, Laladon, Ciomas, Bogor">
     <meta property="og:locale" content="id_ID">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ asset('assets/foto/web/og-masjid.jpg') }}">
     <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('assets/icons/favicon-48.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/icons/favicon-96.png') }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('assets/icons/favicon-192.png') }}">

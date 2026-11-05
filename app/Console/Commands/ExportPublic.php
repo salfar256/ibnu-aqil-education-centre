@@ -239,6 +239,14 @@ class ExportPublic extends Command
         foreach ($xpath->query('//meta[@property="og:url"]') as $node) {
             $node->setAttribute('content', $this->pageUrl($target));
         }
+        // Share images (og:image, twitter:image) must be copied too, or link previews show no picture.
+        foreach (iterator_to_array($xpath->query('//meta[@property="og:image" or @name="twitter:image"]')) as $node) {
+            if ($node instanceof DOMElement && ($rewritten = $this->link($node->getAttribute('content'))) !== null) {
+                $node->setAttribute('content', $rewritten);
+            } else {
+                $node->parentNode?->removeChild($node);
+            }
+        }
         // Serialize the root element so libxml keeps UTF-8 text (e.g. "—") instead of
         // converting it to named entities like &mdash;, which search engines may show literally.
         return "<!DOCTYPE html>\n".$document->saveHTML($document->documentElement);
