@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#103e35">
     <title>@yield('title', 'Ibnu Aqil Education Center')</title>
-    <meta name="description" content="@yield('description', 'MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2027/2028 langsung kepada admin PPDB melalui WhatsApp.')">
+    <meta name="description" content="@yield('description', 'TK, MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2027/2028 langsung kepada admin PPDB melalui WhatsApp.')">
     <link rel="canonical" href="{{ request()->url() }}">
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta property="og:title" content="@yield('title', 'Ibnu Aqil Education Center')">
-    <meta property="og:description" content="@yield('description', 'MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2027/2028 langsung kepada admin PPDB melalui WhatsApp.')">
+    <meta property="og:description" content="@yield('description', 'TK, MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2027/2028 langsung kepada admin PPDB melalui WhatsApp.')">
     <meta property="og:url" content="{{ request()->url() }}">
     <meta property="og:site_name" content="Ibnu Aqil Education Center">
-    <meta property="og:image" content="{{ asset('assets/brosur-2026-2027.jpg') }}">
+    <meta property="og:image" content="{{ asset('assets/foto/web/og-masjid.jpg') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Masjid Ibnu Aqil, Laladon, Ciomas, Bogor">
+    <meta property="og:locale" content="id_ID">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('assets/icons/favicon-48.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/icons/favicon-96.png') }}">

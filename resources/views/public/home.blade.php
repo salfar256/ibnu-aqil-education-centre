@@ -1,6 +1,6 @@
 @extends('layouts.public')
-@section('title', 'Ibnu Aqil Education Center — MI, SMP, SMA, SMK, Pesantren Bogor')
-@section('description', 'Yayasan Haji Agus Salim Bogor (YHASB) · Ibnu Aqil Education Center: MI, SMP, SMA, SMK, dan Pondok Pesantren di Laladon, Ciomas. PPDB 2027/2028.')
+@section('title', 'Ibnu Aqil Education Center — TK, MI, SMP, SMA, SMK, Pesantren Bogor')
+@section('description', 'Yayasan Haji Agus Salim Bogor (YHASB) · Ibnu Aqil Education Center: TK, MI, SMP, SMA, SMK, dan Pondok Pesantren di Laladon, Ciomas. PPDB 2027/2028 dibuka Sabtu, 7 November 2026.')
 @php
     use App\Services\{WhatsApp, SchoolProfile, SocialLinks};
     $leaders = SchoolProfile::leaders();
