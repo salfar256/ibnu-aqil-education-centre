@@ -7,7 +7,7 @@
         <span class="ia-unit-logo-wrap">@if($u['logo'])<img src="{{ $u['logo'] }}" alt="Logo {{ $u['name'] }}" width="120" height="120" loading="lazy" decoding="async">@else<strong>{{ $u['short'] }}</strong>@endif</span>
         <span class="ia-unit-text">
             <strong>{{ $u['name'] }}</strong>
-            @if($full)<em class="ia-full-badge">Kuota PPDB sudah penuh</em><span>Terima kasih atas kepercayaannya.</span>@else<span>{{ $u['line'] }}</span>@endif
+            @if($full)<em class="ia-full-badge">Kuota SPMB sudah penuh</em><span>Terima kasih atas kepercayaannya.</span>@else<span>{{ $u['line'] }}</span>@endif
             <small>@include('public.partials.icon', ['name' => 'user', 'size' => 15]) {{ $u['who'] }}</small>
         </span>
         <span class="ia-unit-go" aria-hidden="true">@include('public.partials.icon', ['name' => 'arrow', 'size' => 20])</span>

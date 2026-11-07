@@ -1,6 +1,6 @@
 @extends('layouts.public')
 @section('title', 'Kontak — Ibnu Aqil Education Center')
-@section('description', 'Hubungi Sekolah Ibnu Aqil: WhatsApp PPDB, telepon kantor, lokasi sekolah di Laladon, Ciomas, Bogor, dan media sosial resmi @ibnuaqilmedia.')
+@section('description', 'Hubungi Sekolah Ibnu Aqil: WhatsApp SPMB, telepon kantor, lokasi sekolah di Laladon, Ciomas, Bogor, dan media sosial resmi @ibnuaqilmedia.')
 @php
     use App\Services\{SocialLinks, WhatsApp};
     $wa = WhatsApp::link($settings, 'Saya ingin bertanya tentang Sekolah Ibnu Aqil.');
@@ -32,7 +32,7 @@
 <section class="ia-section">
     <div class="container">
         <div class="ia-contact-cards">
-            @if($wa)<a class="ia-ccard ia-ccard-wa" href="{{ $wa }}" target="_blank" rel="noopener noreferrer"><span class="ia-ccard-icon">@include('public.partials.icon', ['name' => 'whatsapp', 'size' => 32])</span><strong>WhatsApp PPDB</strong><span>{{ $waDisplay ?? 'Chat admin' }}</span><em>Chat sekarang @include('public.partials.icon', ['name' => 'arrow', 'size' => 18])</em></a>@endif
+            @if($wa)<a class="ia-ccard ia-ccard-wa" href="{{ $wa }}" target="_blank" rel="noopener noreferrer"><span class="ia-ccard-icon">@include('public.partials.icon', ['name' => 'whatsapp', 'size' => 32])</span><strong>WhatsApp SPMB</strong><span>{{ $waDisplay ?? 'Chat admin' }}</span><em>Chat sekarang @include('public.partials.icon', ['name' => 'arrow', 'size' => 18])</em></a>@endif
             @if($tel)<a class="ia-ccard" href="{{ $tel }}"><span class="ia-ccard-icon">@include('public.partials.icon', ['name' => 'phone', 'size' => 32])</span><strong>Telepon kantor</strong><span>{{ $phone }}</span><em>Telepon @include('public.partials.icon', ['name' => 'arrow', 'size' => 18])</em></a>@endif
             @if($maps)<a class="ia-ccard" href="{{ $maps }}" target="_blank" rel="noopener noreferrer"><span class="ia-ccard-icon">@include('public.partials.icon', ['name' => 'pin', 'size' => 32])</span><strong>Lokasi sekolah</strong><span>{{ $address }}</span><em>Petunjuk arah @include('public.partials.icon', ['name' => 'arrow', 'size' => 18])</em></a>@endif
             @if($visit)<a class="ia-ccard" href="{{ $visit }}" target="_blank" rel="noopener noreferrer"><span class="ia-ccard-icon">@include('public.partials.icon', ['name' => 'calendar', 'size' => 32])</span><strong>Kunjungi sekolah</strong><span>Senin–Jumat · 08.00–15.00 WIB</span><em>Atur jadwal @include('public.partials.icon', ['name' => 'arrow', 'size' => 18])</em></a>@endif
@@ -47,7 +47,7 @@
         <div class="ia-social-copy">
             <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'heart', 'size' => 16]) {{ '@ibnuaqilmedia' }}</p>
             <h2>Yuk, ikuti media sosial kami!</h2>
-            <p>Lihat keseruan kegiatan, prestasi, dan info PPDB terbaru setiap hari.</p>
+            <p>Lihat keseruan kegiatan, prestasi, dan info SPMB terbaru setiap hari.</p>
             <div class="ia-social-cards">
                 @foreach($social as $key => $link)
                 <a class="ia-scard ia-scard-{{ $socialMeta[$key][0] ?? 'x' }}" href="{{ $link['url'] }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $link['label'] }} {{ $link['handle'] }} (tab baru)">

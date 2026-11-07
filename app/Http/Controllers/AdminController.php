@@ -299,7 +299,7 @@ class AdminController extends Controller
         return [
             'contact_email' => ['Email resmi', 'email'],
             'contact_phone' => ['Nomor telepon resmi', 'text'],
-            'whatsapp_url' => ['Tautan WhatsApp PPDB', 'url'],
+            'whatsapp_url' => ['Tautan WhatsApp SPMB', 'url'],
             'registration_url' => ['Tautan sistem pendaftaran', 'url'],
             'address' => ['Alamat resmi', 'textarea'],
             'maps_url' => ['Tautan Google Maps', 'url'],

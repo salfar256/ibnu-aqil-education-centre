@@ -105,9 +105,9 @@ class SchoolProfile {
   ['Juara 3 Olimpiade Akuntansi tingkat SMK','Se-Jabodetabek','2015/2016'],
  ];
  public const ADMISSION_STEPS=[
-  ['Isi formulir','Mengisi formulir pendaftaran dan membayar biaya pendaftaran, langsung di kantor pendaftaran atau melalui admin PPDB.'],
+  ['Isi formulir','Mengisi formulir pendaftaran dan membayar biaya pendaftaran, langsung di kantor pendaftaran atau melalui admin SPMB.'],
   ['Lengkapi dokumen','Menyerahkan formulir beserta dokumen persyaratan peserta didik baru.'],
-  ['Tes dan wawancara','Mengikuti tes seleksi dan wawancara sesuai jadwal dari panitia PPDB.'],
+  ['Tes dan wawancara','Mengikuti tes seleksi dan wawancara sesuai jadwal dari panitia SPMB.'],
   ['Daftar ulang','Setelah dinyatakan diterima, menyelesaikan biaya administrasi yang telah ditetapkan.'],
  ];
  public const SCHEDULE=[

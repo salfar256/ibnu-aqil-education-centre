@@ -4,7 +4,7 @@ namespace App\Services;
 // Builds WhatsApp PPDB links with a prefilled message, so the admin knows which unit or topic a parent is asking about.
 // The number always comes from the verified `whatsapp_url` setting; no link is produced when it is missing or malformed.
 class WhatsApp {
-    public const GREETING = 'Assalamu\'alaikum, Admin PPDB Ibnu Aqil. ';
+    public const GREETING = 'Assalamu\'alaikum, Admin SPMB Ibnu Aqil. ';
 
     public const UNITS = [
         'tk' => ['TK', 'TK Ibnu Aqil'],
@@ -77,7 +77,7 @@ class WhatsApp {
     {
         $unit = $slug ? self::unitName($slug) : 'Ibnu Aqil';
         $items = [
-            ['Berapa biaya masuk dan biaya bulanannya?', 'Rincian biaya terbaru untuk tahun ajaran 2027/2028 disampaikan langsung oleh admin PPDB, sesuai unit dan pilihan mondok.', self::costMessage($slug)],
+            ['Berapa biaya masuk dan biaya bulanannya?', 'Rincian biaya terbaru untuk tahun ajaran 2027/2028 disampaikan langsung oleh admin SPMB, sesuai unit dan pilihan mondok.', self::costMessage($slug)],
             ['Dokumen apa saja yang perlu disiapkan?', $slug === 'tk'
                 ? 'Untuk TK: formulir pendaftaran, fotokopi akta kelahiran, fotokopi KTP orang tua atau wali, dan fotokopi kartu keluarga (masing-masing 2 lembar), serta pas foto 3x4 sebanyak 2 lembar.'
                 : ($slug === 'mi'
@@ -85,9 +85,9 @@ class WhatsApp {
                 : 'Umumnya formulir pendaftaran, fotokopi ijazah yang dilegalisir, pas foto 3x4, fotokopi KTP orang tua atau wali, kartu keluarga, akta kelahiran, kartu NISN (jika ada), dan surat keterangan berkelakuan baik dari sekolah asal.'),
                 'Dokumen apa saja yang perlu disiapkan untuk mendaftar di '.$unit.'?'],
             ['Apakah siswa wajib mondok?', 'Siswa SMA Ibnu Aqil Boarding School wajib mondok. Bagi siswa SMP, mondok bersifat pilihan: boleh pulang-pergi dari rumah atau tinggal di asrama. Asrama putra dan putri di Pondok Pesantren Ibnu Aqil terpisah.', 'Saya ingin tahu tentang ketentuan mondok untuk siswa SMP/SMA di Ibnu Aqil. Bagaimana ketentuannya?'],
-            ['Apakah kuota masih tersedia?', 'Pendaftaran telah dibuka dan kuota terbatas. Kuota TK dan MI sudah penuh, terima kasih atas kepercayaannya. SMP, SMA, SMK, dan Pondok Pesantren masih menerima pendaftaran; tanyakan ketersediaan tempat kepada admin PPDB dan daftarlah segera.', 'Apakah kuota pendaftaran '.$unit.' masih tersedia?'],
+            ['Apakah kuota masih tersedia?', 'Pendaftaran telah dibuka dan kuota terbatas. Kuota TK dan MI sudah penuh, terima kasih atas kepercayaannya. SMP, SMA, SMK, dan Pondok Pesantren masih menerima pendaftaran; tanyakan ketersediaan tempat kepada admin SPMB dan daftarlah segera.', 'Apakah kuota pendaftaran '.$unit.' masih tersedia?'],
             ['Bisakah saya melihat sekolah terlebih dahulu?', 'Bisa. Kantor pendaftaran melayani setiap hari kerja pukul 08.00–15.00 WIB di sekolah Ibnu Aqil, Laladon, Ciomas, Bogor.', 'Saya ingin berkunjung ke sekolah untuk melihat '.$unit.'. Kapan waktu yang tepat?'],
-            ['Bagaimana jadwal tes dan wawancara?', 'Tes seleksi dan wawancara dilaksanakan sesuai jadwal dari panitia PPDB setelah formulir dan dokumen diserahkan.', 'Kapan jadwal tes dan wawancara untuk '.$unit.'?'],
+            ['Bagaimana jadwal tes dan wawancara?', 'Tes seleksi dan wawancara dilaksanakan sesuai jadwal dari panitia SPMB setelah formulir dan dokumen diserahkan.', 'Kapan jadwal tes dan wawancara untuk '.$unit.'?'],
         ];
 
         return array_values(array_filter(array_map(fn ($item) => ['question' => $item[0], 'answer' => $item[1], 'href' => self::link($settings, $item[2])], $items), fn ($item) => $item['href'] !== null));

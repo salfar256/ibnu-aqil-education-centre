@@ -1,6 +1,6 @@
 @extends('layouts.public')
 @section('title', 'Ibnu Aqil Education Center — TK, MI, SMP, SMA, SMK, Pesantren Bogor')
-@section('description', 'Yayasan Haji Agus Salim Bogor (YHASB) · Ibnu Aqil Education Center: TK, MI, SMP, SMA, SMK, dan Pondok Pesantren di Laladon, Ciomas. PPDB 2027/2028 telah dibuka, kuota terbatas.')
+@section('description', 'Yayasan Haji Agus Salim Bogor (YHASB) · Ibnu Aqil Education Center: TK, MI, SMP, SMA, SMK, dan Pondok Pesantren di Laladon, Ciomas. SPMB 2027/2028 telah dibuka, kuota terbatas.')
 @php
     use App\Services\{WhatsApp, SchoolProfile, SocialLinks};
     $leaders = SchoolProfile::leaders();
@@ -36,7 +36,7 @@
     <div class="ia-hero-inner container">
         <div class="ia-hero-copy">
             <svg class="calligraphy-draw ia-bismillah" viewBox="0 0 690 150" role="img" aria-label="Bismillahirrahmanirrahim"><text x="345" y="112" text-anchor="middle" lang="ar" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</text></svg>
-            <p class="ia-pill">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB 2027/2028 · Sekolah Ibnu Aqil</p>
+            <p class="ia-pill">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) SPMB 2027/2028 · Sekolah Ibnu Aqil</p>
             <h1>Assalamu'alaikum,<br><span>selamat datang di Yayasan Haji Agus Salim Bogor</span></h1>
             <p class="ia-hero-brand">YHASB · Ibnu Aqil Education Center</p>
             <p class="ia-hero-lead">TK · MI · SMP · SMA · SMK · Pondok Pesantren<br>Satu kawasan, satu keluarga, sejak 1992.</p>
@@ -45,7 +45,7 @@
                 <p>Kuota terbatas: SMP, SMA, SMK, dan Pondok Pesantren masih menerima pendaftaran. Amankan tempat putra-putri Anda sekarang. Kuota TK dan MI sudah penuh, terima kasih atas kepercayaannya.</p>
             </div>
             <div class="ia-hero-actions">
-                @if($ppdbUrl)<a class="ia-btn ia-btn-wa" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) <span><span class="ia-hide-sm">Chat </span>WhatsApp<span class="ia-hide-sm"> PPDB</span></span></a>@endif
+                @if($ppdbUrl)<a class="ia-btn ia-btn-wa" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) <span><span class="ia-hide-sm">Chat </span>WhatsApp<span class="ia-hide-sm"> SPMB</span></span></a>@endif
                 @if($tel)<a class="ia-btn ia-btn-light" href="{{ $tel }}">@include('public.partials.icon', ['name' => 'phone']) Telepon</a>@endif
             </div>
             <p class="ia-hero-hint">@include('public.partials.icon', ['name' => 'clock', 'size' => 18]) Admin melayani Senin–Jumat, 08.00–15.00 WIB</p>
@@ -134,7 +134,7 @@
             </ul>
         </div>
         <div class="ia-contact-actions">
-            @if($ppdbUrl)<a class="ia-btn ia-btn-wa ia-btn-block" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) Chat WhatsApp PPDB</a>@endif
+            @if($ppdbUrl)<a class="ia-btn ia-btn-wa ia-btn-block" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) Chat WhatsApp SPMB</a>@endif
             @if($tel)<a class="ia-btn ia-btn-light ia-btn-block" href="{{ $tel }}">@include('public.partials.icon', ['name' => 'phone']) Telepon kantor</a>@endif
             @if($mapsUrl)<a class="ia-btn ia-btn-light ia-btn-block" href="{{ $mapsUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'pin']) Petunjuk arah</a>@endif
         </div>

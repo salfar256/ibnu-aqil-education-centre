@@ -20,9 +20,9 @@
         <div class="ia-unit-hero-copy">
             <nav class="ia-crumb" aria-label="Jejak halaman"><a href="{{ route('public.home') }}">Beranda</a> <span aria-hidden="true">›</span> <a href="{{ route('public.home') }}#pilih-sekolah">Sekolah</a></nav>
             @if($info && $info['logo'])<span class="ia-unit-hero-logo"><img src="{{ $info['logo'] }}" alt="Logo {{ $unit->title }}" width="120" height="120" decoding="async"></span>@endif
-            <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB {{ Units::PPDB_YEAR }} · {{ $full ? 'kuota sudah penuh' : 'pendaftaran telah dibuka, kuota terbatas' }}</p>
+            <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) SPMB {{ Units::PPDB_YEAR }} · {{ $full ? 'kuota sudah penuh' : 'pendaftaran telah dibuka, kuota terbatas' }}</p>
             <h1>{{ $unit->title }}</h1>
-            @if($full)<p class="ia-full-note"><strong>Kuota PPDB {{ Units::PPDB_YEAR }} untuk {{ $unit->title }} sudah penuh.</strong> {{ Units::THANKS }} Informasi pendaftaran tahun berikutnya dapat ditanyakan kepada admin.</p>
+            @if($full)<p class="ia-full-note"><strong>Kuota SPMB {{ Units::PPDB_YEAR }} untuk {{ $unit->title }} sudah penuh.</strong> {{ Units::THANKS }} Informasi pendaftaran tahun berikutnya dapat ditanyakan kepada admin.</p>
             @elseif($info)<p class="ia-unit-hero-line">{{ $info['line'] }}</p>@endif
             <ul class="ia-unit-facts">
                 @if($info)<li>@include('public.partials.icon', ['name' => 'user', 'size' => 18]) {{ $info['who'] }}</li>
@@ -165,7 +165,7 @@
 <section class="ia-section ia-brochure-section" id="brosur">
     <div class="container ia-brochure-inner">
         <div>
-            <h2 class="ia-title">Brosur {{ $unit->slug === 'pesantren' ? 'Penerimaan Santri Baru' : 'PPDB' }} {{ $brochure['year'] }}</h2>
+            <h2 class="ia-title">Brosur {{ $unit->slug === 'pesantren' ? 'Penerimaan Santri Baru' : 'SPMB' }} {{ $brochure['year'] }}</h2>
             <p>Simpan di HP, lalu kirim ke keluarga lewat WhatsApp.</p>
             <div class="ia-brochure-actions">
                 @if($brochure['pdf'])<a class="ia-btn ia-btn-small" href="{{ $brochure['pdf'] }}" download>@include('public.partials.icon', ['name' => 'download', 'size' => 20]) Unduh PDF ({{ number_format($brochure['pdf_kb'] / 1024, 1, ',', '') }} MB)</a>@endif
@@ -189,10 +189,10 @@
     <div class="container ia-contact-inner">
         <div>
             <h2>Siap bergabung dengan {{ $info['short'] ?? $unit->title }}?</h2>
-            <p>Tanyakan pendaftaran, jadwal tes, dan biaya langsung ke admin PPDB.</p>
+            <p>Tanyakan pendaftaran, jadwal tes, dan biaya langsung ke admin SPMB.</p>
         </div>
         <div class="ia-contact-actions">
-            @if($ppdbUrl)<a class="ia-btn ia-btn-wa ia-btn-block" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) Chat WhatsApp PPDB</a>@endif
+            @if($ppdbUrl)<a class="ia-btn ia-btn-wa ia-btn-block" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) Chat WhatsApp SPMB</a>@endif
             @if($costUrl)<a class="ia-btn ia-btn-light ia-btn-block" href="{{ $costUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'wallet']) Tanya rincian biaya</a>@endif
             <a class="ia-btn ia-btn-light ia-btn-block" href="{{ route('public.page', 'pendaftaran') }}">@include('public.partials.icon', ['name' => 'form']) Cara mendaftar</a>
         </div>

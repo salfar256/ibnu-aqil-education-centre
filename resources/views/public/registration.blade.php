@@ -1,5 +1,5 @@
 @extends('layouts.public')
-@section('title', 'Info Pendaftaran PPDB 2027/2028 — Ibnu Aqil Education Center')
+@section('title', 'Info Pendaftaran SPMB 2027/2028 — Ibnu Aqil Education Center')
 @section('description', 'Cara mendaftar di Sekolah Ibnu Aqil tahun ajaran 2027/2028: alur, syarat dokumen, dan brosur TK, MI, SMP, SMA, SMK, dan Pondok Pesantren yang bisa diunduh.')
 @php
     use App\Services\{Units, WhatsApp};
@@ -11,7 +11,7 @@
         ['isi-formulir', 'Isi formulir', 'Ambil nomor antrean, lalu isi formulir pendaftaran.'],
         ['unggah-berkas', 'Serahkan berkas', 'Lampirkan dokumen persyaratan.'],
         ['verifikasi', 'Verifikasi', 'Panitia memeriksa kelengkapan dokumen.'],
-        ['wawancara', 'Tes & wawancara', 'Sesuai jadwal dari panitia PPDB.'],
+        ['wawancara', 'Tes & wawancara', 'Sesuai jadwal dari panitia SPMB.'],
         ['daftar-ulang', 'Daftar ulang', 'Setelah diterima, selesaikan administrasi.'],
     ];
     $docsTk = ['Formulir pendaftaran', 'Fotokopi akta kelahiran (2 lembar)', 'Fotokopi KTP orang tua/wali (2 lembar)', 'Fotokopi Kartu Keluarga (2 lembar)', 'Pas foto 3×4 (2 lembar)'];
@@ -24,7 +24,7 @@
     <div class="container ia-reg-hero-inner">
         <div class="ia-reg-copy">
             <nav class="ia-crumb" aria-label="Jejak halaman"><a href="{{ route('public.home') }}">Beranda</a> <span aria-hidden="true">›</span> <span aria-current="page">Info pendaftaran</span></nav>
-            <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB {{ Units::PPDB_YEAR }} · Sekolah Ibnu Aqil</p>
+            <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) SPMB {{ Units::PPDB_YEAR }} · Sekolah Ibnu Aqil</p>
             <h1>Ayo daftar,<br><span>kuota terbatas!</span></h1>
             <p class="ia-reg-lead">Pendaftaran tahun ajaran {{ Units::PPDB_YEAR }} <strong>telah dibuka</strong> dan kuota terbatas. SMP, SMA, SMK, dan Pondok Pesantren masih menerima pendaftaran: siapkan berkas dan daftar segera agar putra-putri Anda tidak kehabisan tempat. Kuota TK dan MI sudah penuh, terima kasih atas kepercayaannya.</p>
             <ul class="ia-unit-facts">
@@ -73,7 +73,7 @@
             <div class="ia-docs-card ia-c-mi ia-unit-full"><h3>MI Ibnu Aqil <small>(kuota sudah penuh)</small></h3><ul>@foreach($docsMi as $d)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 20]) {{ $d }}</li>@endforeach</ul></div>
             <div class="ia-docs-card ia-c-smp"><h3>SMP · SMA · SMK</h3><ul>@foreach($docsUpper as $d)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 20]) {{ $d }}</li>@endforeach</ul></div>
         </div>
-        <p class="ia-note">@include('public.partials.icon', ['name' => 'help', 'size' => 18]) SMA tidak menerima siswa pindahan. Rincian biaya dijelaskan langsung oleh admin PPDB.</p>
+        <p class="ia-note">@include('public.partials.icon', ['name' => 'help', 'size' => 18]) SMA tidak menerima siswa pindahan. Rincian biaya dijelaskan langsung oleh admin SPMB.</p>
     </div>
 </section>
 

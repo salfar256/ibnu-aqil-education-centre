@@ -5,7 +5,7 @@
         <div data-reveal>
             <p class="eyebrow">Pertanyaan orang tua</p>
             <h2 id="faq-heading">Yang sering<br><em>ditanyakan.</em></h2>
-            <p class="faq-intro">Ketuk pertanyaan untuk melihat jawaban singkat. Butuh penjelasan lebih lanjut? Pertanyaan Anda langsung terkirim ke admin PPDB lewat WhatsApp.</p>
+            <p class="faq-intro">Ketuk pertanyaan untuk melihat jawaban singkat. Butuh penjelasan lebih lanjut? Pertanyaan Anda langsung terkirim ke admin SPMB lewat WhatsApp.</p>
         </div>
         <div class="faq-list">
             @foreach($faqItems as $item)

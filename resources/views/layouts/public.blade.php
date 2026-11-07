@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#103e35">
     <title>@yield('title', 'Ibnu Aqil Education Center')</title>
-    <meta name="description" content="@yield('description', 'TK, MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2027/2028 langsung kepada admin PPDB melalui WhatsApp.')">
+    <meta name="description" content="@yield('description', 'TK, MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2027/2028 langsung kepada admin SPMB melalui WhatsApp.')">
     <link rel="canonical" href="{{ request()->url() }}">
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta property="og:title" content="@yield('title', 'Ibnu Aqil Education Center')">
-    <meta property="og:description" content="@yield('description', 'TK, MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2027/2028 langsung kepada admin PPDB melalui WhatsApp.')">
+    <meta property="og:description" content="@yield('description', 'TK, MI, SMP, SMA Boarding School, SMK, dan Pondok Pesantren Ibnu Aqil di Laladon, Ciomas, Bogor. Tanyakan pendaftaran 2027/2028 langsung kepada admin SPMB melalui WhatsApp.')">
     <meta property="og:url" content="{{ request()->url() }}">
     <meta property="og:site_name" content="Ibnu Aqil Education Center">
     <meta property="og:image" content="{{ asset('assets/foto/web/og-masjid.jpg') }}">
@@ -46,7 +46,7 @@
 <body>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
     <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
-    <div class="topline"><div class="container"><span>PPDB 2027/2028 telah dibuka · kuota terbatas · TK &amp; MI sudah penuh</span>@if($toplineWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran tahun ajaran 2027/2028.'))<a href="{{ $toplineWa }}" target="_blank" rel="noopener noreferrer">Informasi PPDB 2027/2028 — tanya admin via WhatsApp <span aria-hidden="true">↗</span></a>@endif</div></div>
+    <div class="topline"><div class="container"><span>SPMB 2027/2028 telah dibuka · kuota terbatas · TK &amp; MI sudah penuh</span>@if($toplineWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran tahun ajaran 2027/2028.'))<a href="{{ $toplineWa }}" target="_blank" rel="noopener noreferrer">Informasi SPMB 2027/2028 — tanya admin via WhatsApp <span aria-hidden="true">↗</span></a>@endif</div></div>
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="{{ route('public.home') }}" aria-label="Ibnu Aqil Education Center, beranda">
@@ -76,7 +76,7 @@
             <div class="footer-brand-column">
                 <a class="brand brand-light" href="{{ route('public.home') }}"><img class="official-logo" src="{{ asset(\App\Services\PublicPhotos::logo()) }}" alt="Logo Yayasan Haji Agus Salim Bogor" width="48" height="49"><span class="brand-name">Ibnu Aqil<small>EDUCATION CENTER</small></span></a>
                 <p>Yayasan Haji Agus Salim Bogor (YHASB)<br>MI · SMP · SMA · SMK · Pondok Pesantren</p>
-                @if($footerWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran di Ibnu Aqil.'))<a class="footer-portal" href="{{ $footerWa }}" target="_blank" rel="noopener noreferrer">Tanya admin PPDB via WhatsApp <span aria-hidden="true">↗</span></a>@endif
+                @if($footerWa = \App\Services\WhatsApp::link($waSettings, 'Saya ingin bertanya tentang pendaftaran di Ibnu Aqil.'))<a class="footer-portal" href="{{ $footerWa }}" target="_blank" rel="noopener noreferrer">Tanya admin SPMB via WhatsApp <span aria-hidden="true">↗</span></a>@endif
             </div>
             <div><h2>Jelajahi</h2><a href="{{ route('public.page', 'tentang') }}">Tentang Ibnu Aqil</a><a href="{{ route('public.page', 'fasilitas') }}">Fasilitas & kegiatan</a><a href="{{ route('public.page', 'pendaftaran') }}">Cara mendaftar</a><a href="{{ route('public.page', 'kontak') }}">Kontak</a></div>
             <div><h2>Sekolah</h2>@foreach(['tk' => 'TK (dibuka 2027)', 'mi' => 'MI', 'smp' => 'SMP', 'sma' => 'SMA', 'smk' => 'SMK', 'pesantren' => 'Pondok Pesantren'] as $slug => $label)<a href="{{ route('public.unit', $slug) }}">{{ $label }} Ibnu Aqil</a>@endforeach</div>
@@ -84,7 +84,7 @@
                 <ul class="ia-foot-list">
                     @if(!empty($settings['contact_address']))<li>@include('public.partials.icon', ['name' => 'pin', 'size' => 18])<span>{{ strtok($settings['contact_address'], "\n") }}</span></li>@endif
                     @if(!empty($settings['contact_phone']))<li>@include('public.partials.icon', ['name' => 'phone', 'size' => 18])<a href="tel:{{ preg_replace('/[^0-9+]/', '', $settings['contact_phone']) }}">{{ $settings['contact_phone'] }}</a></li>@endif
-                    @if($footerWa)<li>@include('public.partials.icon', ['name' => 'whatsapp', 'size' => 18])<a href="{{ $footerWa }}" target="_blank" rel="noopener noreferrer">WhatsApp PPDB</a></li>@endif
+                    @if($footerWa)<li>@include('public.partials.icon', ['name' => 'whatsapp', 'size' => 18])<a href="{{ $footerWa }}" target="_blank" rel="noopener noreferrer">WhatsApp SPMB</a></li>@endif
                     @if($footerMapsUrl = \App\Services\SocialLinks::maps($settings ?? []))<li>@include('public.partials.icon', ['name' => 'compass', 'size' => 18])<a href="{{ $footerMapsUrl }}" target="_blank" rel="noopener noreferrer">Petunjuk arah (Google Maps)</a></li>@endif
                     <li>@include('public.partials.icon', ['name' => 'clock', 'size' => 18])<span>Senin–Jumat · 08.00–15.00 WIB</span></li>
                 </ul>
@@ -97,9 +97,9 @@
     @php($waMenu = \App\Services\WhatsApp::menu($waSettings))
     @if($waMenu !== [])
     <details class="wa-float">
-        <summary class="wa-float-toggle" aria-label="Chat WhatsApp PPDB Ibnu Aqil, pilih topik"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.8a8 8 0 0 1-11.9 7L4 20l1.2-4A8 8 0 1 1 20 11.8Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 8.3c-.7 1.9 1.8 5.8 4.8 6.9 1.2.5 2.1-.8 2.1-1.1l-2.1-1-.7.7c-1.3-.7-2.3-1.6-2.8-2.8l.6-.7-1-2Z" fill="currentColor"/></svg><span>WhatsApp PPDB</span></summary>
+        <summary class="wa-float-toggle" aria-label="Chat WhatsApp SPMB Ibnu Aqil, pilih topik"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.8a8 8 0 0 1-11.9 7L4 20l1.2-4A8 8 0 1 1 20 11.8Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 8.3c-.7 1.9 1.8 5.8 4.8 6.9 1.2.5 2.1-.8 2.1-1.1l-2.1-1-.7.7c-1.3-.7-2.3-1.6-2.8-2.8l.6-.7-1-2Z" fill="currentColor"/></svg><span>WhatsApp SPMB</span></summary>
         <div class="wa-menu" role="group" aria-label="Topik pertanyaan">
-            <p class="wa-menu-head"><strong>Tanya admin PPDB</strong><span>Pilih topik, pesan langsung tersusun di WhatsApp.</span></p>
+            <p class="wa-menu-head"><strong>Tanya admin SPMB</strong><span>Pilih topik, pesan langsung tersusun di WhatsApp.</span></p>
             @foreach($waMenu as $waItem)<a href="{{ $waItem['href'] }}" target="_blank" rel="noopener noreferrer">{{ $waItem['label'] }} <span aria-hidden="true">↗</span></a>@endforeach
         </div>
     </details>

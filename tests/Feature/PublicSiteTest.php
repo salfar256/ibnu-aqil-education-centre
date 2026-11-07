@@ -113,7 +113,7 @@ class PublicSiteTest extends TestCase
         $this->post('/admin/manage/settings', $valid)->assertRedirect()->assertSessionHasNoErrors();
 
         $this->get(route('public.page', 'kontak'))->assertOk()
-            ->assertSee('WhatsApp PPDB')->assertSee('https://wa.me/6285810183161', false)
+            ->assertSee('WhatsApp SPMB')->assertSee('https://wa.me/6285810183161', false)
             ->assertSee('https://www.instagram.com/ibnuaqilmedia', false)->assertSee('https://www.youtube.com/@ibnuaqilmedia', false)
             ->assertSee('https://www.tiktok.com/@ibnuaqilmedia', false)->assertSee('Petunjuk arah')->assertSee('Yuk, ikuti media sosial kami!')->assertDontSee('Cihideung');
 
@@ -129,7 +129,7 @@ class PublicSiteTest extends TestCase
 
         $this->get(route('public.home'))->assertOk()
             ->assertSee('assets/foto/web/masjid-hero.webp', false)->assertSee('assets/foto/web/kelas-tik.jpg', false)->assertSee('assets/foto/web/pembina-kh-agus-salim-hero.webp', false)->assertSee('assets/foto/web/ketua-yayasan.webp', false)->assertSee('Bismillahirrahmanirrahim')
-            ->assertSee('Empat langkah')->assertSee('Chat WhatsApp PPDB')->assertSee('KH. Agus Salim')->assertSee('Hj. Saidah Hilmiyah, S.Pd., M.M.')->assertSee('Ketua Yayasan')
+            ->assertSee('Empat langkah')->assertSee('Chat WhatsApp SPMB')->assertSee('KH. Agus Salim')->assertSee('Hj. Saidah Hilmiyah, S.Pd., M.M.')->assertSee('Ketua Yayasan')
             ->assertSee('class="ia-bottom-nav"', false)->assertSee('https://share.google/1qFq51ITYcl8wqM9V', false)->assertSee('manifest.webmanifest', false);
         $this->get(route('public.achievements'))->assertOk()->assertSee('Juara 1 Pencak Silat tingkat Nasional')->assertDontSee('Belum ada prestasi');
         $this->page('fasilitas', ['body' => 'Daftar fasilitas terverifikasi.']);
@@ -163,7 +163,7 @@ class PublicSiteTest extends TestCase
         $this->get('/unit/mi')->assertOk()->assertSee('Dr. Hj. Fuzna Nur Aqilah, M.Pd.')->assertDontSee('Bisa sambil mondok (opsional)')->assertSee('assets/ekskul/lucu/calistung.webp', false)->assertSee('assets/brosur/brosur-mi-2027-2028.pdf', false);
         $this->get('/unit/pesantren')->assertOk()->assertSee('Santri dari SMP &amp; SMA', false)->assertSee('Santri Pondok Pesantren Ibnu Aqil');
         $this->get('/tentang')->assertOk()->assertSee('KH. Agus Salim, S.Sos., M.M.')->assertSee('Menjaga tradisi yang baik')->assertSee('Sekolah Ibnu Aqil')->assertSee(route('public.unit', 'smk'), false);
-        $this->get('/')->assertOk()->assertSee('ia-c-smk', false)->assertSee('Santri dari SMP &amp; SMA', false)->assertSee('assets/foto/web/masjid-hero.webp', false)->assertDontSee('Terhubung melalui ilmu')->assertSee('PPDB 2027/2028 · Sekolah Ibnu Aqil')->assertSee('Yayasan Haji Agus Salim Bogor')->assertSee('Kunjungi sekolah')->assertSee('MI, SMP, SMA, SMK');
+        $this->get('/')->assertOk()->assertSee('ia-c-smk', false)->assertSee('Santri dari SMP &amp; SMA', false)->assertSee('assets/foto/web/masjid-hero.webp', false)->assertDontSee('Terhubung melalui ilmu')->assertSee('SPMB 2027/2028 · Sekolah Ibnu Aqil')->assertSee('Yayasan Haji Agus Salim Bogor')->assertSee('Kunjungi sekolah')->assertSee('MI, SMP, SMA, SMK');
         $this->get('/pendaftaran')->assertOk()->assertSee('Alur pendaftaran')->assertSee('assets/icons/daftar/isi-formulir.webp', false)->assertDontSee('Tanya admin</strong>', false)->assertSee('assets/foto/siswa/mi-1.webp', false)->assertSee('assets/brosur/brosur-smp-2027-2028.pdf', false);
     }
 }
