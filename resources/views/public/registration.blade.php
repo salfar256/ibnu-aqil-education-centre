@@ -26,10 +26,10 @@
             <nav class="ia-crumb" aria-label="Jejak halaman"><a href="{{ route('public.home') }}">Beranda</a> <span aria-hidden="true">›</span> <span aria-current="page">Info pendaftaran</span></nav>
             <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB {{ Units::PPDB_YEAR }} · Sekolah Ibnu Aqil</p>
             <h1>Ayo daftar,<br><span>kuota terbatas!</span></h1>
-            <p class="ia-reg-lead">Pendaftaran tahun ajaran {{ Units::PPDB_YEAR }} dibuka <strong>{{ Units::PPDB_OPEN }}</strong> dan ditutup begitu kuota setiap unit habis. Siapkan berkas sejak sekarang dan datang di hari-hari pertama agar putra-putri Anda tidak kehabisan tempat.</p>
+            <p class="ia-reg-lead">Pendaftaran tahun ajaran {{ Units::PPDB_YEAR }} <strong>telah dibuka</strong> dan kuota terbatas. SMP, SMA, SMK, dan Pondok Pesantren masih menerima pendaftaran: siapkan berkas dan daftar segera agar putra-putri Anda tidak kehabisan tempat. Kuota TK dan MI sudah penuh, terima kasih atas kepercayaannya.</p>
             <ul class="ia-unit-facts">
-                <li>@include('public.partials.icon', ['name' => 'calendar', 'size' => 18]) Dibuka {{ Units::PPDB_OPEN }}</li>
-                <li>@include('public.partials.icon', ['name' => 'star', 'size' => 18]) Sampai kuota habis</li>
+                <li>@include('public.partials.icon', ['name' => 'calendar', 'size' => 18]) Pendaftaran telah dibuka</li>
+                <li>@include('public.partials.icon', ['name' => 'star', 'size' => 18]) Kuota terbatas</li>
                 <li>@include('public.partials.icon', ['name' => 'clock', 'size' => 18]) Setiap hari kerja · 08.00–15.00 WIB</li>
             </ul>
             <div class="ia-hero-actions">
@@ -69,8 +69,8 @@
     <div class="container">
         <h2 class="ia-title ia-title-icon">@if($icon('dokumen'))<img class="ia-title-img" src="{{ $icon('dokumen') }}" alt="" width="48" height="48" loading="lazy">@endif Syarat dokumen</h2>
         <div class="ia-docs">
-            <div class="ia-docs-card ia-c-tk"><h3>TK Ibnu Aqil <small>(baru, 2027)</small></h3><ul>@foreach($docsTk as $d)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 20]) {{ $d }}</li>@endforeach</ul></div>
-            <div class="ia-docs-card ia-c-mi"><h3>MI Ibnu Aqil</h3><ul>@foreach($docsMi as $d)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 20]) {{ $d }}</li>@endforeach</ul></div>
+            <div class="ia-docs-card ia-c-tk ia-unit-full"><h3>TK Ibnu Aqil <small>(kuota sudah penuh)</small></h3><ul>@foreach($docsTk as $d)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 20]) {{ $d }}</li>@endforeach</ul></div>
+            <div class="ia-docs-card ia-c-mi ia-unit-full"><h3>MI Ibnu Aqil <small>(kuota sudah penuh)</small></h3><ul>@foreach($docsMi as $d)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 20]) {{ $d }}</li>@endforeach</ul></div>
             <div class="ia-docs-card ia-c-smp"><h3>SMP · SMA · SMK</h3><ul>@foreach($docsUpper as $d)<li>@include('public.partials.icon', ['name' => 'check', 'size' => 20]) {{ $d }}</li>@endforeach</ul></div>
         </div>
         <p class="ia-note">@include('public.partials.icon', ['name' => 'help', 'size' => 18]) SMA tidak menerima siswa pindahan. Rincian biaya dijelaskan langsung oleh admin PPDB.</p>

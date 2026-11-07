@@ -11,6 +11,16 @@ class Units
 
     public const PPDB_OPEN = 'Sabtu, 7 November 2026';
 
+    // Unit yang kuota PPDB-nya sudah habis: tampil abu-abu dengan ucapan terima kasih.
+    public const QUOTA_FULL = ['tk', 'mi'];
+
+    public const THANKS = 'Terima kasih atas kepercayaan Bapak/Ibu kepada Ibnu Aqil.';
+
+    public static function full(string $slug): bool
+    {
+        return in_array($slug, self::QUOTA_FULL, true);
+    }
+
     // Ekstrakurikuler → label and sticker file name (inside assets/ekskul/formal, assets/ekskul/lucu or assets/ekskul/smk).
     public const EKSKUL = [
         'tahfidz' => ["Tahfidz Al-Qur'an", 'tahfidz'],
@@ -193,7 +203,7 @@ class Units
                 'Juara 2 Lomba Puisi tingkat SMA 2025',
                 'Juara 2 Lomba Cerdas Cermat Akuntansi AFEST 2025 Universitas Pakuan',
             ],
-            'note' => 'SPMB 2027/2028 dibuka Sabtu, 7 November 2026 sampai kuota habis, pukul 08.00–14.00 WIB. Pendaftaran dilakukan secara offline di sekolah. Admin SMK: 0858-1762-4288.',
+            'note' => 'SPMB 2027/2028 telah dibuka dan kuota terbatas, pukul 08.00–14.00 WIB. Pendaftaran dilakukan secara offline di sekolah. Admin SMK: 0858-1762-4288.',
             'schedule' => 'Senin–Jumat · 07.15–14.20 WIB',
             'boarding' => null,
             'ekskul_style' => 'smk',

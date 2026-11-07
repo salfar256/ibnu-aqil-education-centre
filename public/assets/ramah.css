@@ -481,3 +481,11 @@ p{color:var(--ia-muted)}
 .ia-hero-open .ia-hero-open-date strong{color:var(--ia-gold)}
 .ia-reg-lead{margin:10px 0 14px;font-size:17px;line-height:1.55;max-width:560px;color:#e6efe9}
 .ia-reg-lead strong{color:var(--ia-gold)}
+
+/* ===== Unit dengan kuota penuh (abu-abu) ===== */
+.ia-unit-full{--u:#9aa3ad;--u2:#5f6872;--u-ink:#fff;--u-soft:#eef0f2}
+.ia-unit.ia-unit-full .ia-unit-logo-wrap img,.ia-unit-full .ia-unit-hero-logo img{filter:grayscale(1);opacity:.85}
+.ia-full-badge{display:inline-block;font-style:normal;font-weight:800;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;background:#fff;color:#4b5560;padding:4px 10px;border-radius:999px;margin:2px 0}
+.ia-full-note{margin:10px 0 20px;max-width:560px;font-size:18px;line-height:1.5;background:rgba(255,255,255,.16);border-left:5px solid #fff;padding:12px 16px;border-radius:12px;color:#fff}
+.ia-full-note strong{display:block;margin-bottom:2px}
+.ia-docs-card.ia-unit-full{background:#f1f3f5;border-color:#d5d9de}.ia-docs-card.ia-unit-full h3,.ia-docs-card.ia-unit-full li{color:#5f6872}.ia-docs-card.ia-unit-full .ia-icon{color:#9aa3ad}

@@ -12,16 +12,18 @@
     $brochure = $info['brochure_files'] ?? null;
 @endphp
 @section('content')
-<div class="ia-unit-page ia-c-{{ $color }}">
+@php($full = Units::full($unit->slug))
+<div class="ia-unit-page ia-c-{{ $color }}{{ $full ? ' ia-unit-full' : '' }}">
 {{-- 1. Pembuka berwarna: logo, nama, kepala sekolah --}}
 <section class="ia-unit-hero">
     <div class="container ia-unit-hero-inner">
         <div class="ia-unit-hero-copy">
             <nav class="ia-crumb" aria-label="Jejak halaman"><a href="{{ route('public.home') }}">Beranda</a> <span aria-hidden="true">›</span> <a href="{{ route('public.home') }}#pilih-sekolah">Sekolah</a></nav>
             @if($info && $info['logo'])<span class="ia-unit-hero-logo"><img src="{{ $info['logo'] }}" alt="Logo {{ $unit->title }}" width="120" height="120" decoding="async"></span>@endif
-            <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB {{ Units::PPDB_YEAR }} · dibuka {{ Units::PPDB_OPEN }}</p>
+            <p class="ia-ppdb-tag">@include('public.partials.icon', ['name' => 'sparkle', 'size' => 16]) PPDB {{ Units::PPDB_YEAR }} · {{ $full ? 'kuota sudah penuh' : 'pendaftaran telah dibuka, kuota terbatas' }}</p>
             <h1>{{ $unit->title }}</h1>
-            @if($info)<p class="ia-unit-hero-line">{{ $info['line'] }}</p>@endif
+            @if($full)<p class="ia-full-note"><strong>Kuota PPDB {{ Units::PPDB_YEAR }} untuk {{ $unit->title }} sudah penuh.</strong> {{ Units::THANKS }} Informasi pendaftaran tahun berikutnya dapat ditanyakan kepada admin.</p>
+            @elseif($info)<p class="ia-unit-hero-line">{{ $info['line'] }}</p>@endif
             <ul class="ia-unit-facts">
                 @if($info)<li>@include('public.partials.icon', ['name' => 'user', 'size' => 18]) {{ $info['who'] }}</li>
                 <li>@include('public.partials.icon', ['name' => 'clock', 'size' => 18]) {{ $info['schedule'] }}</li>

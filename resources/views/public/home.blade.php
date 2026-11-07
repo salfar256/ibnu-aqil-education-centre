@@ -1,6 +1,6 @@
 @extends('layouts.public')
 @section('title', 'Ibnu Aqil Education Center — TK, MI, SMP, SMA, SMK, Pesantren Bogor')
-@section('description', 'Yayasan Haji Agus Salim Bogor (YHASB) · Ibnu Aqil Education Center: TK, MI, SMP, SMA, SMK, dan Pondok Pesantren di Laladon, Ciomas. PPDB 2027/2028 dibuka Sabtu, 7 November 2026.')
+@section('description', 'Yayasan Haji Agus Salim Bogor (YHASB) · Ibnu Aqil Education Center: TK, MI, SMP, SMA, SMK, dan Pondok Pesantren di Laladon, Ciomas. PPDB 2027/2028 telah dibuka, kuota terbatas.')
 @php
     use App\Services\{WhatsApp, SchoolProfile, SocialLinks};
     $leaders = SchoolProfile::leaders();
@@ -41,8 +41,8 @@
             <p class="ia-hero-brand">YHASB · Ibnu Aqil Education Center</p>
             <p class="ia-hero-lead">TK · MI · SMP · SMA · SMK · Pondok Pesantren<br>Satu kawasan, satu keluarga, sejak 1992.</p>
             <div class="ia-hero-open">
-                <p class="ia-hero-open-date">@include('public.partials.icon', ['name' => 'calendar', 'size' => 20]) Pendaftaran dibuka <strong>{{ \App\Services\Units::PPDB_OPEN }}</strong></p>
-                <p>Kursi terbatas dan ditutup begitu kuota habis. Amankan tempat putra-putri Anda sejak hari pertama!</p>
+                <p class="ia-hero-open-date">@include('public.partials.icon', ['name' => 'calendar', 'size' => 20]) Pendaftaran <strong>telah dibuka!</strong></p>
+                <p>Kuota terbatas: SMP, SMA, SMK, dan Pondok Pesantren masih menerima pendaftaran. Amankan tempat putra-putri Anda sekarang. Kuota TK dan MI sudah penuh, terima kasih atas kepercayaannya.</p>
             </div>
             <div class="ia-hero-actions">
                 @if($ppdbUrl)<a class="ia-btn ia-btn-wa" href="{{ $ppdbUrl }}" target="_blank" rel="noopener noreferrer">@include('public.partials.icon', ['name' => 'whatsapp']) <span><span class="ia-hide-sm">Chat </span>WhatsApp<span class="ia-hide-sm"> PPDB</span></span></a>@endif
