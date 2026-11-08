@@ -168,6 +168,15 @@ class Units
             'ekskul' => ['paduan-suara', 'badminton', 'silat-gasmi', 'pramuka', 'handball', 'futsal'],
             'students' => ['sma-1', 'sma-2'],
             'brochure' => ['pages' => 2, 'drive' => 'https://drive.google.com/drive/folders/1HuzLAXhcfCX4RqkH8mnv-dao7P6qJy4b?usp=drive_link'],
+            'achievements' => [
+                'Juara 2 Sosiologi, Olimpiade Young Olympiad tingkat nasional',
+                'Juara 3 Pendidikan Pancasila, Olimpiade Young Olympiad tingkat nasional',
+                'Juara 3 Teknik Informatika, Olimpiade Young Olympiad tingkat nasional',
+                'Juara 2 dan Juara 3 Lomba Cerdas Cermat Akuntansi AFEST UNPAK 2026, tingkat Jabodetabek & Jawa',
+                'Medali Emas Lomba Pencak Silat Event Asta Indonesia',
+                'Medali Perak Lomba Pencak Silat Event Asta Indonesia',
+                'Penerima BOS Kinerja Terbaik tahun 2026',
+            ],
             'note' => 'Siswa SMA wajib mondok di asrama pesantren. SMA tidak menerima siswa pindahan.',
         ],
         'smk' => [
