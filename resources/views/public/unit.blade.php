@@ -70,6 +70,25 @@
 </section>
 @endif
 
+@if(!empty($info['video']))
+{{-- Video promosi (tautan ke YouTube, tanpa memuat pemutar video) --}}
+<section class="ia-section ia-video-section">
+    <div class="container ia-video">
+        <div class="ia-video-copy">
+            <p class="ia-kicker">Video promosi</p>
+            <h2 class="ia-title">{{ $info['video']['title'] }}</h2>
+            <p>{{ $info['video']['text'] }}</p>
+            <a class="ia-btn ia-btn-yt" href="{{ $info['video']['url'] }}" target="_blank" rel="noopener">Tonton di YouTube ↗</a>
+        </div>
+        <a class="ia-video-card" href="{{ $info['video']['url'] }}" target="_blank" rel="noopener" aria-label="Tonton video {{ $info['video']['title'] }} di YouTube">
+            <img src="{{ asset($info['video']['thumb']) }}" alt="Cuplikan video promosi {{ $unit->title }}" width="476" height="595" loading="lazy" decoding="async">
+            <span class="ia-video-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+            <span class="ia-video-label">YouTube</span>
+        </a>
+    </div>
+</section>
+@endif
+
 {{-- 3. Program unggulan dari brosur --}}
 <section class="ia-section">
     <div class="container">

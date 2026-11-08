@@ -245,6 +245,13 @@ class Units
             'people' => 'Santri',
             'students' => ['smp-1', 'sma-3'],
             'brochure' => ['pages' => 1, 'drive' => 'https://drive.google.com/drive/folders/1qALATkx1TEwo5CUwnh2nH0kcbW5k24eF?usp=drive_link'],
+            // Video promosi: hanya tautan YouTube + gambar kecil, agar halaman tetap ringan.
+            'video' => [
+                'url' => 'https://youtu.be/fTNJRKyHFAw',
+                'thumb' => 'assets/foto/web/video-pesantren.webp',
+                'title' => 'Kenalan dengan Pondok Pesantren Ibnu Aqil',
+                'text' => 'Tonton santri kami mengajak berkeliling pesantren: masjid, asrama putra dan putri, kegiatan mengaji, hingga deretan prestasi santri.',
+            ],
         ],
     ];
 
