@@ -81,7 +81,7 @@
             <a class="ia-btn ia-btn-yt" href="{{ $info['video']['url'] }}" target="_blank" rel="noopener">Tonton di YouTube ↗</a>
         </div>
         <a class="ia-video-card" href="{{ $info['video']['url'] }}" target="_blank" rel="noopener" aria-label="Tonton video {{ $info['video']['title'] }} di YouTube">
-            <img src="{{ asset($info['video']['thumb']) }}" alt="Cuplikan video promosi {{ $unit->title }}" width="476" height="595" loading="lazy" decoding="async">
+            <img src="{{ asset($info['video']['thumb']) }}" alt="Cuplikan video promosi {{ $unit->title }}" width="540" height="959" loading="lazy" decoding="async">
             <span class="ia-video-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
             <span class="ia-video-label">YouTube</span>
         </a>
