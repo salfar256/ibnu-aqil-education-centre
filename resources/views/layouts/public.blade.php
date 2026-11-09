@@ -92,7 +92,7 @@
                 @include('public.partials.social-links')
             </div>
         </div>
-        <div class="container footer-bottom"><span>© {{ date('Y') }} Ibnu Aqil Education Center</span><a href="{{ route('login') }}">Akses pengelola <span aria-hidden="true">↗</span></a></div>
+        <div class="container footer-bottom"><span>© {{ date('Y') }} Ibnu Aqil Education Center</span><a href="{{ route('login') }}" rel="nofollow">Akses pengelola <span aria-hidden="true">↗</span></a></div>
     </footer>
     @php($waMenu = \App\Services\WhatsApp::menu($waSettings))
     @if($waMenu !== [])

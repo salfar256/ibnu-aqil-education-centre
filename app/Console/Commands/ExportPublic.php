@@ -62,7 +62,9 @@ class ExportPublic extends Command
             $documents['portal/index.html'] = $this->portalPage($portalUrl);
             $documents['404.html'] = $this->statusPage('Halaman tidak ditemukan', 'Halaman yang Anda tuju tidak tersedia. Silakan kembali ke beranda untuk menjelajahi informasi Ibnu Aqil.');
             $documents['sitemap.xml'] = $this->sitemap();
-            $documents['robots.txt'] = "User-agent: *\nAllow: /\nDisallow: ".$this->basePath."/portal/\nSitemap: ".$this->baseUrl."/sitemap.xml\n";
+            // The /portal/ stub carries noindex; it must stay crawlable so Google can read that tag
+            // (blocking it in robots.txt makes Search Console report "Blocked by robots.txt").
+            $documents['robots.txt'] = "User-agent: *\nAllow: /\nSitemap: ".$this->baseUrl."/sitemap.xml\n";
             $documents['.nojekyll'] = '';
             // Browsers and search engines also look for /favicon.ico at the site root.
             if (is_file(public_path('favicon.ico')) && filesize(public_path('favicon.ico')) > 0) {
